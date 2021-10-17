@@ -49,7 +49,7 @@ module.exports = {
       // =============================================================================
     } else {
       const commands = await client.commands;
-      let HyCoreMenu = new MessageEmbed()
+      const HyCoreMenu = new MessageEmbed()
         .setColor("#FF5733")
         .setTimestamp()
         .setAuthor("HyCore- multi☣️purpose bot")

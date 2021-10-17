@@ -14,7 +14,7 @@ module.exports = {
   // =============================================================================
   run: async (client, message) => {
     await message.react("🤩");
-    let HyCore = await message.channel.send(
+    const HyCore = await message.channel.send(
       new MessageEmbed()
         .setTimestamp()
         .setColor("#FF5733")
