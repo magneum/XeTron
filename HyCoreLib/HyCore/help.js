@@ -33,7 +33,7 @@ module.exports = {
           new MessageEmbed()
             .setColor("#FF5733")
             .setTimestamp()
-            .setThumbnail("https://i.postimg.cc/50L5rXL6/Hycore-1.png")
+            .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
             .setAuthor(command.name, client.user.displayAvatarURL())
             .addField(`\`> Description\``, command.description || "-")
             .addField(`\`> Usage\``, command.usage || "-")
@@ -55,7 +55,7 @@ module.exports = {
         .setAuthor("HyCore- multi☣️purpose bot")
         .setTitle("HyCore Help Menu")
         .setURL("https://github.com/krakinz")
-        .setThumbnail("https://i.postimg.cc/50L5rXL6/Hycore-1.png")
+        .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
         .setDescription(
           `\`\`\`𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+ 𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..\`\`\``
         )
@@ -63,7 +63,7 @@ module.exports = {
           `👈🏽‍Reqstd by ${message.author.username}`,
           message.author.avatarURL({ dynamic: true })
         )
-        .setImage("https://i.postimg.cc/50L5rXL6/Hycore-1.png");
+        .setImage("https://i.postimg.cc/4xbGh8D4/HyCore.jpg");
       // =============================================================================
       // 𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..
       // =============================================================================

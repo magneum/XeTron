@@ -56,7 +56,7 @@ module.exports = {
         .setColor("#FF5733")
         .setAuthor("HyCore- multi☣️purpose bot")
         .setURL("https://github.com/krakinz")
-        .setThumbnail("https://i.postimg.cc/50L5rXL6/Hycore-1.png")
+        .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
         .setImage(data)
         .setTitle("Dirty👊🏽‍Punch")
         .setTitle("Ouu SHIT! That was HARDDDD!!!")

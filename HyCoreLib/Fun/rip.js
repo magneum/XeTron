@@ -23,7 +23,7 @@ module.exports = {
         .setTitle(`Rest In⚰️Peace Boi`)
         .setURL("https://github.com/krakinz")
         .setAuthor("HyCore- multi☣️purpose bot")
-        .setThumbnail("https://i.postimg.cc/50L5rXL6/Hycore-1.png")
+        .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
         .setDescription(`\`\`\`Rest In Peace\`\`\``)
         .setImage(
           encodeURI(

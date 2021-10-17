@@ -22,7 +22,7 @@ module.exports = {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#FF5733")
-          .setThumbnail("https://i.postimg.cc/50L5rXL6/Hycore-1.png")
+          .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
           .setAuthor("HyCore- multi☣️purpose bot")
           .setURL("https://github.com/krakinz")
           .setTitle("Twitter")
@@ -55,7 +55,7 @@ module.exports = {
           new MessageEmbed()
             .setTimestamp()
             .setColor("#FF5733")
-            .setThumbnail("https://i.postimg.cc/50L5rXL6/Hycore-1.png")
+            .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
             .setAuthor("HyCore- multi☣️purpose bot")
             .setURL("https://github.com/krakinz")
             .setTitle(

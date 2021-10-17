@@ -16,7 +16,7 @@ module.exports = {
       .setColor("#43745a")
       .setTitle(`\`💬Ping\``)
       .setURL("https://github.com/Krakinz")
-      .setThumbnail("https://i.postimg.cc/50L5rXL6/Hycore-1.png")
+      .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
       .setAuthor("HyCore- multi☣️purpose bot")
       .addField(`\`Brought To You by\``, "👑Krakinz & KrakinzLab(c)", true)
       .addField(

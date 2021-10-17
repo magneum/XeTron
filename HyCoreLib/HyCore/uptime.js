@@ -45,7 +45,7 @@ module.exports = {
           .setTitle(`\`💬Uptime\``)
           .setURL("https://github.com/Krakinz")
           .setAuthor("HyCore- multi☣️purpose bot")
-          .setThumbnail(`https://i.postimg.cc/50L5rXL6/Hycore-1.png`)
+          .setThumbnail(`https://i.postimg.cc/4xbGh8D4/HyCore.jpg`)
           .addField(`\`Brought To You by\``, "👑Krakinz & KrakinzLab(c)", true)
           .addField(
             `\`🛸Uptime\``,
