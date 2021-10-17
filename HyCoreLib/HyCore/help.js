@@ -83,7 +83,7 @@ module.exports = {
         let category = key;
         let desc = "" + value.join(", ") + "";
         HyCoreMenu.addField(
-          `\`⚡${category.toUpperCase()}-${value.length} file(s)\``,
+          `⚡\`${category}-${value.length} file(s)\`⚡`,
           desc
         );
       }

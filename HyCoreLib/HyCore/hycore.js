@@ -19,13 +19,13 @@ module.exports = {
         .setTimestamp()
         .setColor("#FF5733")
         .setTitle(`👑HyCore Information Table`)
-        .setURL("https://github.com/krakinz")
         .setAuthor("HyCore- multi☣️purpose bot")
-        .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
+        .setURL("https://github.com/krakinz")
         .setImage("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
+        .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
         .addField(`\`⚙️Engine Version\``, `${HyCoredGin}`, true)
-        .addField(`\`Uptime\``, `${ms(client.uptime)}`, true)
-        .addField(`\`Ping\``, `${client.ws.ping}ms`, true)
+        .addField(`\`🛸Uptime\``, `${ms(client.uptime)}`, true)
+        .addField(`\`📡Ping\``, `${client.ws.ping}ms`, true)
         .addField(
           `\`Memory\``,
           `${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)} MB RSS\n${(
@@ -35,11 +35,14 @@ module.exports = {
           ).toFixed(2)} MB Heap`,
           true
         )
-        .addField(`\`Guild Count\``, `${client.guilds.cache.size} guilds`, true)
-        .addField(`\`User Count\``, `${client.users.cache.size} users`, true)
-        .addField(`\`Commands\``, `${client.commands.size} cmds`, true)
         .addField(
-          `\`Node Version\``,
+          `\`📚Guild Count\``,
+          `${client.guilds.cache.size} guilds`,
+          true
+        )
+        .addField(`\`💡HyCore Commands\``, `${client.commands.size} cmds`, true)
+        .addField(
+          `\`🤖Nodejs\``,
           `${process.version} on ${process.platform} ${process.arch}`,
           true
         )
