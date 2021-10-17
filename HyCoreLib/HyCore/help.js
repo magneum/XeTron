@@ -88,6 +88,10 @@ module.exports = {
         );
       }
       HyCoreMenu.addField(
+        `Extra Premium Features For Free`,
+        "🎧**[Music](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)**\n**🤩[Welcome](https://t.me/krakinzbot)**"
+      );
+      HyCoreMenu.addField(
         `Helper/Mod/Dev/Support Links`,
         ":link: **[Discord](https://discord.gg/VR9WU8eBxe)** | **[Telegram](https://t.me/krakinzbot)**"
       );
