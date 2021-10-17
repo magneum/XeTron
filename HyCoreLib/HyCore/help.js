@@ -95,7 +95,9 @@ module.exports = {
         `Helper/Mod/Dev/Support Links`,
         ":link: **[Discord](https://discord.gg/VR9WU8eBxe)** | **[Telegram](https://t.me/krakinzbot)**"
       );
-      message.channel.send(HyCoreMenu);
+      await message.channel.send(HyCoreMenu);
+      await HyCoreMenu.react("🍯");
+      await HyCoreMenu.react("⚡");
       return;
     }
   },
