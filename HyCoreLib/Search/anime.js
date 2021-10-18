@@ -22,7 +22,7 @@ module.exports = {
           .setTimestamp()
           .setColor("#FF5733")
           .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
-          .setAuthor("HyCore- multi☣️purpose bot")
+          .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
           .setURL("https://github.com/krakinz")
           .setTitle("Anime")
           .setFooter(
@@ -53,7 +53,7 @@ module.exports = {
         .setColor("#FF5733")
         .setImage(data.picture)
         .setURL("https://github.com/krakinz")
-        .setAuthor("HyCore- multi☣️purpose bot")
+        .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
         .setTitle(`Search result for ${args}`.split(",").join(" "))
         .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
         .addField("Premiered", `\`${data.premiered}\``, true)

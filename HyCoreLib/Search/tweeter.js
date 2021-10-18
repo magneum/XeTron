@@ -23,7 +23,7 @@ module.exports = {
           .setTimestamp()
           .setColor("#FF5733")
           .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
-          .setAuthor("HyCore- multi☣️purpose bot")
+          .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
           .setURL("https://github.com/krakinz")
           .setTitle("Twitter")
           .setFooter(
@@ -56,7 +56,7 @@ module.exports = {
             .setTimestamp()
             .setColor("#FF5733")
             .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
-            .setAuthor("HyCore- multi☣️purpose bot")
+            .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
             .setURL("https://github.com/krakinz")
             .setTitle(
               `@${body.screen_name.toLowerCase()}`,

@@ -44,7 +44,7 @@ module.exports = {
           .setColor("#43745a")
           .setTitle(`\`💬Uptime\``)
           .setURL("https://github.com/Krakinz")
-          .setAuthor("HyCore- multi☣️purpose bot")
+          .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
           .setThumbnail(`https://i.postimg.cc/4xbGh8D4/HyCore.jpg`)
           .addField(`\`Brought To You by\``, "👑Krakinz & KrakinzLab(c)", true)
           .addField(

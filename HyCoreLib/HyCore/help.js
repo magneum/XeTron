@@ -52,7 +52,7 @@ module.exports = {
       const HyCoreMenu = new MessageEmbed()
         .setColor("#FF5733")
         .setTimestamp()
-        .setAuthor("HyCore- multi☣️purpose bot")
+        .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
         .setTitle("HyCore Help Menu")
         .setURL("https://github.com/krakinz")
         .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")

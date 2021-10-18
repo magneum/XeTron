@@ -22,7 +22,7 @@ module.exports = {
         .setColor("#FF5733")
         .setTitle(`Rest In⚰️Peace Boi`)
         .setURL("https://github.com/krakinz")
-        .setAuthor("HyCore- multi☣️purpose bot")
+        .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
         .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
         .setDescription(`\`\`\`Rest In Peace\`\`\``)
         .setImage(

@@ -21,7 +21,7 @@ module.exports = {
           new MessageEmbed()
             .setTimestamp()
             .setColor("#FF5733")
-            .setAuthor("HyCore- multi☣️purpose bot")
+            .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
             .setURL("https://github.com/krakinz")
             .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
             .setImage(response.body.url)

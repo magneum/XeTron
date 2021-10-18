@@ -20,7 +20,7 @@ module.exports = {
           .setTimestamp()
           .setColor("#FF5733")
           .setTitle(`👑HyCore Information Table`)
-          .setAuthor("HyCore- multi☣️purpose bot")
+          .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
           .setURL("https://github.com/krakinz")
           .setImage("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
           .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")

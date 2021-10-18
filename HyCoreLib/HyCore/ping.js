@@ -17,7 +17,7 @@ module.exports = {
       .setTitle(`\`💬Ping\``)
       .setURL("https://github.com/Krakinz")
       .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
-      .setAuthor("HyCore- multi☣️purpose bot")
+      .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
       .addField(`\`Brought To You by\``, "👑Krakinz & KrakinzLab(c)", true)
       .addField(
         `\`📡Pong\``,

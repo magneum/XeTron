@@ -25,7 +25,7 @@ module.exports = {
             new MessageEmbed()
               .setTimestamp()
               .setColor("#FF5733")
-              .setAuthor("HyCore- multi☣️purpose bot")
+              .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
               .setURL("https://github.com/krakinz")
               .setTitle("WhoIs ??")
               .setFooter(
@@ -57,7 +57,7 @@ module.exports = {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#FF5733")
-          .setAuthor("HyCore- multi☣️purpose bot")
+          .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
           .setURL("https://github.com/krakinz")
           .setTitle("WhoIs ??")
           .setFooter(
@@ -143,7 +143,7 @@ module.exports = {
     // =============================================================================
     embed
       .setTimestamp()
-      .setAuthor("HyCore- multi☣️purpose bot")
+      .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
       .setURL("https://github.com/krakinz")
       .setTitle("WhoIs ??")
       .addField("Joined At", moment(user.joinedAt).format("LLLL"))

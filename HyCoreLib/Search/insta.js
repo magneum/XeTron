@@ -18,7 +18,7 @@ module.exports = {
           .setTimestamp()
           .setColor("#FF5733")
           .setURL("https://github.com/krakinz")
-          .setAuthor("HyCore- multi☣️purpose bot")
+          .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
           .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
           .setTitle("Instagram")
           .setFooter(
@@ -55,7 +55,7 @@ module.exports = {
           .setTimestamp()
           .setColor("#FF5733")
           .setURL("https://github.com/krakinz")
-          .setAuthor("HyCore- multi☣️purpose bot")
+          .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
           .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
           .setTitle("Instagram")
           .setFooter(
@@ -85,7 +85,7 @@ module.exports = {
         .setTimestamp()
         .setColor("#FF5733")
         .setURL("https://github.com/krakinz")
-        .setAuthor("HyCore- multi☣️purpose bot")
+        .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
         .setImage("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
         .setTitle(
           `${
