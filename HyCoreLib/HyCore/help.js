@@ -89,7 +89,9 @@ module.exports = {
       }
       HyCoreMenu.addField(
         `Extra Premium Features For Free`,
-        "🎧**[Music](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)**\n**🤩Welcome=Coming Soon!**"
+        `
+🎧**[Music](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)**
+**🤩Welcome=Coming Soon!**`
       );
       HyCoreMenu.addField(
         `Helper/Mod/Dev/Support Links`,
