@@ -15,7 +15,7 @@ client.aliases = new Discord.Collection();
 client.queue = new Map();
 client.queue = new Map();
 client.vote = new Map();
-const PreHyCore = "pls";
+const PreHyCore = "hy";
 Disbut(client);
 client.login(process.env.TOKEN);
 // =============================================================================
