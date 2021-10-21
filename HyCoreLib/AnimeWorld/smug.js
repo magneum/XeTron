@@ -5,6 +5,7 @@ const { MessageEmbed } = require("discord.js");
 // =============================================================================
 module.exports = {
   name: "smug",
+  category: "AnimeWorld",
   run: async (client, message, args) => {
     const HyCoreAnime = new Anime({
       message: message,

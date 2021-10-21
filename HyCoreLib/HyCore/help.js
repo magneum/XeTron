@@ -50,11 +50,12 @@ module.exports = {
     } else {
       const commands = await client.commands;
       const HyCoreMenu = new MessageEmbed()
-        .setColor("#FF5733")
         .setTimestamp()
-        .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
+        .setColor("#FF5733")
         .setTitle("HyCore Help Menu")
         .setURL("https://github.com/krakinz")
+        .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
+        .setImage("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
         .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
         .setDescription(
           `\`\`\`𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+ 𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..\`\`\``
@@ -63,7 +64,16 @@ module.exports = {
           `👈🏽‍Reqstd by ${message.author.username}`,
           message.author.avatarURL({ dynamic: true })
         )
-        .setImage("https://i.postimg.cc/4xbGh8D4/HyCore.jpg");
+        .addField(
+          `Extra Premium Features For Free`,
+          `
+  🎧**[Music](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)**
+  **🤩Welcome=Coming Soon!**`
+        )
+        .addField(
+          `Helper/Mod/Dev/Support Links`,
+          ":link: **[Discord](https://discord.gg/VR9WU8eBxe)** | **[Telegram](https://t.me/krakinzbot)**"
+        );
       // =============================================================================
       // 𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..
       // =============================================================================
@@ -83,23 +93,12 @@ module.exports = {
         let category = key;
         let desc = "" + value.join(", ") + "";
         HyCoreMenu.addField(
-          `⚡\`${category}-${value.length} file(s)\`⚡`,
+          `${emoji}\`${category}-${value.length} file(s)\``,
           desc
         );
       }
-      HyCoreMenu.addField(
-        `Extra Premium Features For Free`,
-        `
-🎧**[Music](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)**
-**🤩Welcome=Coming Soon!**`
-      );
-      HyCoreMenu.addField(
-        `Helper/Mod/Dev/Support Links`,
-        ":link: **[Discord](https://discord.gg/VR9WU8eBxe)** | **[Telegram](https://t.me/krakinzbot)**"
-      );
       await message.channel.send(HyCoreMenu).then((embedMessage) => {
         embedMessage.react("🍯");
-        embedMessage.react("⚡");
       });
       return;
     }
