@@ -32,23 +32,14 @@ async function HyCore() {
     console.log(`Loading... ${eventName}`);
     client.on(eventName, event.bind(null, client));
   }
-
+  // =============================================================================
+  `𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..`;
+  // =============================================================================
   readdirSync(`./HyCoreLib/`).forEach((dir) => {
     const commands = readdirSync(`./HyCoreLib/${dir}/`).filter((file) =>
       file.endsWith(".js")
     );
     for (let file of commands) {
-      var str = file;
-      var newString = str.substring(0, str.length - 3);
-      var activities = [`${newString}`],
-        i = 0;
-      setInterval(
-        () =>
-          client.user.setActivity(`👑${activities[i++ % activities.length]}`, {
-            type: "WATCHING",
-          }),
-        3000
-      );
       let pull = require(`./HyCoreLib/${dir}/${file}`);
       if (pull.name) {
         client.commands.set(pull.name, pull);
@@ -65,10 +56,16 @@ async function HyCore() {
     }
   });
   console.log(Table.toString());
+  // =============================================================================
+  `𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..`;
+  // =============================================================================
   require("http")
     .createServer((req, res) => res.end("HyCore Ready!"))
     .listen(3000);
+  // =============================================================================
+  `𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..`;
+  // =============================================================================
+  client.on;
   await client.login(process.env.TOKEN);
 }
-
 HyCore();
