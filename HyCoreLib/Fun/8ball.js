@@ -27,9 +27,10 @@ module.exports = {
   emoji: "📝",
   name: "8ball",
   description: "Tells you a fortune",
-  async execute(client, message, args) {
+  run: async (client, message, args) => {
     if (args.length == 0) return message.channel.send("`Usage: =8ball <msg>`");
-    await message.channel.send(fortunes[Math.floor(Math.random() * fortunes.length)]
+    await message.channel.send(
+      fortunes[Math.floor(Math.random() * fortunes.length)]
     );
   },
 };

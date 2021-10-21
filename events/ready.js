@@ -4,14 +4,14 @@
 module.exports = (client, message) => {
   client.user.setStatus("online");
   var activities = [
-      `${PreHyCore} hycore`,
-      `${PreHyCore} help`,
-      `${PreHyCore} mods`,
-      `${PreHyCore} invite`,
-      `${PreHyCore} meme`,
-      `${PreHyCore} nsfw`,
-      `${PreHyCore} slap`,
-      `${PreHyCore} kiss`,
+      `hycore`,
+      `help`,
+      `mods`,
+      `invite`,
+      `meme`,
+      `nsfw`,
+      `slap`,
+      `kiss`,
     ],
     i = 0;
   setInterval(
