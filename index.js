@@ -4,8 +4,8 @@
 console.clear();
 const fs = require("fs");
 const ascii = require("ascii-table");
-let Table = new ascii("Commands");
-Table.setHeading("Command", "Load status");
+let Table = new ascii("HyCore📚Library");
+Table.setHeading("Command", "Load status", "Status");
 const { readdirSync } = require("fs");
 require("dotenv").config({ path: "src/.env" });
 const PreHyCore = process.env.PreHyCore;
@@ -45,7 +45,9 @@ async function HyCore() {
       let pull = require(`./HyCoreLib/${dir}/${file}`);
       if (pull.name) {
         client.commands.set(pull.name, pull);
-        Table.addRow(file.toUpperCase(), "🍯");
+        var str = file;
+        var newStr = str.slice(0, -3);
+        Table.addRow("🔸> " + newStr.toUpperCase(), "handler ready!", "     🍯");
       } else {
         Table.addRow(file, `❌  -> missing a help.name, or help.name is not a string.`);
         continue;
