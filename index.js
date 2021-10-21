@@ -8,7 +8,6 @@ let Table = new ascii("HyCore📚Library");
 Table.setHeading("Command", "Load status");
 const { readdirSync } = require("fs");
 require("dotenv").config({ path: "src/.env" });
-const PreHyCore = process.env.PreHyCore;
 const Disbut = require("discord-buttons");
 const Discord = require("discord.js");
 const client = new Discord.Client({});
