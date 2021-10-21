@@ -1,4 +1,4 @@
-const db = require("old-wio.db")
+const db = require("quick.db")
 const { MessageEmbed } = require("discord.js")
 require("dotenv").config({ path: "src/.env" });
 const PreHyCore = process.env.PreHyCore;
