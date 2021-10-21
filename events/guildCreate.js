@@ -13,10 +13,8 @@ module.exports = (client, guild) => {
       .replace("0 Minute\n", "");
   };
   let Total = RemoveUseless(
-    `${Days} ${Days > 1 ? "Days" : "Day"}\n${Hours} ${
-      Hours > 1 ? "Hours" : "Hour"
-    }\n${Minutes} ${Minutes > 1 ? "Minutes" : "Minute"}\n${Seconds} ${
-      Seconds > 1 ? "Seconds" : "Second"
+    `${Days} ${Days > 1 ? "Days" : "Day"}\n${Hours} ${Hours > 1 ? "Hours" : "Hour"
+    }\n${Minutes} ${Minutes > 1 ? "Minutes" : "Minute"}\n${Seconds} ${Seconds > 1 ? "Seconds" : "Second"
     }`
   );
   const channel = client.channels.cache.get("896660877091164180");
@@ -51,7 +49,7 @@ module.exports = (client, guild) => {
       )
       .addField(
         `:candy:\`HyCore Main Commands\``,
-        `${PreHyCore}hycore & ${PreHyCore}help to know more...`,
+        `${client.prefix}hycore & ${client.prefix}help to know more...`,
         true
       )
       .addField(`\`Brought To You by\``, "👑Krakinz & KrakinzLab(c)", true)
