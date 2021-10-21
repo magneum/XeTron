@@ -6,7 +6,7 @@ const { MessageEmbed } = require("discord.js");
 // =============================================================================
 module.exports = {
   name: "anime",
-  category: "AnimeWorld",
+  category: "😈AnimeWorld",
   aliases: [],
   description: "Get info about an anime",
   usage: "anime parasyte",

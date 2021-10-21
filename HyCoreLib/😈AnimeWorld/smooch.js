@@ -1,11 +1,14 @@
-const { Anime } = require("djs-anime");
+const { Random } = require("something-random-on-discord");
 const { MessageEmbed } = require("discord.js");
+const random = new Random();
 // =============================================================================
 // 𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..
 // =============================================================================
 module.exports = {
-  name: "kick",
-  category: "AnimeWorld",
+  name: "smooch",
+  category: "😈AnimeWorld",
+  aliases: [],
+  description: "smooch someone",
   run: async (client, message, args) => {
     const target =
       message.mentions.members.first() ||
@@ -14,13 +17,10 @@ module.exports = {
       message.react("❗");
       const noargembed = new MessageEmbed()
         .setTimestamp()
-        .setTitle("kick")
+        .setTitle("Kiss")
         .setColor("#FF5733")
+        .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
         .setURL("https://github.com/krakinz")
-        .setAuthor(
-          "HyCore👑Multi☣️Purpose🤖Bot",
-          client.user.displayAvatarURL()
-        )
         .setFooter(
           `👈🏽‍Reqstd by ${message.author.username}`,
           message.author.avatarURL({ dynamic: true })
@@ -33,19 +33,31 @@ module.exports = {
           },
           {
             name: `**\`🔸Example\`**`,
-            value: `${client.prefix} kick (mention or ID)`,
+            value: "pls smooch <Name or ID>",
             inline: true,
           }
         );
       return message.channel.send({ embeds: [noargembed] });
     }
-    const HyCoreAnime = new Anime({
-      message: message,
-      embedTitle: `**\`\`\`${message.author.username} kick ${target.displayName} out.\`\`\`**`,
-      embedFooter: `Reqstd by ${message.author.username}`,
-      embedColor: "#FF5733",
-    });
-    HyCoreAnime.kick();
+    let data = await random.getAnimeImgURL("kiss");
+    const smoochhard = new MessageEmbed()
+      .setTimestamp()
+      .setImage(data)
+      .setColor("#FF5733")
+      .setTitle("So Wet Smooch wow💋")
+      .setURL("https://github.com/krakinz")
+      .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
+      .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
+      .setFooter(
+        `👈🏽‍Reqstd by ${message.author.username}`,
+        message.author.avatarURL({ dynamic: true })
+      )
+      .addField(
+        `**\`So Romantic!\`**`,
+        `${message.author.username} gave a sweet kiss to ${target.user.username}.Now you better kiss ${message.author.username} back`,
+        true
+      );
+    return message.channel.send({ embeds: [smoochhard] });
   },
 };
 // =============================================================================

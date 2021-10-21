@@ -4,8 +4,8 @@ const { MessageEmbed } = require("discord.js");
 // 𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..
 // =============================================================================
 module.exports = {
-  name: "yeet",
-  category: "AnimeWorld",
+  name: "wave",
+  category: "😈AnimeWorld",
   run: async (client, message, args) => {
     const target =
       message.mentions.members.first() ||
@@ -14,7 +14,7 @@ module.exports = {
       message.react("❗");
       const noargembed = new MessageEmbed()
         .setTimestamp()
-        .setTitle("yeet")
+        .setTitle("wave")
         .setColor("#FF5733")
         .setURL("https://github.com/krakinz")
         .setAuthor(
@@ -33,7 +33,7 @@ module.exports = {
           },
           {
             name: `**\`🔸Example\`**`,
-            value: `${client.prefix} yeet (mention or ID)`,
+            value: `${client.prefix} wave (mention or ID)`,
             inline: true,
           }
         );
@@ -41,11 +41,11 @@ module.exports = {
     }
     const HyCoreAnime = new Anime({
       message: message,
-      embedTitle: `**\`\`\`${message.author.username} yeeted ${target.displayName} like a power ranger lmao....\`\`\`**`,
+      embedTitle: `**\`\`\`${message.author.username} waving at ${target.displayName}.\`\`\`**`,
       embedFooter: `Reqstd by ${message.author.username}`,
       embedColor: "#FF5733",
     });
-    HyCoreAnime.yeet();
+    HyCoreAnime.wave();
   },
 };
 // =============================================================================
