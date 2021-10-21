@@ -1,53 +1,66 @@
+const ms = require("pretty-ms");
 const { MessageEmbed } = require("discord.js");
+const { HyCoredGin } = require("../../package.json");
+const { version: discordjsVersion } = require("discord.js");
 // =============================================================================
 // 𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..
 // =============================================================================
 module.exports = {
-  name: "snipe",
-  aliases: [],
-  category: "hycore",
-  usage: "snipe",
-  description:
-    "Get last message which is deleted with message Author and Image(If any)",
+  name: "hycore",
+  category: "🍯HyCore",
+  description: "Check Hycore Stats",
   // =============================================================================
   // 𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..
   // =============================================================================
-  run: async (client, message, args) => {
-    const msg = client.snipes.get(message.channel.id);
-    if (!msg) {
-      message.react("❗");
-      message.channel.send(
+  run: async (client, message) => {
+    await message.react("🤩");
+    const HyCore = await message.channel
+      .send(
         new MessageEmbed()
           .setTimestamp()
           .setColor("#FF5733")
+          .setTitle(`👑HyCore Information Table`)
           .setAuthor("HyCore👑Multi☣️Purpose🤖Bot")
           .setURL("https://github.com/krakinz")
-          .setTitle("Snipe aka get-Back Deleted Messages")
+          .setImage("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
+          .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
+          .addField(`\`⚙️Engine Version\``, `${HyCoredGin}`, true)
+          .addField(`\`🛸Uptime\``, `${ms(client.uptime)}`, true)
+          .addField(`\`📡Ping\``, `${client.ws.ping}ms`, true)
+          .addField(
+            `\`Memory\``,
+            `${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)} MB RSS\n${(
+              process.memoryUsage().heapUsed /
+              1024 /
+              1024
+            ).toFixed(2)} MB Heap`,
+            true
+          )
+          .addField(
+            `\`📚Guild Count\``,
+            `${client.guilds.cache.size} guilds`,
+            true
+          )
+          .addField(
+            `\`💡HyCore Commands\``,
+            `${client.commands.size} cmds`,
+            true
+          )
+          .addField(
+            `\`🤖Nodejs\``,
+            `${process.version} on ${process.platform} ${process.arch}`,
+            true
+          )
+          .addField(`\`Discord.js\``, `${discordjsVersion}`, true)
           .setFooter(
             `👈🏽‍Reqstd by ${message.author.username}`,
             message.author.avatarURL({ dynamic: true })
           )
-          .addFields(
-            {
-              name: `**\`⚠️Error\`**`,
-              value: "There's nothing to snipe!",
-              inline: true,
-            },
-            {
-              name: `**\`🔸Example\`**`,
-              value: "pls snipe",
-              inline: true,
-            }
-          )
-      );
-      return;
-    }
-    if (msg.image) {
-      embed.setImage(msg.image).setColor("#FF5733").setTimestamp();
-    }
-    message.channel.send(
-      new MessageEmbed().setAuthor(msg.author).setDescription(msg.content)
-    );
+      )
+      .then((embedMessage) => {
+        embedMessage.react("🍯");
+        embedMessage.react("⚡");
+      });
   },
 };
 // =============================================================================

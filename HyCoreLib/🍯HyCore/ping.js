@@ -4,7 +4,7 @@ const { MessageEmbed } = require("discord.js");
 // =============================================================================
 module.exports = {
     name: "ping",
-    category: "hycore",
+    category: "🍯HyCore",
     aliases: [],
     description: "Returns latency and API ping",
     run: async (client, message, args) => {

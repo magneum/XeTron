@@ -4,7 +4,7 @@ const { MessageEmbed } = require("discord.js");
 // =============================================================================
 module.exports = {
   name: "uptime",
-  category: "hycore",
+  category: "🍯HyCore",
   aliases: [],
   description: "Shows Bot's Uptime.",
   usage: "uptime",

@@ -6,7 +6,7 @@ module.exports = {
   name: "embedgen",
   aliases: [],
   description: "embed Generator",
-  category: "hycore",
+  category: "🍯HyCore",
   run: async (client, message, args) => {
     try {
       const filter = (msg) => msg.author.id == message.author.id;

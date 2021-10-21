@@ -5,7 +5,7 @@ const { MessageEmbed } = require("discord.js");
 // =============================================================================
 module.exports = {
   name: "userinfo",
-  category: "hycore",
+  category: "🍯HyCore",
   aliases: [],
   usage: "userinfo <MENTION>",
   description: "Get advance stats of given person or yourself",

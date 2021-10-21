@@ -26,10 +26,10 @@ client.login(process.env.TOKEN);
 // =============================================================================
 async function HyCore() {
   const eventFiles = fs
-    .readdirSync("./Events/")
+    .readdirSync("./HyCoreEvents/")
     .filter((file) => file.endsWith(".js"));
   for (const file of eventFiles) {
-    const event = require(`./Events/${file}`);
+    const event = require(`./HyCoreEvents/${file}`);
     const eventName = file.split(".")[0];
     console.log(`Loading... ${eventName}`);
     client.on(eventName, event.bind(null, client));
@@ -45,12 +45,9 @@ async function HyCore() {
       let pull = require(`./HyCoreLib/${dir}/${file}`);
       if (pull.name) {
         client.commands.set(pull.name, pull);
-        Table.addRow(file, "✅");
+        Table.addRow(file.toUpperCase(), "🍯");
       } else {
-        Table.addRow(
-          file,
-          `❌  -> missing a help.name, or help.name is not a string.`
-        );
+        Table.addRow(file, `❌  -> missing a help.name, or help.name is not a string.`);
         continue;
       }
       if (pull.aliases && Array.isArray(pull.aliases))

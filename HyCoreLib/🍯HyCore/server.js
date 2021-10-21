@@ -3,6 +3,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
     emoji: "📊",
     name: "server",
+    category: "🍯HyCore",
     description: "Show server related infos!",
     run: async (client, message, args) => {
         var members = await message.guild.members.fetch();
