@@ -19,7 +19,7 @@ module.exports = async (client, member) => {
   ctx.strokeRect(0, 0, canvas.width, canvas.height);
   var Joined__User = `${member.user.username}`;
   if (Joined__User.length >= 10) {
-    ctx.font = "bold 110px Segoe Script";
+    ctx.font = "bold 110px Sans";
     ctx.fillStyle = "#FFFFFF";
     ctx.fillText(
       `💠 ${Joined__User} `,
@@ -31,7 +31,7 @@ module.exports = async (client, member) => {
       500
     );
   } else {
-    ctx.font = "bold 140px Segoe Script";
+    ctx.font = "bold 140px Sans";
     ctx.fillStyle = "#FFFFFF";
     ctx.fillText(
       `💠 ${Joined__User} `,
