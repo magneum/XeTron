@@ -37,7 +37,7 @@ module.exports = {
             inline: true,
           }
         );
-      return message.channel.send({ embeds: [noargembed] });
+      return message.channel.send(noargembed);
     }
     const HyCoreAnime = new Anime({
       message: message,

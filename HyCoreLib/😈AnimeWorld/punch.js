@@ -39,7 +39,7 @@ module.exports = {
             inline: true,
           }
         );
-      return message.channel.send({ embeds: [noargembed] });
+      return message.channel.send(noargembed);
     }
     let data = await random.getAnimeImgURL("punch");
     const DeadlyPunch = new MessageEmbed()
@@ -59,7 +59,7 @@ module.exports = {
         value: `**${message.author.username}** punched **${target.user.username}** so hard that **${target.user.username}** needs to take revenge! (Maybe use *${PreHyCore} punch* or *${PreHyCore} slap*)`,
         inline: true,
       });
-    return message.channel.send({ embeds: [DeadlyPunch] });
+    return message.channel.send(DeadlyPunch);
   },
 };
 // =============================================================================

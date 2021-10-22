@@ -37,7 +37,7 @@ module.exports = {
             inline: true,
           }
         );
-      return message.channel.send({ embeds: [noargembed] });
+      return message.channel.send(noargembed);
     }
     let data = await random.getAnimeImgURL("kiss");
     const smoochhard = new MessageEmbed()
@@ -57,7 +57,7 @@ module.exports = {
         `${message.author.username} gave a sweet kiss to ${target.user.username}.Now you better kiss ${message.author.username} back`,
         true
       );
-    return message.channel.send({ embeds: [smoochhard] });
+    return message.channel.send(smoochhard);
   },
 };
 // =============================================================================
