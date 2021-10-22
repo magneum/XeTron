@@ -37,7 +37,7 @@ module.exports = {
       ? "Welcome"
       : "Goodbye";
     db.set(
-      `${Current === "Welcome" ? `Welcome_Channel` : `GoodBye_Channel`}_${
+      `${Current === "Welcome" ? `HyWel_` : `GoodBye_Channel`}_${
         message.guild.id
       }`,
       mentionedChannel.id
