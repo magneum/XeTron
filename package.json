@@ -30,6 +30,7 @@
     "hastebin-gen": "^2.0.5",
     "hmtai": "^2.0.9",
     "i": "^0.3.6",
+    "enmap": "^5.8.2",
     "images-scraper": "^6.4.0",
     "imdb-api": "^4.2.0",
     "instagram-api.js": "0.0.8",

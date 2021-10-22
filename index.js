@@ -47,7 +47,10 @@ async function HyCore() {
         var newStr = str.slice(0, -3);
         Table.addRow("🔸> " + newStr.toUpperCase(), "handler🍯ready!");
       } else {
-        Table.addRow(file, `❌  -> missing a help.name, or help.name is not a string.`);
+        Table.addRow(
+          file,
+          `❌  -> missing a help.name, or help.name is not a string.`
+        );
         continue;
       }
       if (pull.aliases && Array.isArray(pull.aliases))
