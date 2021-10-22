@@ -23,7 +23,7 @@ module.exports = {
         );
       if (!user) return message.channel.send("**Enter A Valid User!**");
 
-      let member = db.fetch(`money_${user2.id}`);
+      let member = db.get(`money_${user2.id}`);
 
       let embed1 = new MessageEmbed()
         .setColor("GREEN")

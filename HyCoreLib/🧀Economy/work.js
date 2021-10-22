@@ -13,7 +13,7 @@ module.exports = {
   accessableby: "everyone",
   run: async (bot, message, args) => {
     let user = message.author;
-    let author = await db.fetch(`work_${user.id}`);
+    let author = await db.get(`work_${user.id}`);
 
     let timeout = 1800000;
 

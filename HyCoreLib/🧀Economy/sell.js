@@ -1,7 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const db = require("quick.db");
 
-
 module.exports = {
   name: "sell",
   noalias: [""],
@@ -11,7 +10,7 @@ module.exports = {
   accessableby: "everyone",
   run: async (bot, message, args) => {
     let prefix;
-    let fetched = await db.fetch(`prefix_${message.guild.id}`);
+    let fetched = await db.get(`prefix_${message.guild.id}`);
 
     if (fetched === null) {
       fetched = prefix;
@@ -25,11 +24,11 @@ module.exports = {
         .setColor("GREEN")
         .setDescription(`❌ You don't have Nikes to sell`);
 
-      let nikees = await db.fetch(`nikes_${user.id}`);
+      let nikees = await db.get(`nikes_${user.id}`);
 
       if (nikees < 1) return message.channel.send(embed1);
 
-      db.fetch(`nikes_${user.id}`);
+      db.get(`nikes_${user.id}`);
       db.subtract(`nikes_${user.id}`, 1);
 
       let embed2 = new MessageEmbed()
@@ -43,11 +42,11 @@ module.exports = {
         .setColor("GREEN")
         .setDescription(`❌ You don't have a Car to sell`);
 
-      let cars = await db.fetch(`car_${user.id}`);
+      let cars = await db.get(`car_${user.id}`);
 
       if (cars < 1) return message.channel.send(embed3);
 
-      db.fetch(`car_${user.id}`);
+      db.get(`car_${user.id}`);
       db.subtract(`car_${user.id}`, 1);
 
       let embed4 = new MessageEmbed()
@@ -61,11 +60,11 @@ module.exports = {
         .setColor("GREEN")
         .setDescription(`❌ You don't have a Mansion to sell`);
 
-      let houses = await db.fetch(`house_${user.id}`);
+      let houses = await db.get(`house_${user.id}`);
 
       if (houses < 1) return message.channel.send(sembed2);
 
-      db.fetch(`house_${user.id}`);
+      db.get(`house_${user.id}`);
       db.subtract(`house_${user.id}`, 1);
 
       let sembed3 = new MessageEmbed()

@@ -11,7 +11,7 @@ module.exports = {
   accessableby: "",
   run: async (bot, message, args) => {
     let user = message.author;
-    let moneydb = await db.fetch(`money_${user.id}`);
+    let moneydb = await db.get(`money_${user.id}`);
     let money = parseInt(args[0]);
     let win = false;
 

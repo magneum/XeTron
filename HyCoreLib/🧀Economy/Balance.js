@@ -22,11 +22,11 @@ module.exports = {
       ) ||
       message.member;
 
-    let bal = db.fetch(`money_${user.id}`);
+    let bal = db.get(`money_${user.id}`);
 
     if (bal === null) bal = 0;
 
-    let bank = await db.fetch(`bank_${user.id}`);
+    let bank = await db.get(`bank_${user.id}`);
 
     if (bank === null) bank = 0;
     let Total = bal + bank;

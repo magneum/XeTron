@@ -11,10 +11,10 @@ module.exports = {
   run: async (bot, message, args) => {
     let user = message.author;
 
-    let member = db.fetch(`money_${user.id}`);
+    let member = db.get(`money_${user.id}`);
 
     if (args[0] == "all") {
-      let money = await db.fetch(`money_${user.id}`);
+      let money = await db.get(`money_${user.id}`);
 
       let embedbank = new MessageEmbed()
         .setColor("GREEN")

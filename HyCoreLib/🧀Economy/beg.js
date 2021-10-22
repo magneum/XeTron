@@ -15,7 +15,7 @@ module.exports = {
     let timeout = 120000;
     let amount = 20;
 
-    let beg = await db.fetch(`beg_${user.id}`);
+    let beg = await db.get(`beg_${user.id}`);
 
     if (beg !== null && timeout - (Date.now() - beg) > 0) {
       let time = ms(timeout - (Date.now() - beg));

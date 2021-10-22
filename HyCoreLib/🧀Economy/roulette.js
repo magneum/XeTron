@@ -11,7 +11,7 @@ module.exports = {
   accessableby: "everyone",
   run: async (bot, message, args) => {
     let prefix = "q";
-    let fetched = await db.fetch(`prefix_${message.guild.id}`);
+    let fetched = await db.get(`prefix_${message.guild.id}`);
 
     if (fetched === null) {
       fetched = prefix;
@@ -28,7 +28,7 @@ module.exports = {
 
     let colour = args[0];
     let money = parseInt(args[1]);
-    let moneydb = await db.fetch(`money_${user.id}`);
+    let moneydb = await db.get(`money_${user.id}`);
 
     let random = Math.floor(Math.random() * 10);
 

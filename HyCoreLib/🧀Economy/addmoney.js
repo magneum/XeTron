@@ -31,7 +31,7 @@ module.exports = {
     if (args[0] > 10000)
       return message.channel.send("**Cannot Add That Much Amount!**");
     db.add(`money_${user.id}`, args[1]);
-    let bal = db.fetch(`money_${user.id}`);
+    let bal = db.get(`money_${user.id}`);
 
     let moneyEmbed = new MessageEmbed()
       .setColor("GREEN")

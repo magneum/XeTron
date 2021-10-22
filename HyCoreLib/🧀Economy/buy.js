@@ -10,14 +10,14 @@ module.exports = {
   usage: "[item]",
   accessableby: "everyone",
   run: async (bot, message, args) => {
-    let PreHyCore = db.get(`PreHyCore-${message.guild.id}`);
+    let PreHyCore = db.get(`prefix_${message.guild.id}`);
     if (PreHyCore === null) {
       PreHyCore = process.env.PreHyCore;
     }
     let user = message.author;
 
     let prefix;
-    let fetched = await db.fetch(`prefix_${message.guild.id}`);
+    let fetched = await db.get(`prefix_${message.guild.id}`);
 
     if (fetched === null) {
       prefix = default_prefix;
@@ -25,7 +25,7 @@ module.exports = {
       prefix = fetched;
     }
 
-    let author = db.fetch(`money_${user.id}`);
+    let author = db.get(`money_${user.id}`);
 
     let Embed = new MessageEmbed()
       .setColor("GREEN")
@@ -34,7 +34,7 @@ module.exports = {
     if (args.join(" ").toLocaleLowerCase() == "bronze") {
       if (author < 200) return message.channel.send(Embed);
 
-      await db.fetch(`bronze_${user.id}`);
+      await db.get(`bronze_${user.id}`);
       db.set(`bronze_${user.id}`, true);
 
       let Embed2 = new MessageEmbed()
@@ -50,7 +50,7 @@ module.exports = {
 
       if (author < 600) return message.channel.send(Embed3);
 
-      await db.fetch(`nikes_${user.id}`);
+      await db.get(`nikes_${user.id}`);
       db.add(`nikes_${user.id}`, 1);
 
       let Embed4 = new MessageEmbed()
@@ -66,7 +66,7 @@ module.exports = {
 
       if (author < 800) return message.channel.send(Embed5);
 
-      await db.fetch(`car_${user.id}`);
+      await db.get(`car_${user.id}`);
       db.add(`car_${user.id}`, 1);
 
       let Embed6 = new MessageEmbed()
@@ -82,7 +82,7 @@ module.exports = {
 
       if (author < 1200) return message.channel.send(Embed7);
 
-      await db.fetch(`house_${user.id}`);
+      await db.get(`house_${user.id}`);
       db.add(`house_${user.id}`, 1);
 
       let Embed8 = new MessageEmbed()

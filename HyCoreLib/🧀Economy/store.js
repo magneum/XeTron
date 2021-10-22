@@ -11,7 +11,7 @@ module.exports = {
   accessableby: "everyone",
   run: async (bot, message, args) => {
     let prefix;
-    let fetched = await db.fetch(`prefix_${message.guild.id}`);
+    let fetched = await db.get(`prefix_${message.guild.id}`);
     let g = [1, 2, 3, 4, null];
     if (fetched === null) {
       prefix = default_prefix;

@@ -15,7 +15,7 @@ module.exports = {
     let timeout = 86400000;
     let amount = 200;
 
-    let daily = await db.fetch(`daily_${user.id}`);
+    let daily = await db.get(`daily_${user.id}`);
 
     if (daily !== null && timeout - (Date.now() - daily) > 0) {
       let time = ms(timeout - (Date.now() - daily));

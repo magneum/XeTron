@@ -14,9 +14,9 @@ module.exports = {
   run: async (bot, message, args) => {
     let user = message.author;
 
-    let bal = db.fetch(`money_${user.id}`);
+    let bal = db.get(`money_${user.id}`);
 
-    let fish = await db.fetch(`fish_${user.id}`);
+    let fish = await db.get(`fish_${user.id}`);
     if (!args[0]) {
       if (bal === null) bal = 0;
 
@@ -33,7 +33,7 @@ module.exports = {
       const worth = randomRange(fishh.min, fishh.max);
 
       let timeout = 1800000;
-      let fishtime = await db.fetch(`fishtime_${user.id}`);
+      let fishtime = await db.get(`fishtime_${user.id}`);
 
       if (fishtime !== null && timeout - (Date.now() - fishtime) > 0) {
         let time = ms(timeout - (Date.now() - fishtime));

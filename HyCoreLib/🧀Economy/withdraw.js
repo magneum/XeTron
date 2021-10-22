@@ -11,10 +11,10 @@ module.exports = {
   run: async (bot, message, args) => {
     let user = message.author;
 
-    let member2 = db.fetch(`bank_${user.id}`);
+    let member2 = db.get(`bank_${user.id}`);
 
     if (args.join(" ").toLocaleLowerCase() == "all") {
-      let money = await db.fetch(`bank_${user.id}`);
+      let money = await db.get(`bank_${user.id}`);
       let embed = new MessageEmbed()
         .setColor("GREEN")
         .setDescription(`❌**You Do Not Have Any Money To Withdraw!**`);
