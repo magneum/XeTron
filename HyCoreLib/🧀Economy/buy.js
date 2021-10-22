@@ -28,7 +28,7 @@ module.exports = {
     let fetched = await db.get(`prefix_${message.guild.id}`);
 
     if (fetched === null) {
-      prefix = default_prefix;
+      prefix = process.env.prefix;
     } else {
       prefix = fetched;
     }
