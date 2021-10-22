@@ -12,11 +12,11 @@ if (Hyde < 13) {
 `𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..`;
 // =============================================================================
 module.exports = (client, message) => {
-  let PreHyCore = db.get(`prefix_${message.guild.id}`);
-  if (PreHyCore === null) {
-    PreHyCore = process.env.PreHyCore;
+  let prefix = db.get(`prefix_${message.guild.id}`);
+  if (prefix === null) {
+    prefix = process.env.prefix;
   }
-  if (PreHyCore.length > 1) {
+  if (prefix.length > 1) {
     client.user.setStatus("online");
     var activities = [
         `hycore`,
@@ -32,7 +32,7 @@ module.exports = (client, message) => {
     setInterval(
       () =>
         client.user.setActivity(
-          `🍯${PreHyCore} ${activities[i++ % activities.length]}  |😚`,
+          `🍯${prefix} ${activities[i++ % activities.length]}  |😚`,
           {
             type: "WATCHING",
           }
@@ -55,7 +55,7 @@ module.exports = (client, message) => {
     setInterval(
       () =>
         client.user.setActivity(
-          `🍯${PreHyCore}${activities[i++ % activities.length]} |😚`,
+          `🍯${prefix}${activities[i++ % activities.length]} |😚`,
           {
             type: "WATCHING",
           }
@@ -66,9 +66,9 @@ module.exports = (client, message) => {
 
   if (!message.guild) return;
   if (message.author.bot) return;
-  if (!message.content.startsWith(PreHyCore)) return;
+  if (!message.content.startsWith(prefix)) return;
   if (!message.member) message.member = message.guild.fetchMember(message);
-  const args = message.content.slice(PreHyCore.length).trim().split(/ +/g);
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const cmd = args.shift().toLowerCase();
   if (cmd.length === 0) return;
   let command = client.commands.get(cmd);

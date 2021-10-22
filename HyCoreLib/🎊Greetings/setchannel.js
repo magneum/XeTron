@@ -15,7 +15,7 @@ if (Hyde < 13) {
 // =============================================================================
 module.exports = {
   name: "setchannel",
-  category: "Greetings",
+  category: "🎊Greetings",
   aliases: [],
   description: "Returns latency and API ping",
   run: async (client, message, args) => {
