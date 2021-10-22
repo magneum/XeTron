@@ -5,7 +5,15 @@ const inviteRegex =
   /(https?:\/\/)?(www\.|canary\.|ptb\.)?discord(\.gg|(app)?\.com\/invite|\.me)\/([^ ]+)\/?/gi;
 const botInvRegex =
   /(https?:\/\/)?(www\.|canary\.|ptb\.)?discord(app)\.com\/(api\/)?oauth2\/authorize\?([^ ]+)\/?/gi;
-
+const Hyde = process.versions.node.split(".")[0];
+if (Hyde < 12) {
+  throw new Error("Requires Node 12 (or higher)");
+}
+if (Hyde < 13) {
+  require("dotenv").config();
+} else if (Hyde > 13) {
+  require("dotenv").config({ path: "src/.env" });
+}
 module.exports = {
   getMember(message, toFind = "") {
     toFind = toFind.toLowerCase();

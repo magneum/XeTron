@@ -1,4 +1,12 @@
-require("dotenv").config({ path: "src/.env" });
+const Hyde = process.versions.node.split(".")[0];
+if (Hyde < 12) {
+  throw new Error("Requires Node 12 (or higher)");
+}
+if (Hyde < 13) {
+  require("dotenv").config();
+} else if (Hyde > 13) {
+  require("dotenv").config({ path: "src/.env" });
+}
 const { MessageEmbed } = require("discord.js");
 const db = require("quick.db");
 

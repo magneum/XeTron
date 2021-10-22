@@ -2,12 +2,20 @@
 `𝐇𝐲𝐜𝐨𝐫𝐞 𝐢𝐬 𝐚 𝐝𝐢𝐬𝐜𝐨𝐫𝐝 𝐌𝐮𝐥𝐭𝐢𝐩𝐮𝐫𝐩𝐨𝐬𝐞 𝐛𝐨𝐭 𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐝𝐢𝐬𝐜𝐨𝐫𝐝.𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟓𝟎+𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬..`;
 // =============================================================================
 console.clear();
+const Hyde = process.versions.node.split(".")[0];
+if (Hyde < 12) {
+  throw new Error("Requires Node 12 (or higher)");
+}
+if (Hyde < 13) {
+  require("dotenv").config();
+} else if (Hyde > 13) {
+  require("dotenv").config({ path: "src/.env" });
+}
 const fs = require("fs");
 const ascii = require("ascii-table");
+const { readdirSync } = require("fs");
 let Table = new ascii("HyCore📚Library");
 Table.setHeading("Command", "Load status");
-const { readdirSync } = require("fs");
-require("dotenv").config({ path: "src/.env" });
 const Disbut = require("discord-buttons");
 const Discord = require("discord.js");
 const client = new Discord.Client({});
