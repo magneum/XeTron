@@ -4,7 +4,7 @@ const db = require("quick.db");
 module.exports = {
   name: "balance",
   aliases: ["bal"],
-  category: "economy",
+  category: "🧀Economy",
   description: "Shows Current Balance",
   usage: "[username | nickname | mention | ID](optional)",
   accessableby: "everyone",

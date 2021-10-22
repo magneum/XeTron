@@ -4,7 +4,7 @@ const db = require("quick.db");
 module.exports = {
   name: "removemoney",
   aliases: ["rm"],
-  category: "economy",
+  category: "🧀Economy",
   description: "Removes money from a user",
   usage: "[ mention | ID]",
   accessableby: "Administrator, Owner",

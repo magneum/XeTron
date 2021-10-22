@@ -7,7 +7,7 @@ const JworkR = Jwork[Math.floor(Math.random() * Jwork.length)];
 module.exports = {
   name: "work",
   aliases: ["wr"],
-  category: "economy",
+  category: "🧀Economy",
   description: "Work to Earn Money",
   usage: " ",
   accessableby: "everyone",

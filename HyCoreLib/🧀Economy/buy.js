@@ -5,7 +5,7 @@ const db = require("quick.db");
 module.exports = {
   name: "buy",
   noalias: [""],
-  category: "economy",
+  category: "🧀Economy",
   description: "buys items",
   usage: "[item]",
   accessableby: "everyone",

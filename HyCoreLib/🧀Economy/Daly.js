@@ -3,37 +3,38 @@ const db = require("quick.db");
 const ms = require("parse-ms");
 
 module.exports = {
-  name: "coins-system",
-  aliases: ["week"],
-  category: "economy",
-  description: "Gives You 5000 per Day",
+  name: "daily",
+  aliases: ["coins-system"],
+  category: "🧀Economy",
+  description: "Gives You 200 per day",
   usage: " ",
   accessableby: "everyone",
   run: async (bot, message, args) => {
     let user = message.author;
-    let timeout = 604800000;
-    let amount = 5000;
 
-    let weekly = await db.fetch(`weekly_${user.id}`);
+    let timeout = 86400000;
+    let amount = 200;
 
-    if (weekly !== null && timeout - (Date.now() - weekly) > 0) {
-      let time = ms(timeout - (Date.now() - weekly));
+    let daily = await db.fetch(`daily_${user.id}`);
+
+    if (daily !== null && timeout - (Date.now() - daily) > 0) {
+      let time = ms(timeout - (Date.now() - daily));
 
       let timeEmbed = new MessageEmbed()
         .setColor("GREEN")
         .setDescription(
-          `❌ You have already collected your weekly reward\n\nCollect it again in ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s `
+          `❌ You've already collected your daily reward\n\nCollect it again in ${time.hours}h ${time.minutes}m ${time.seconds}s `
         );
       message.channel.send(timeEmbed);
     } else {
       let moneyEmbed = new MessageEmbed()
         .setColor("GREEN")
         .setDescription(
-          `✅ You've collected your weekly reward of ${amount} coins`
+          `✅ You've collected your daily reward of ${amount} coins`
         );
       message.channel.send(moneyEmbed);
       db.add(`money_${user.id}`, amount);
-      db.set(`weekly_${user.id}`, Date.now());
+      db.set(`daily_${user.id}`, Date.now());
     }
   },
 };

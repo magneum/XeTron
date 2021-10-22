@@ -4,7 +4,7 @@ const db = require("quick.db");
 module.exports = {
   name: "leaderboard",
   aliases: ["lb"],
-  category: "economy",
+  category: "🧀Economy",
   description: "Shows Server's Top 10 Users of Economy Leaderboard",
   usage: " ",
   accessableby: "everyone",

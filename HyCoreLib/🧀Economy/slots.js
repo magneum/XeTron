@@ -5,7 +5,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "slots",
   aliases: ["sl"],
-  category: "economy",
+  category: "🧀Economy",
   description: "Slot game | 9x - rare | 3x - common",
   usage: "<amount>",
   accessableby: "",

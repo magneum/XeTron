@@ -5,7 +5,7 @@ const db = require("quick.db");
 module.exports = {
   name: "roulette",
   aliases: ["roul"],
-  category: "economy",
+  category: "🧀Economy",
   description: "Bet a colour to win or lose",
   usage: "[colour]<amount>",
   accessableby: "everyone",

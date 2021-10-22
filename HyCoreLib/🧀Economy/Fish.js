@@ -7,7 +7,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "fish",
   aliases: ["catchfish"],
-  category: "economy",
+  category: "🧀Economy",
   description: "Catch A Fish From A Vast Ocean",
   usage: "[list | rewards] (optional)",
   acessableby: "everyone",
