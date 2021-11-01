@@ -3,11 +3,7 @@
 "🐙============================================================================================================================<⚡>";
 "🐙"
 "🐙"
-require("dotenv").config();
-var path = require("path");
-const simplydjs = require("simply-djs")
-const XeTron_AntiLink_Row = require("../../xᴇᴛʀᴏɴ_ᴅʙ_ᴇɴɢɪɴᴇꜱ/guildData/antilink");
-const { MessageAttachment, MessageEmbed, MessageActionRow, MessageSelectMenu } = require("discord.js");
+const Discord = require("discord.js")
 module.exports = {
   name: "embed",
   description: "Send Messages in embed form",
@@ -15,21 +11,38 @@ module.exports = {
   run: async (client, message, args) => {
     let msg = args.join(" ");
     if (!msg) {
-      await message.react("❌");
+      // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+      const { PokeList } = require("../../pokelist");
+      var path = require("path");
+      let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
+      console.log(poke);
       var scriptName = path.basename(__filename);
       var str = scriptName;
-      var newScpt = str.slice(0, -3);
+      var newScpt = str.slice(0, -3).toUpperCase();
+      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${message.client.prefix
+        }${newScpt.toLowerCase()} <msg>`;
+      const cyanArea = `💡${newScpt} Details:\n\nSend Messages in embed form`;
+      require("dotenv").config();
+      await message.react("❌");
       return await message.reply({
-        embeds: [new MessageEmbed().setTimestamp()
-          .setColor(process.env.NaNKol)
-          .setAuthor("⚡𝐗𝐞𝐓𝐫𝐨𝐧⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setDescription("```diff\n-😥Please Check Below To Find What Went Wrong!\n```")
-          .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({ dynamic: true }))],
-        components: [new MessageActionRow().addComponents(new MessageSelectMenu()
-          .setCustomId(`XɛTrση_${newScpt}`)
-          .setPlaceholder(`${newScpt.toUpperCase()}⚠️error in usage`)
-          .addOptions([{ label: "Error", description: "Know The Error!", value: `error${newScpt}`, emoji: "⭕" },
-          { label: "Usage", description: "Learn Proper Usage!", value: `usage${newScpt}`, emoji: "💡" }]))],
+        embeds: [
+          new Discord.MessageEmbed()
+            .setTimestamp()
+            .setURL("https://github.com/krakinz")
+            .setColor(process.env.redArea || "#B33F40")
+            .setTitle(`\`\`\`${newScpt} Command Helper\`\`\``)
+            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+            .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+            .setFooter(
+              `👈🏽Requested by ${message.author.username}`,
+              message.author.avatarURL({ dynamic: true })
+            ).setDescription(`\`\`\`diff
+${redArea}\`\`\`
+
+\`\`\`fix
+${cyanArea}
+\`\`\``),
+        ],
       });
     }
     message.reply({

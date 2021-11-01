@@ -1,5 +1,9 @@
 {
   "XeTronGen": "Tɾσɳ☆b.k8d9✭",
+  "engines": {
+    "node": ">=16.6.0",
+    "npm": ">=7.20.0"
+  },
   "scripts": {
     "start": "node ☆XɛTrση✭.js"
   },
