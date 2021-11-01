@@ -8,7 +8,7 @@ module.exports = {
   name: "biden",
   permissions: ["SEND_MESSAGES"],
   cooldown: 3,
-  description: "Get a custom clyde message!",
+  description: "Get a custom Tweet from Biden!",
   run: async (client, message, args) => {
     if (!args[0]) {
       // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -22,7 +22,7 @@ module.exports = {
       const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${
         message.client.prefix
       }${newScpt.toLowerCase()} <text>`;
-      const cyanArea = `💡${newScpt} Details:\n\nMake Biden Tweet.`;
+      const cyanArea = `💡${newScpt} Details:\n\nGet a custom Tweet from Biden!`;
       require("dotenv").config();
       await message.react("❌");
       return await message.reply({

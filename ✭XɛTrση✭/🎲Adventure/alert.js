@@ -8,7 +8,7 @@ module.exports = {
   name: "alert",
   permissions: ["SEND_MESSAGES"],
   cooldown: 3,
-  description: "Get a custom clyde message!",
+  description: "Get an Alert message!",
   run: async (client, message, args) => {
     if (!args[0]) {
       // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -22,7 +22,7 @@ module.exports = {
       const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${
         message.client.prefix
       }${newScpt.toLowerCase()} <txt>`;
-      const cyanArea = `💡${newScpt} Details:\n\nGet a custom clyde message!`;
+      const cyanArea = `💡${newScpt} Details:\n\nGet an Alert message!`;
       require("dotenv").config();
       await message.react("❌");
       return await message.reply({
