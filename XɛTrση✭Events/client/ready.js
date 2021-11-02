@@ -10,11 +10,12 @@ module.exports = (XɛTrση) => {
   XɛTrση.user.setPresence({
     status: "online"
   });
-  var activities = ["❓help", "⚡xetron", "🤖servers", "🥳members", "💖join", "💔leave",
+  var activities = ["❓help", "⚡xetron", "🐙servers", "🥳members", "💖join", "💔leave",
       "🔐moderation", "🐍games", "🔥anime", "⚠️everything", "📜update", "🔞nsfw"
     ],
     i = 0;
-  setInterval(() => XɛTrση.user.setActivity(`⚡${activities[i++ % activities.length]}`, {
+  activities = activities.toUpperCase()
+  setInterval(() => XɛTrση.user.setActivity(`⮞ ${activities[i++ % activities.length]} ⧪`, {
     type: "WATCHING"
   }), 2000);
 
