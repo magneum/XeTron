@@ -4,6 +4,13 @@
 "🐙";
 "🐙";
 const Discord = module.require("discord.js");
+const { PokeList } = require("../../pokelist");
+var path = require("path");
+let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
+console.log(poke);
+var scriptName = path.basename(__filename);
+var str = scriptName;
+var newScpt = str.slice(0, -3).toUpperCase();
 module.exports = {
   cooldown: 5,
   name: "emojiid",
@@ -13,16 +20,8 @@ module.exports = {
     const emoji = message.guild.emojis.cache.find((r) => r.name === name);
     if (!name) {
       // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-      const { PokeList } = require("../../pokelist");
-      var path = require("path");
-      let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
-      console.log(poke);
-      var scriptName = path.basename(__filename);
-      var str = scriptName;
-      var newScpt = str.slice(0, -3).toUpperCase();
-      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${
-        message.client.prefix
-      }${newScpt.toLowerCase()} <emoji name>`;
+      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${message.client.prefix
+        }${newScpt.toLowerCase()} <emoji name>`;
       const cyanArea = `💡${newScpt} Details:
 This Command will Get ID of any emoji`;
       require("dotenv").config();

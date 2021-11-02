@@ -5,6 +5,13 @@
 "🐙";
 const Discord = require("discord.js");
 const prefixModel = require("../../XɛTrση✭Database/setprefix");
+const { PokeList } = require("../../pokelist");
+var path = require("path");
+let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
+console.log(poke);
+var scriptName = path.basename(__filename);
+var str = scriptName;
+var newScpt = str.slice(0, -3).toUpperCase();
 module.exports = {
   cooldown: 5,
   name: "setprefix",
@@ -14,16 +21,8 @@ module.exports = {
     const data = await prefixModel.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
     if (!args[0] || args[0].length > 5) {
       // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-      const { PokeList } = require("../../pokelist");
-      var path = require("path");
-      let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
-      console.log(poke);
-      var scriptName = path.basename(__filename);
-      var str = scriptName;
-      var newScpt = str.slice(0, -3).toUpperCase();
-      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${
-        message.client.prefix
-      }${newScpt.toLowerCase()} <new prefix>`;
+      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${message.client.prefix
+        }${newScpt.toLowerCase()} <new prefix>`;
       const cyanArea = `💡${newScpt} Details:
 Set the prefix <per server>!
 And Rememver that Your new prefix must be under 5 characters!`;
@@ -51,13 +50,6 @@ ${cyanArea}
       });
     }
     if (data) {
-      const { PokeList } = require("../../pokelist");
-      var path = require("path");
-      let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
-      console.log(poke);
-      var scriptName = path.basename(__filename);
-      var str = scriptName;
-      var newScpt = str.slice(0, -3).toUpperCase();
       await prefixModel.findOneAndRemove({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
       message.reply({
         embeds: [
@@ -82,13 +74,6 @@ ${cyanArea}
       });
       newData.save();
     } else if (!data) {
-      const { PokeList } = require("../../pokelist");
-      var path = require("path");
-      let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
-      console.log(poke);
-      var scriptName = path.basename(__filename);
-      var str = scriptName;
-      var newScpt = str.slice(0, -3).toUpperCase();
       message.reply({
         embeds: [
           new Discord.MessageEmbed()

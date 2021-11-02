@@ -4,6 +4,13 @@
 "🐙";
 "🐙";
 const Discord = require("discord.js");
+const { PokeList } = require("../../pokelist");
+var path = require("path");
+let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
+console.log(poke);
+var scriptName = path.basename(__filename);
+var str = scriptName;
+var newScpt = str.slice(0, -3).toUpperCase();
 module.exports = {
   cooldown: 5,
   name: "wiki",
@@ -14,16 +21,8 @@ module.exports = {
     const msg = args.join(" ");
     if (!msg) {
       // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-      const { PokeList } = require("../../pokelist");
-      var path = require("path");
-      let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
-      console.log(poke);
-      var scriptName = path.basename(__filename);
-      var str = scriptName;
-      var newScpt = str.slice(0, -3).toUpperCase();
-      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage !!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${
-        message.client.prefix
-      }${newScpt.toLowerCase()} <text to search>`;
+      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage !!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${message.client.prefix
+        }${newScpt.toLowerCase()} <text to search>`;
       const cyanArea = `💡${newScpt} Details:\n\nGet Search Results from Wikipedia.`;
       require("dotenv").config();
       await message.react("❌");

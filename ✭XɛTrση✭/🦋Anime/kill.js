@@ -6,23 +6,22 @@
 require("dotenv").config();
 const { Anime } = require("djs-anime");
 const Discord = require("discord.js");
+const { PokeList } = require("../../pokelist");
+var path = require("path");
+let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
+console.log(poke);
+var scriptName = path.basename(__filename);
+var str = scriptName;
+var newScpt = str.slice(0, -3).toUpperCase();
 module.exports = {
   cooldown: 5,
   name: "kill",
   run: async (client, message) => {
     const Hit = message.mentions.members.first();
     if (!Hit) {
-      `❌""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""❌`;
-      const { PokeList } = require("../../pokelist");
-      var path = require("path");
-      let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
-      console.log(poke);
-      var scriptName = path.basename(__filename);
-      var str = scriptName;
-      var newScpt = str.slice(0, -3).toUpperCase();
-      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage !!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${
-        message.client.prefix
-      }${newScpt.toLowerCase()} <on|off>`;
+      // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage !!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${message.client.prefix
+        }${newScpt.toLowerCase()} <on|off>`;
       const cyanArea = `💡${newScpt} Details:\n\nIs he dead?`;
       require("dotenv").config();
       await message.react("❌");

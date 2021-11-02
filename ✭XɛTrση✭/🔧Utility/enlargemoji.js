@@ -5,6 +5,13 @@
 "🐙";
 const Discord = require("discord.js");
 const { parse } = require("twemoji-parser");
+const { PokeList } = require("../../pokelist");
+var path = require("path");
+let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
+console.log(poke);
+var scriptName = path.basename(__filename);
+var str = scriptName;
+var newScpt = str.slice(0, -3).toUpperCase();
 const Color = `#ffffff`;
 module.exports = {
   cooldown: 5,
@@ -17,16 +24,8 @@ module.exports = {
     const emoji = args[0];
     if (!emoji) {
       // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-      const { PokeList } = require("../../pokelist");
-      var path = require("path");
-      let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
-      console.log(poke);
-      var scriptName = path.basename(__filename);
-      var str = scriptName;
-      var newScpt = str.slice(0, -3).toUpperCase();
-      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage !!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${
-        message.client.prefix
-      }${newScpt.toLowerCase()} <Emoji>`;
+      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage !!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${message.client.prefix
+        }${newScpt.toLowerCase()} <Emoji>`;
       const cyanArea = `💡${newScpt} Details:\n\nConverting Server emoji to PNG/GIF!`;
       require("dotenv").config();
       await message.react("❌");
@@ -55,9 +54,8 @@ ${cyanArea}
     let customemoji = Discord.Util.parseEmoji(emoji);
 
     if (customemoji.id) {
-      const Link = `https://cdn.discordapp.com/emojis/${customemoji.id}.${
-        customemoji.animated ? "gif" : "png"
-      }`;
+      const Link = `https://cdn.discordapp.com/emojis/${customemoji.id}.${customemoji.animated ? "gif" : "png"
+        }`;
 
       const Added = new Discord.MessageEmbed()
         .setAuthor(`Enlarged Emoji`, authoravatar)

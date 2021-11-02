@@ -7,6 +7,13 @@ require("dotenv").config();
 const client = require("nekos.life");
 const Discord = require("discord.js");
 const neko = new client();
+const { PokeList } = require("../../pokelist");
+var path = require("path");
+let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
+console.log(poke);
+var scriptName = path.basename(__filename);
+var str = scriptName;
+var newScpt = str.slice(0, -3).toUpperCase();
 module.exports = {
   cooldown: 5,
   name: "feetgif",
@@ -16,16 +23,8 @@ module.exports = {
     var errMessage = "This is not an NSFW Channel";
     if (!message.channel.nsfw) {
       `❌""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""❌`;
-      const { PokeList } = require("../../pokelist");
-      var path = require("path");
-      let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
-      console.log(poke);
-      var scriptName = path.basename(__filename);
-      var str = scriptName;
-      var newScpt = str.slice(0, -3).toUpperCase();
-      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Channel !!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${
-        message.client.prefix
-      }${newScpt.toLowerCase()} ❗(𝗜𝗻𝘀𝗶𝗱𝗲 𝗼𝗻𝗹𝘆 𝗡𝗦𝗙𝗪👅𝗖𝗵𝗮𝗻𝗻𝗲𝗹!)`;
+      const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Channel !!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${message.client.prefix
+        }${newScpt.toLowerCase()} ❗(𝗜𝗻𝘀𝗶𝗱𝗲 𝗼𝗻𝗹𝘆 𝗡𝗦𝗙𝗪👅𝗖𝗵𝗮𝗻𝗻𝗲𝗹!)`;
       const cyanArea = `💡${newScpt} Details:\n\nSends ${newScpt} nsfw pics`;
       require("dotenv").config();
       await message.react("❌");

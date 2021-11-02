@@ -85,7 +85,6 @@ XɛTrση.on('guildCreate', (guild) => {
 });
 
 
-
 function loadEvents(XɛTrση) {
   const cooldowns = new Collection();
   XɛTrση.on("error", console.error);
