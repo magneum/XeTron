@@ -6,23 +6,27 @@
 const chalk = require("chalk");
 const mongoose = require("mongoose");
 require("dotenv").config();
-module.exports = (client) => {
-  client.user.setPresence({
+module.exports = (XɛTrση) => {
+  XɛTrση.user.setPresence({
     status: "online"
   });
-  client.user.setActivity("Hello", {
-    type: "STREAMING"
-  });
+  var activities = ["❓help", "⚡xetron", "🤖servers", "🥳members", "💖join", "💔leave",
+      "🔐moderation", "🐍games", "🔥anime", "⚠️everything", "📜update", "🔞nsfw"
+    ],
+    i = 0;
+  setInterval(() => XɛTrση.user.setActivity(`⚡${activities[i++ % activities.length]}`, {
+    type: "WATCHING"
+  }), 2000);
 
   let allMembers = new Set();
-  client.guilds.cache.forEach((guild) => {
+  XɛTrση.guilds.cache.forEach((guild) => {
     guild.members.cache.forEach((member) => {
       allMembers.add(member.user.id);
     });
   });
 
   let allChannels = new Set();
-  client.guilds.cache.forEach((guild) => {
+  XɛTrση.guilds.cache.forEach((guild) => {
     guild.channels.cache.forEach((channel) => {
       allChannels.add(channel.id);
     });
@@ -30,7 +34,7 @@ module.exports = (client) => {
 
   console.log(
     chalk.bgMagentaBright.black(
-      ` ${client.guilds.cache.size}servers ${client.channels.cache.size}channels ${allMembers.size}members`
+      ` ${XɛTrση.guilds.cache.size}servers ${XɛTrση.channels.cache.size}channels ${allMembers.size}members`
     )
   );
 
@@ -44,14 +48,14 @@ module.exports = (client) => {
     .then(
       console.log(
         chalk.bgGreenBright.black(
-          ` ${client.user.username} Trying to connect to Database`
+          ` ${XɛTrση.user.username} Trying to connect to Database`
         )
       )
     )
     .catch((err) =>
       console.log(
         chalk.bgRedBright.black(
-          ` ${client.user.username} Database Error\n${err} `
+          ` ${XɛTrση.user.username} Database Error\n${err} `
         )
       )
     );
