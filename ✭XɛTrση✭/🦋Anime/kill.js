@@ -7,6 +7,7 @@ require("dotenv").config();
 const { Anime } = require("djs-anime");
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "kill",
   run: async (client, message) => {
     const Hit = message.mentions.members.first();

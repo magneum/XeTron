@@ -7,6 +7,7 @@ require("dotenv").config();
 const hmtai = require("hmtai");
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "creampie",
   aliases: [],
   category: "nsfw",

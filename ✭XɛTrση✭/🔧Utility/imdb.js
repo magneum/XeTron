@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const imdb = require("imdb-api");
 module.exports = {
+  cooldown: 5,
   name: "imdb",
   description: "Get the information about series and movies",
   botPerms: ["EMBED_LINKS"],

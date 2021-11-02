@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "clyde",
   description: "Get a custom clyde message!",
   botPerms: ["ATTACH_FILES"],

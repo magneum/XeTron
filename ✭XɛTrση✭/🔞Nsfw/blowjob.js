@@ -7,6 +7,7 @@ require("dotenv").config();
 const Discord = require("discord.js");
 const got = require("got");
 module.exports = {
+  cooldown: 5,
   name: "blowjob",
   category: "nsfw",
   description: "Sends blowjob pics",

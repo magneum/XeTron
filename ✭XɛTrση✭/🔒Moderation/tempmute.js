@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const ms = require("ms");
 module.exports = {
+  cooldown: 5,
   name: "tempmute",
   category: "info",
   description: "Returns latency and API ping",

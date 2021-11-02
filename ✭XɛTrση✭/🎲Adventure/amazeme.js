@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const got = require("got");
 module.exports = {
+  cooldown: 5,
   name: "amazeme",
   aliases: [],
   category: "Fun",

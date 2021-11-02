@@ -8,6 +8,7 @@ const Discord = module.require("discord.js");
 const NSFW = require("discord-nsfw");
 const nsfw = new NSFW();
 module.exports = {
+  cooldown: 5,
   name: "porngif",
   category: "nsfw",
   description: "Sends porn gifs.",

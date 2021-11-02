@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const translate = require("@iamtraction/google-translate");
 module.exports = {
+  cooldown: 5,
   name: "translate",
   description: "Translates the given message.",
   run: async (client, message, args) => {

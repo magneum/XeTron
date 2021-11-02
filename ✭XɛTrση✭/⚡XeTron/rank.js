@@ -5,6 +5,7 @@ var Users = require("../../XɛTrση✭Database/xp");
 var Cards = require("../../XɛTrση✭Database/card");
 
 module.exports = {
+  cooldown: 5,
   name: "rank",
   aliases: ["level", "card"],
   description: "Show you your XP Card.",

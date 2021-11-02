@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "pp",
   description: "Another fun Command",
   botPerms: ["EMBED_LINKS"],

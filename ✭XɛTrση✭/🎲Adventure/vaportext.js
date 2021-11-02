@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "vaportext",
   description: "Fun Command",
   run: async (client, message, args) => {

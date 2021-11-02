@@ -8,6 +8,7 @@ const client = require("nekos.life");
 const Discord = require("discord.js");
 const neko = new client();
 module.exports = {
+  cooldown: 5,
   name: "feetgif",
   category: "nsfw",
   usage: "[command]",

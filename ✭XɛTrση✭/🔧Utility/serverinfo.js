@@ -7,6 +7,7 @@ const Discord = require("discord.js");
 const moment = require("moment");
 require("moment-duration-format");
 module.exports = {
+  cooldown: 5,
   name: "serverinfo",
   category: "utility",
   description: "Shows info about a server",

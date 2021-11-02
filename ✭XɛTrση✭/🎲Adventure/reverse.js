@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "reverse",
   description: "Reverse the text entered",
   run: async (client, message, args) => {

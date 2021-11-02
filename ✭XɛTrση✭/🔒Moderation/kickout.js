@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "kickout",
   category: "moderation",
   description: "Kick anyone with one shot xD",

@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const moment = require("moment");
 module.exports = {
+  cooldown: 5,
   name: "userinfo",
   description: "Get info about your account or mentiobned user's account!",
   aliases: ["ui"],

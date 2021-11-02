@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "clap",
   description: "Add clap emoji between each word",
   run: async (client, message, args) => {

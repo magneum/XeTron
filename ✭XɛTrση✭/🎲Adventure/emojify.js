@@ -25,6 +25,7 @@ const mapping = {
   mapping[c] = mapping[c.toUpperCase()] = ` :regional_indicator_${c}:`;
 });
 module.exports = {
+  cooldown: 5,
   name: "emojify",
   aliases: [],
   category: "Fun",

@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const ms = require("ms");
 module.exports = {
+  cooldown: 5,
   name: "mute",
   description: "Mutes the specified user.",
   usage: "Mute @user [time] [reason]",

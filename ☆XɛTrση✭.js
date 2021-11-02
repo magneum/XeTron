@@ -16,7 +16,7 @@ const clientEvent = (event) => require(`./XɛTrση✭Events/client/${event}`);
 const otherEvent = (event) => require(`./XɛTrση✭Events/functions/${event}`);
 const { Client, Collection, Intents, MessageEmbed } = require("discord.js");
 const XɛTrση = new Client({
-  allowedMentions: { parse: ["users", "roles"] },
+  allowedMentions: { parse: ["users", "roles", "everyone"] },
   intents: [
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MESSAGES,

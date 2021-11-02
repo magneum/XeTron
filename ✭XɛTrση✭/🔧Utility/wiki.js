@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "wiki",
   description: "Get Search Results from Wikipedia",
   botPerms: ["EMBED_LINKS"],

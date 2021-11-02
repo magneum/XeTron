@@ -5,6 +5,7 @@
 "🐙";
 const Discord = module.require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "suggest",
   description: "Suggest Features for Infinity",
   botPerms: ["EMBED_LINKS"],

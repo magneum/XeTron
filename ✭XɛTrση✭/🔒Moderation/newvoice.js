@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "newvoice",
   description: "Create Voice Channels in your Server",
   userPerms: ["MANAGE_CHANNELS"],

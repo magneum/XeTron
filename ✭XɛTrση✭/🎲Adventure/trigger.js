@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "trigger",
   description: "Put the Triggered Overlay pic over avatars!",
   botPerms: ["ATTTACH_FILES"],

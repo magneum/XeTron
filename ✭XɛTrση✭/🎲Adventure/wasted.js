@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "wasted",
   description: "Put the GTA Wasted pic over avatars!",
   botPerms: ["ATTTACH_FILES"],

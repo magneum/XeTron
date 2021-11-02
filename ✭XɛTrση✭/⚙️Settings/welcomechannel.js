@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const prefixModel = require("../../XɛTrση✭Database/welcome");
 module.exports = {
+  cooldown: 5,
   name: "welcomechannel",
   description: "Change the welcome channel per server!",
   aliases: ["jchannel", "welcome"],

@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const prefixModel = require("../../XɛTrση✭Database/joinmsg");
 module.exports = {
+  cooldown: 5,
   name: "joinmessage",
   description: "Change the welcome message per server!",
   aliases: ["joinmsg", "welcomemsg", "jmsg"],

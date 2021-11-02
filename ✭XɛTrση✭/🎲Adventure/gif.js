@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const giphy = require("giphy-api")("W8g6R14C0hpH6ZMon9HV9FTqKs4o4rCk");
 module.exports = {
+  cooldown: 5,
   name: "gif",
   description: "Get gifs based on your search",
   botPerms: ["EMBED_LINKS", "MANAGE_MESSAGES"],

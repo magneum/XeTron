@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const flip = require("flip-text");
 module.exports = {
+  cooldown: 5,
   name: "fliptext",
   description: "Flip some text",
   usage: "fliptext <text>",

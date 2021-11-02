@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const simplydjs = require("simply-djs");
 module.exports = {
+  cooldown: 5,
   name: "calculator",
   description: "calculates.",
   run: async (client, message, args) => {

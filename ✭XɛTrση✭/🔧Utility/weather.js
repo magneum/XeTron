@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "weather",
   description: "Shows Weather for the provided place",
   botPerms: ["EMBED_LINKS"],

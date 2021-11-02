@@ -6,10 +6,16 @@
 const prefixModel = require("../../XɛTrση✭Database/setprefix");
 const Users = require("../../XɛTrση✭Database/xp");
 const Cards = require("../../XɛTrση✭Database/card");
-const {lvlupimg } = require('../../Cards')
+const { lvlupimg } = require('../../Cards')
 const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const { Collection } = require("discord.js")
 module.exports = async (message, cooldowns) => {
+    if (message.author.bot) {
+        return;
+    }
+    if (!message.guild.me.permissionsIn(message.channel).has("SEND_MESSAGES")) {
+        return;
+    }
     let xpAdd = Math.ceil(Math.random() * 15);
     let messageAdd = +1
     Users.findOne({
@@ -78,11 +84,7 @@ module.exports = async (message, cooldowns) => {
     }
     client.prefix = PREFIX;
 
-    if (message.author.bot) return;
 
-
-    if (!message.guild.me.permissionsIn(message.channel).has("SEND_MESSAGES"))
-        return;
 
     const prefixRegex = new RegExp(
         `^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`
@@ -152,13 +154,6 @@ module.exports = async (message, cooldowns) => {
         return message.reply(command.expectedArgs)
 
     }
-
-
-
-
-
-
-    // cooldowns
     if (!cooldowns.has(command.name)) {
         cooldowns.set(command.name, new Collection());
     }
@@ -172,11 +167,10 @@ module.exports = async (message, cooldowns) => {
 
         if (now < expirationTime) {
             const timeLeft = (expirationTime - now) / 1000;
-            return message.reply(
-                `please wait ${timeLeft.toFixed(
-                    1
-                )} more second(s) before reusing the \`${command.name}\` command.`
-            );
+            return message.reply(`**\`\`\`diff
+-😈Wait ${timeLeft.toFixed(1)}second(s) before using👇🏽‍
++Command: ${command.name} !
+\`\`\`**`)
         }
     }
 

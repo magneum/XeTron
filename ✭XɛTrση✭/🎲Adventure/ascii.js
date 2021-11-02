@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const figlet = require("figlet");
 module.exports = {
+  cooldown: 5,
   name: "ascii",
   aliases: [],
   category: "Fun",

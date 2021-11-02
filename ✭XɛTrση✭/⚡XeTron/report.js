@@ -5,6 +5,7 @@
 "🐙";
 const Discord = module.require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "report",
   description: "Report a bug",
   botPerms: ["EMBED_LINKS"],

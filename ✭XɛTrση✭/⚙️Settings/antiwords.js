@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const antiwordsSchema = require("../../XɛTrση✭Database/antiwords");
 module.exports = {
+  cooldown: 5,
   name: "antiwords",
   userPerms: ["ADMINISTRATOR"],
   description: "Setup AntiWords per server!",

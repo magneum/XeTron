@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const cooldown = new Set();
 module.exports = {
+  cooldown: 5,
   name: "illegal",
   description: "Provide a text to Trump for making it illegal",
   botPerms: ["EMBED_LINKS", "MANAGE_MESSAGES"],

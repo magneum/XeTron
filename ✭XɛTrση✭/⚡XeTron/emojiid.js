@@ -5,6 +5,7 @@
 "🐙";
 const Discord = module.require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "emojiid",
   description: "Get ID of emojis",
   run: async (client, message, args) => {

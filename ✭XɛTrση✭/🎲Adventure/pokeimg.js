@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "pokeimg",
   description: "Get Image of the Mentioned Pokemon",
   botPerms: ["EMBED_LINKS"],

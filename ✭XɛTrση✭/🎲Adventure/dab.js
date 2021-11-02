@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "dab",
   description: "Adds dab emoji after each word",
   botPerms: ["USE_EXTERNAL_EMOJIS"],

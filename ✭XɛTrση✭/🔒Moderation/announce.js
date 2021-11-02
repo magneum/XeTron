@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "announce",
   description: "Make an Announcemnet in your Server",
   userPerms: ["MANAGE_MESSAGES"],

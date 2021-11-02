@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const prefixModel = require("../../XɛTrση✭Database/goodbyechannel");
 module.exports = {
+  cooldown: 5,
   name: "goodbyechannel",
   description: "Change the goodbye channel per server!",
   userPerms: ["MANAGE_CHANNELS"],

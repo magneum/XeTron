@@ -7,6 +7,7 @@ require("dotenv").config();
 const Discord = require("discord.js");
 const malScraper = require("mal-scraper");
 module.exports = {
+  cooldown: 5,
   name: "anime",
   description: "Get info about an anime",
   usage: "[command | Anime]",

@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "roast",
   description: "Roasts a user",
   run: async (client, message, args) => {

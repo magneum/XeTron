@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "servericon",
   description: "Displays the Server Icon",
   botPerms: ["EMBED_LINKS", "MANAGE_MESSAGES"],

@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const prefixModel = require("../../XɛTrση✭Database/leavemessage");
 module.exports = {
+  cooldown: 5,
   name: "leavemessage",
   description: "Change the leave message per server!",
   userPerms: ["MANAGE_CHANNELS"],

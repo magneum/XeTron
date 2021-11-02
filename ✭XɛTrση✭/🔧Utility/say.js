@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "say",
   description: "Make the bot say your message",
   botPerms: ["MANAGE_MESSAGES"],

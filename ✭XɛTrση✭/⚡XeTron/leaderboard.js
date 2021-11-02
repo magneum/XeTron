@@ -3,6 +3,7 @@ var { MessageEmbed } = require("discord.js");
 var Users = require("../../XɛTrση✭Database/xp.js");
 
 module.exports = {
+  cooldown: 5,
   name: "leaderboard",
   description: "Show the top 10 leaderboard!",
   run: async (bot, message, args) => {

@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "avatar",
   description: "Get a  widened avatar of a user",
   botPerms: ["ATTTACH_FILES"],

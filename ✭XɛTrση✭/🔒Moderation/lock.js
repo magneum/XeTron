@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "lock",
   description: "Locks a Channel",
   userPerms: ["MANAGE_CHANNELS"],

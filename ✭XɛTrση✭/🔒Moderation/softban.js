@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "softban",
   description: "Soft Ban a User",
   userPerms: ["BAN_MEMBERS"],

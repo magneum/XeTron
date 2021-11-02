@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "orangetext",
   description: " Colors the Text woth Orange Color",
   run: async (client, message, args) => {

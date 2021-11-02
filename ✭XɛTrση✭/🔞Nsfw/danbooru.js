@@ -7,6 +7,7 @@ require("dotenv").config();
 const Discord = require("discord.js");
 const booru = require("booru");
 module.exports = {
+  cooldown: 5,
   name: "danbooru",
   category: "nsfw",
   description: "Searches danbooru image board",

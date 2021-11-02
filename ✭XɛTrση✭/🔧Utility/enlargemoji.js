@@ -7,6 +7,7 @@ const Discord = require("discord.js");
 const { parse } = require("twemoji-parser");
 const Color = `#ffffff`;
 module.exports = {
+  cooldown: 5,
   name: "enlargemoji",
   category: "fun",
   description: "Converting Server emoji to PNG/GIF!",

@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const prefixModel = require("../../XɛTrση✭Database/setprefix");
 module.exports = {
+  cooldown: 5,
   name: "setprefix",
   description: "Change the prefix per server!",
   userPerms: ["MANAGE_GUILD"],

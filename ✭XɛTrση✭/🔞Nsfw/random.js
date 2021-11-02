@@ -8,6 +8,7 @@ const RandomHub = require("random-hub").RandomHub;
 const hub = new RandomHub();
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "random",
   aliases: [],
   category: "nsfw",

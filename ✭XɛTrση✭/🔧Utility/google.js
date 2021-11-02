@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "google",
   description: "Search anything on google",
   botPerms: ["EMBED_LINKS"],

@@ -5,6 +5,7 @@
 "🐙"
 const Discord = require("discord.js")
 module.exports = {
+  cooldown: 5,
   name: "embed",
   description: "Send Messages in embed form",
   botPerms: ["EMBED_LINKS", "MANAGE_MESSAGES"],

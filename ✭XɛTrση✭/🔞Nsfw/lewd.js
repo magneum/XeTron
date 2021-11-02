@@ -8,6 +8,7 @@ const Discord = module.require("discord.js");
 const NSFW = require("discord-nsfw");
 const nsfw = new NSFW();
 module.exports = {
+  cooldown: 5,
   name: "lewd",
   category: "nsfw",
   description: "Sends lewd pictures.",

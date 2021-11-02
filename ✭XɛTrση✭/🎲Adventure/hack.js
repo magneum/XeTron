@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const ms = module.require("ms");
 module.exports = {
+  cooldown: 5,
   name: "hack",
   description: "Another Fun Command",
   run: async (client, message, args) => {

@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "changemymind",
   description: "Image Manipulation Command",
   botPerms: ["ATTTACH_FILES"],

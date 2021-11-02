@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "delchannel",
   description: "Delete Channels From your Server",
   userPerms: ["MANAGE_CHANNELS"],

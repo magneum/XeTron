@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "ban",
   category: "moderation",
   description: "Ban anyone with one shot whithout knowing anyone xD",

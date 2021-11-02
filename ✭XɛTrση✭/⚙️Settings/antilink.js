@@ -6,6 +6,7 @@
 const Discord = require("discord.js");
 const prefixModel = require("../../XɛTrση✭Database/antilink");
 module.exports = {
+  cooldown: 5,
   name: "antilink",
   description: "Setup antilink per server!",
   userPerms: ["MANAGE_GUILD"],

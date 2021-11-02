@@ -6,6 +6,7 @@
 const channelModel = require("../../XɛTrση✭Database/channelupdate");
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "channelupdate",
   description: "Channel Updates info per server!",
   userPerms: ["MANAGE_GUILD"],

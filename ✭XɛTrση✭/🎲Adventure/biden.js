@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "biden",
   permissions: ["SEND_MESSAGES"],
   cooldown: 3,

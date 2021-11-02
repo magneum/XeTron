@@ -7,6 +7,7 @@ require("dotenv").config();
 const random = require("something-random-on-discord").Random;
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "smooch",
   category: "Fun",
   aliases: [],

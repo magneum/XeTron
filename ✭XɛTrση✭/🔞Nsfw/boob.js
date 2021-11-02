@@ -7,6 +7,7 @@ require("dotenv").config();
 const Discord = module.require("discord.js");
 const fetch = require("node-fetch");
 module.exports = {
+  cooldown: 5,
   name: "boob",
   category: "nsfw",
   description: "Some Boob Pics for you!",

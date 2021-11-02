@@ -5,6 +5,7 @@
 "🐙";
 const Discord = require("discord.js");
 module.exports = {
+  cooldown: 5,
   name: "clear",
   description: "delete the given number of messages",
   userPerms: ["MANAGE_MESSAGES"],
