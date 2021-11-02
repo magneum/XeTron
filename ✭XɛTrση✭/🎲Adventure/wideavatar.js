@@ -17,12 +17,10 @@ module.exports = {
       format: "png",
     });
     message.reply({
-      files: [
-        {
-          attachment: `https://vacefron.nl/api/wide?image=${avatar}`,
-          name: "wideavatar.png",
-        },
-      ],
+      files: [{
+        attachment: `https://vacefron.nl/api/wide?image=${avatar}`,
+        name: "wideavatar.png",
+      }, ],
     });
   },
 };

@@ -4,7 +4,9 @@
 "🐙";
 "🐙";
 const Discord = require("discord.js");
-const { PokeList } = require("../../pokelist");
+const {
+  PokeList
+} = require("../../pokelist");
 var path = require("path");
 let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
 console.log(poke);
@@ -29,21 +31,23 @@ module.exports = {
       return await message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setURL("https://github.com/krakinz")
-            .setColor(process.env.redArea || "#B33F40")
-            .setTitle(`\`\`\`${newScpt} Command Helper\`\`\``)
-            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-            .setAuthor("⚡XΣTЯON⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ).setDescription(`\`\`\`diff
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`\`\`\`${newScpt} Command Helper\`\`\``)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("⚡XΣTЯON⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix
 ${cyanArea}
-\`\`\``),
+\`\`\`**`),
         ],
       });
     }
@@ -55,18 +59,24 @@ ${cyanArea}
     let embed = new Discord.MessageEmbed()
       .setTitle(`<:ann:748176925792665721> New Server Announcement`)
       .setDescription(args.slice(1).join(" "), {
-        allowedMentions: { parse: ["users"] },
+        allowedMentions: {
+          parse: ["users"]
+        },
       })
       .setColor("RANDOM")
       .setFooter(`Announcement by ${message.author.username}`);
-    anchannel.send({ embeds: [embed] });
+    anchannel.send({
+      embeds: [embed]
+    });
 
     let anembed = new Discord.MessageEmbed()
       .setTitle("Done!")
       .setDescription(`Announcement has been sent to ${anchannel}`)
       .setColor("RANDOM");
 
-    message.reply({ embeds: [anembed] });
+    message.reply({
+      embeds: [anembed]
+    });
     message.delete();
   },
 };

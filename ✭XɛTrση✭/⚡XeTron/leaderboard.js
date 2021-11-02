@@ -1,5 +1,7 @@
 const Discord = require("discord.js");
-var { MessageEmbed } = require("discord.js");
+var {
+  MessageEmbed
+} = require("discord.js");
 var Users = require("../../XɛTrση✭Database/xp.js");
 
 module.exports = {
@@ -8,9 +10,11 @@ module.exports = {
   description: "Show the top 10 leaderboard!",
   run: async (bot, message, args) => {
     Users.find({
-      serverID: message.guild.id,
-    })
-      .sort([["xp", "descending"]])
+        serverID: message.guild.id,
+      })
+      .sort([
+        ["xp", "descending"]
+      ])
       .exec((err, res) => {
         if (err) console.log(err);
         let embed = new MessageEmbed()
@@ -60,7 +64,9 @@ module.exports = {
             }
           }
         }
-        message.channel.send({ embeds: [embed] });
+        message.channel.send({
+          embeds: [embed]
+        });
       });
   },
 };

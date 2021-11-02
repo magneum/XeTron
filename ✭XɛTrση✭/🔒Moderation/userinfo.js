@@ -30,9 +30,9 @@ module.exports = {
       mention.roles.cache.get === "" ? "None" : mention.roles.cache.get;
     const usericon = mention.user.avatarURL;
     const mentionPermissions =
-      mention.permissions.toArray() === null
-        ? "None"
-        : mention.permissions.toArray();
+      mention.permissions.toArray() === null ?
+      "None" :
+      mention.permissions.toArray();
     const finalPermissions = [];
     for (const permission in permissions) {
       if (mentionPermissions.includes(permission))
@@ -89,7 +89,9 @@ module.exports = {
       .setFooter(`ID: ${mention.user.id}`, mention.user.avatarURL())
       .setTimestamp()
       .setColor("RANDOM");
-    message.reply({ embeds: [userlol] });
+    message.reply({
+      embeds: [userlol]
+    });
   },
 };
 "🐙";

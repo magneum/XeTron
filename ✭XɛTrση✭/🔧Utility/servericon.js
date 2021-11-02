@@ -20,10 +20,16 @@ module.exports = {
           format: "png",
         })})`
       )
-      .setImage(server.iconURL({ size: 2048, dynamic: true, format: "png" }))
+      .setImage(server.iconURL({
+        size: 2048,
+        dynamic: true,
+        format: "png"
+      }))
       .setColor("RANDOM");
-    message.reply({ embeds: [embed] });
-    
+    message.reply({
+      embeds: [embed]
+    });
+
   },
 };
 "🐙";

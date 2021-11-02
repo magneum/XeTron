@@ -6,7 +6,9 @@
 require("dotenv").config();
 const random = require("something-random-on-discord").Random;
 const Discord = require("discord.js");
-const { PokeList } = require("../../pokelist");
+const {
+  PokeList
+} = require("../../pokelist");
 var path = require("path");
 let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
 console.log(poke);
@@ -33,21 +35,23 @@ module.exports = {
       return await message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setURL("https://github.com/krakinz")
-            .setColor(process.env.redArea || "#B33F40")
-            .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
-            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-            .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ).setDescription(`\`\`\`diff
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix
 ${cyanArea}
-\`\`\``),
+\`\`\`**`),
         ],
       });
     }
@@ -63,14 +67,18 @@ ${cyanArea}
       .setThumbnail("https://i.postimg.cc/4xbGh8D4/HyCore.jpg")
       .setFooter(
         `👈🏽Requested by ${message.author.username}`,
-        message.author.avatarURL({ dynamic: true })
+        message.author.avatarURL({
+          dynamic: true
+        })
       )
       .addFields({
         name: `**\`So Hard Right!\`**`,
         value: `**${message.author.username}** punched **${target.user.username}** so hard that **${target.user.username}** needs to take revenge! (Maybe use *${client.prefix} punch* or *${client.prefix} slap*)`,
         inline: true,
       });
-    return message.reply({ embeds: [DeadlyPunch] });
+    return message.reply({
+      embeds: [DeadlyPunch]
+    });
   },
 };
 ("🐙");

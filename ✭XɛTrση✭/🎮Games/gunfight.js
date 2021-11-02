@@ -5,7 +5,7 @@
 "🐙";
 module.exports = {
 	name: 'gunfight',
-  description: "First one to shoot wins!",
+	description: "First one to shoot wins!",
 	aliases: ['gf'],
 	run: async (client, message, args) => {
 		const opponent = message.mentions.users.first();
@@ -18,34 +18,31 @@ module.exports = {
 			ended2: '_ _     :levitate: :skull_crossbones:      **STOP!**        :point_left: :levitate:',
 		};
 
-		const componentsArray = [
-			{
-				type: 1,
-				components: [
-					{
-						type: 2,
-						label: 'Shoot!',
-						custom_id: 'shoot1',
-						style: 'PRIMARY',
-						disabled: true,
-					},
-					{
-						type: 2,
-						label: '\u200b',
-						custom_id: 'id lol useless',
-						style: 'SECONDARY',
-						disabled: true,
-					},
-					{
-						type: 2,
-						label: 'Shoot!',
-						custom_id: 'shoot2',
-						style: 'DANGER',
-						disabled: true,
-					},
-				],
-			},
-		];
+		const componentsArray = [{
+			type: 1,
+			components: [{
+					type: 2,
+					label: 'Shoot!',
+					custom_id: 'shoot1',
+					style: 'PRIMARY',
+					disabled: true,
+				},
+				{
+					type: 2,
+					label: '\u200b',
+					custom_id: 'id lol useless',
+					style: 'SECONDARY',
+					disabled: true,
+				},
+				{
+					type: 2,
+					label: 'Shoot!',
+					custom_id: 'shoot2',
+					style: 'DANGER',
+					disabled: true,
+				},
+			],
+		}, ];
 
 		const msg = await message.channel.send({
 			content: positions.three,
@@ -80,24 +77,31 @@ module.exports = {
 			return button.user.id == message.author.id || button.user.id == opponent.id;
 		};
 
-		const button = await msg.awaitMessageComponent({ filter: filter, componentType: 'BUTTON', max: 1 });
+		const button = await msg.awaitMessageComponent({
+			filter: filter,
+			componentType: 'BUTTON',
+			max: 1
+		});
 
 		componentsArray[0].components[0].disabled = true;
 		componentsArray[0].components[2].disabled = true;
 
-		if(button.customId === 'shoot1' && button.user.id == message.author.id) {
+		if (button.customId === 'shoot1' && button.user.id == message.author.id) {
 			msg.edit({
 				content: positions.ended1,
 				components: componentsArray,
 			});
-			return button.reply({ content: `<@${message.author.id}> won!` });
-		}
-		else if(button.customId === 'shoot2' && button.user.id == opponent.id) {
+			return button.reply({
+				content: `<@${message.author.id}> won!`
+			});
+		} else if (button.customId === 'shoot2' && button.user.id == opponent.id) {
 			msg.edit({
 				content: positions.ended1,
 				components: componentsArray,
 			});
-			return button.reply({ content: `<@${opponent.id}> won!` });
+			return button.reply({
+				content: `<@${opponent.id}> won!`
+			});
 		}
 	},
 };

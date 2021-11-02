@@ -24,9 +24,15 @@ module.exports = {
           format: "png",
         })})`
       )
-      .setImage(user.avatarURL({ size: 2048, dynamic: true, format: "png" }));
+      .setImage(user.avatarURL({
+        size: 2048,
+        dynamic: true,
+        format: "png"
+      }));
 
-    message.reply({ embeds: [embed] });
+    message.reply({
+      embeds: [embed]
+    });
   },
 };
 "🐙";

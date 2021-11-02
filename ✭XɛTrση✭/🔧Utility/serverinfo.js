@@ -92,7 +92,9 @@ module.exports = {
       .setColor("RANDOM")
       .setTimestamp();
 
-    message.reply({ embeds: [serverembed] });
+    message.reply({
+      embeds: [serverembed]
+    });
   },
 };
 "🐙";

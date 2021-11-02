@@ -1,6 +1,8 @@
 var Discord = require("discord.js");
 var Canvas = require("canvas");
-var { getMember } = require("../../XpMem");
+var {
+  getMember
+} = require("../../XpMem");
 var Users = require("../../XɛTrση✭Database/xp");
 var Cards = require("../../XɛTrση✭Database/card");
 
@@ -13,8 +15,7 @@ module.exports = {
   run: async (bot, message, args) => {
     var canvas = Canvas.createCanvas(840, 300);
     var ctx = canvas.getContext("2d");
-    Cards.findOne(
-      {
+    Cards.findOne({
         did: message.author.id,
       },
       (err, cards) => {
@@ -22,8 +23,7 @@ module.exports = {
           console.log(err);
           return message.reply("An error happened. ```" + err + "```");
         }
-        Users.findOne(
-          {
+        Users.findOne({
             did: message.author.id,
             serverID: message.guild.id,
           },
@@ -75,8 +75,7 @@ module.exports = {
 };
 
 async function GetAvatar(message, ctx) {
-  Users.findOne(
-    {
+  Users.findOne({
       did: message.author.id,
     },
     async (err, users) => {
@@ -97,7 +96,9 @@ async function GetAvatar(message, ctx) {
   ctx.arc(125, 140, 102, 0, Math.PI * 2);
   ctx.stroke();
   var avatar = await Canvas.loadImage(
-    message.author.displayAvatarURL({ format: "png" })
+    message.author.displayAvatarURL({
+      format: "png"
+    })
   );
   ctx.beginPath();
   ctx.arc(125, 140, 100, 0, Math.PI * 2);

@@ -5,7 +5,9 @@
 "🐙";
 const Discord = require("discord.js");
 const ms = require("ms");
-const { PokeList } = require("../../pokelist");
+const {
+  PokeList
+} = require("../../pokelist");
 var path = require("path");
 let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
 console.log(poke);
@@ -42,21 +44,23 @@ module.exports = {
       return await message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setURL("https://github.com/krakinz")
-            .setColor(process.env.redArea || "#B33F40")
-            .setTitle(`\`\`\`${newScpt} Command Helper\`\`\``)
-            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-            .setAuthor("⚡XΣTЯON⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ).setDescription(`\`\`\`diff
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`\`\`\`${newScpt} Command Helper\`\`\``)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("⚡XΣTЯON⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix
 ${cyanArea}
-\`\`\``),
+\`\`\`**`),
         ],
       });
     }
@@ -84,8 +88,12 @@ ${cyanArea}
       .addField("Reason", reason)
       .addField("Moderator:", message.member.displayName)
       .addField("Time", time, true);
-    user.send({ embeds: [mtuembde] });
-    message.reply({ embeds: [mtembde] });
+    user.send({
+      embeds: [mtuembde]
+    });
+    message.reply({
+      embeds: [mtembde]
+    });
     user.roles.add(role);
     setTimeout(function () {
       user.roles.remove(role);

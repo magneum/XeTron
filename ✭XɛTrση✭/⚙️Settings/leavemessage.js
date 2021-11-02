@@ -5,7 +5,9 @@
 "🐙";
 const Discord = require("discord.js");
 const prefixModel = require("../../XɛTrση✭Database/leavemessage");
-const { PokeList } = require("../../pokelist");
+const {
+  PokeList
+} = require("../../pokelist");
 var path = require("path");
 let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
 console.log(poke);
@@ -30,28 +32,34 @@ Set the leave message <per server>!`;
       return await message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setURL("https://github.com/krakinz")
-            .setColor(process.env.redArea || "#B33F40")
-            .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
-            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-            .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ).setDescription(`\`\`\`diff
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix
 ${cyanArea}
-\`\`\``),
+\`\`\`**`),
         ],
       });
     }
     if (text !== "off") {
-      const data = await prefixModel.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
+      const data = await prefixModel.findOne({
+        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+      });
       if (data) {
-        await prefixModel.findOneAndRemove({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
+        await prefixModel.findOneAndRemove({
+          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+        });
         let newData = new prefixModel({
           ByeMsg: args.join(" "),
           xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
@@ -71,7 +79,9 @@ ${cyanArea}
         xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
       });
       if (data2) {
-        await prefixModel.findOneAndRemove({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
+        await prefixModel.findOneAndRemove({
+          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+        });
         return message.reply(`Leave Message has been turned off!`);
       } else if (!data2) {
         return message.reply(`Leave Message isn't setup!`);

@@ -5,7 +5,9 @@
 "🐙";
 const Discord = require("discord.js");
 const prefixModel = require("../../XɛTrση✭Database/setprefix");
-const { PokeList } = require("../../pokelist");
+const {
+  PokeList
+} = require("../../pokelist");
 var path = require("path");
 let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
 console.log(poke);
@@ -18,7 +20,9 @@ module.exports = {
   description: "Change the prefix per server!",
   userPerms: ["MANAGE_GUILD"],
   run: async (client, message, args) => {
-    const data = await prefixModel.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
+    const data = await prefixModel.findOne({
+      xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+    });
     if (!args[0] || args[0].length > 5) {
       // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
       const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${message.client.prefix
@@ -31,41 +35,47 @@ And Rememver that Your new prefix must be under 5 characters!`;
       return await message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setURL("https://github.com/krakinz")
-            .setColor(process.env.redArea || "#B33F40")
-            .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
-            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-            .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ).setDescription(`\`\`\`diff
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix
 ${cyanArea}
-\`\`\``),
+\`\`\`**`),
         ],
       });
     }
     if (data) {
-      await prefixModel.findOneAndRemove({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
+      await prefixModel.findOneAndRemove({
+        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+      });
       message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setURL("https://github.com/krakinz")
-            .setColor(process.env.redArea || "#B33F40")
-            .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
-            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-            .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ).setDescription(`\`\`\`diff
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ).setDescription(`**\`\`\`diff
 +The new prefix is now **\`${args[0]}\`**   
-\`\`\``),
+\`\`\`**`),
         ],
       });
       let newData = new prefixModel({
@@ -77,18 +87,20 @@ ${cyanArea}
       message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setURL("https://github.com/krakinz")
-            .setColor(process.env.redArea || "#B33F40")
-            .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
-            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-            .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ).setDescription(`\`\`\`diff
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ).setDescription(`**\`\`\`diff
 +The new prefix is now **\`${args[0]}\`**     
-\`\`\``),
+\`\`\`**`),
         ],
       });
       let newData = new prefixModel({

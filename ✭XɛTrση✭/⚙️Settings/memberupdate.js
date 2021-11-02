@@ -5,7 +5,9 @@
 "🐙";
 const memberModel = require("../../XɛTrση✭Database/memberupdate");
 const Discord = require("discord.js");
-const { PokeList } = require("../../pokelist");
+const {
+  PokeList
+} = require("../../pokelist");
 var path = require("path");
 let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
 console.log(poke);
@@ -18,7 +20,9 @@ module.exports = {
   description: "Member Updates info per server!",
   userPerms: ["MANAGE_GUILD"],
   run: async (client, message, args) => {
-    const data = await memberModel.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
+    const data = await memberModel.findOne({
+      xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+    });
     if (!args[0] || args[0].length > 18) {
       // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
       const redArea = `❌${poke.toUpperCase()} says 𝐏𝐨𝐤é𝐎𝐩𝐬𝐢𝐞 \n-⧪   Wrong Usage!\n\n🧀𝐔𝐬𝐚𝐠𝐞\n+⧪   ${message.client.prefix
@@ -30,63 +34,71 @@ Set the goodbye channel <per server>!`;
       return await message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setURL("https://github.com/krakinz")
-            .setColor(process.env.redArea || "#B33F40")
-            .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
-            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-            .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ).setDescription(`\`\`\`diff
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix
 ${cyanArea}
-\`\`\``),
+\`\`\`**`),
         ],
       });
     }
     if (data) {
-      await memberModel.findOneAndRemove({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
+      await memberModel.findOneAndRemove({
+        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+      });
       try {
         await client.channels.cache.get(`${args[0]}`).send({
           content: `**Channel :** <#${args[0]}>`,
           embeds: [
             new Discord.MessageEmbed()
-              .setTimestamp()
-              .setColor(process.env.XeTrons)
-              .setFooter(
-                `👈🏽Requested by ${message.author.username}`,
-                message.author.avatarURL({ dynamic: true })
-              )
-              .setAuthor(
-                "⚡XɛTrση☆",
-                "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
-              )
-              .setDescription(
-                `\`\`\`diff\n+MEMBER🤩UPDATES\n+Now will Receive All The Server Member Updates of this server!\n\`\`\``
-              ),
+            .setTimestamp()
+            .setColor(process.env.XeTrons)
+            .setFooter(
+              `👈🏽Requested by ${message.author.username}`,
+              message.author.avatarURL({
+                dynamic: true
+              })
+            )
+            .setAuthor(
+              "⚡XɛTrση☆",
+              "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
+            )
+            .setDescription(
+              `\`\`\`diff\n+MEMBER🤩UPDATES\n+Now will Receive All The Server Member Updates of this server!\n\`\`\``
+            ),
           ],
         });
         await message.reply({
           content: `**Channel :** <#${args[0]}>`,
           embeds: [
             new Discord.MessageEmbed()
-              .setTimestamp()
-              .setColor(process.env.XeTrons)
-              .setAuthor(
-                "⚡XɛTrση☆",
-                "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
-              )
-              .setDescription(
-                `\`\`\`diff\n+MEMBER🤩UPDATES Is Now Active!\n\`\`\``
-              )
-              .setFooter(
-                `👈🏽Requested by ${message.author.username}`,
-                message.author.avatarURL({ dynamic: true })
-              ),
+            .setTimestamp()
+            .setColor(process.env.XeTrons)
+            .setAuthor(
+              "⚡XɛTrση☆",
+              "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
+            )
+            .setDescription(
+              `\`\`\`diff\n+MEMBER🤩UPDATES Is Now Active!\n\`\`\``
+            )
+            .setFooter(
+              `👈🏽Requested by ${message.author.username}`,
+              message.author.avatarURL({
+                dynamic: true
+              })
+            ),
           ],
         });
       } catch (err) {
@@ -94,19 +106,21 @@ ${cyanArea}
         return await message.reply({
           embeds: [
             new Discord.MessageEmbed()
-              .setTimestamp()
-              .setColor(process.env.XeTrons)
-              .setFooter(
-                `👈🏽Requested by ${message.author.username}`,
-                message.author.avatarURL({ dynamic: true })
-              )
-              .setAuthor(
-                "⚡XɛTrση☆",
-                "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
-              )
-              .setDescription(
-                `\`\`\`diff\nMEMBER🤩UPDATES\n-The new xᴇᴛʀᴏɴᴄʜɪᴅ **\`${args[0]}\` is wrong!**!\`\`\``
-              ),
+            .setTimestamp()
+            .setColor(process.env.XeTrons)
+            .setFooter(
+              `👈🏽Requested by ${message.author.username}`,
+              message.author.avatarURL({
+                dynamic: true
+              })
+            )
+            .setAuthor(
+              "⚡XɛTrση☆",
+              "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
+            )
+            .setDescription(
+              `\`\`\`diff\nMEMBER🤩UPDATES\n-The new xᴇᴛʀᴏɴᴄʜɪᴅ **\`${args[0]}\` is wrong!**!\`\`\``
+            ),
           ],
         });
       }
@@ -121,38 +135,42 @@ ${cyanArea}
           content: `**Channel :** <#${args[0]}>`,
           embeds: [
             new Discord.MessageEmbed()
-              .setTimestamp()
-              .setColor(process.env.XeTrons)
-              .setFooter(
-                `👈🏽Requested by ${message.author.username}`,
-                message.author.avatarURL({ dynamic: true })
-              )
-              .setAuthor(
-                "⚡XɛTrση☆",
-                "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
-              )
-              .setDescription(
-                `\`\`\`diff\n+MEMBER🤩UPDATES\n+Now will Receive All The Server Member Updates of this server!\n\`\`\``
-              ),
+            .setTimestamp()
+            .setColor(process.env.XeTrons)
+            .setFooter(
+              `👈🏽Requested by ${message.author.username}`,
+              message.author.avatarURL({
+                dynamic: true
+              })
+            )
+            .setAuthor(
+              "⚡XɛTrση☆",
+              "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
+            )
+            .setDescription(
+              `\`\`\`diff\n+MEMBER🤩UPDATES\n+Now will Receive All The Server Member Updates of this server!\n\`\`\``
+            ),
           ],
         });
         await message.reply({
           content: `**Channel :** <#${args[0]}>`,
           embeds: [
             new Discord.MessageEmbed()
-              .setTimestamp()
-              .setColor(process.env.XeTrons)
-              .setAuthor(
-                "⚡XɛTrση☆",
-                "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
-              )
-              .setDescription(
-                `\`\`\`diff\n+MEMBER🤩UPDATES Is Now Active!\n\`\`\``
-              )
-              .setFooter(
-                `👈🏽Requested by ${message.author.username}`,
-                message.author.avatarURL({ dynamic: true })
-              ),
+            .setTimestamp()
+            .setColor(process.env.XeTrons)
+            .setAuthor(
+              "⚡XɛTrση☆",
+              "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
+            )
+            .setDescription(
+              `\`\`\`diff\n+MEMBER🤩UPDATES Is Now Active!\n\`\`\``
+            )
+            .setFooter(
+              `👈🏽Requested by ${message.author.username}`,
+              message.author.avatarURL({
+                dynamic: true
+              })
+            ),
           ],
         });
       } catch (err) {
@@ -160,19 +178,21 @@ ${cyanArea}
         return await message.reply({
           embeds: [
             new Discord.MessageEmbed()
-              .setTimestamp()
-              .setColor(process.env.XeTrons)
-              .setFooter(
-                `👈🏽Requested by ${message.author.username}`,
-                message.author.avatarURL({ dynamic: true })
-              )
-              .setAuthor(
-                "⚡XɛTrση☆",
-                "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
-              )
-              .setDescription(
-                `\`\`\`diff\nMEMBER🤩UPDATES\n-The new xᴇᴛʀᴏɴᴄʜɪᴅ **\`${args[0]}\` is wrong!**!\`\`\``
-              ),
+            .setTimestamp()
+            .setColor(process.env.XeTrons)
+            .setFooter(
+              `👈🏽Requested by ${message.author.username}`,
+              message.author.avatarURL({
+                dynamic: true
+              })
+            )
+            .setAuthor(
+              "⚡XɛTrση☆",
+              "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
+            )
+            .setDescription(
+              `\`\`\`diff\nMEMBER🤩UPDATES\n-The new xᴇᴛʀᴏɴᴄʜɪᴅ **\`${args[0]}\` is wrong!**!\`\`\``
+            ),
           ],
         });
       }

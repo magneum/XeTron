@@ -5,7 +5,9 @@
 "🐙";
 const Discord = require("discord.js");
 const imdb = require("imdb-api");
-const { PokeList } = require("../../pokelist");
+const {
+  PokeList
+} = require("../../pokelist");
 var path = require("path");
 let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
 console.log(poke);
@@ -29,26 +31,32 @@ module.exports = {
       return await message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setURL("https://github.com/krakinz")
-            .setColor(process.env.redArea || "#B33F40")
-            .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
-            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-            .setAuthor("⚡XΣƬЯӨП⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ).setDescription(`\`\`\`diff
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("⚡XΣƬЯӨП⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix
 ${cyanArea}
-\`\`\``),
+\`\`\`**`),
         ],
       });
     }
-    const imob = new imdb.Client({ apiKey: "5e36f0db" });
-    let movie = await imob.get({ name: args.join(" ") });
+    const imob = new imdb.Client({
+      apiKey: "5e36f0db"
+    });
+    let movie = await imob.get({
+      name: args.join(" ")
+    });
     const embed = new Discord.MessageEmbed()
       .setTitle(movie.Title)
       .setColor("RANDOM")
@@ -56,7 +64,9 @@ ${cyanArea}
       .SetDescription(
         `Description: \`${movie.plot}\`\nRatings: \`${movie.ratings}\`\nCountry: \`${movie.country}\`\nLanguages: \`${movie.languages}\`\nType: \`${movie.type}\``
       );
-    message.chanel.send({ embeds: [embed] });
+    message.chanel.send({
+      embeds: [embed]
+    });
   },
 };
 "🐙";

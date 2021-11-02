@@ -4,7 +4,9 @@
 "🐙";
 "🐙";
 const Discord = require("discord.js");
-const { PokeList } = require("../../pokelist");
+const {
+  PokeList
+} = require("../../pokelist");
 var path = require("path");
 let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
 console.log(poke);
@@ -29,21 +31,23 @@ module.exports = {
       return await message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setURL("https://github.com/krakinz")
-            .setColor(process.env.redArea || "#B33F40")
-            .setTitle(`\`\`\`${newScpt} Command Helper\`\`\``)
-            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-            .setAuthor("⚡XΣTЯON⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ).setDescription(`\`\`\`diff
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`\`\`\`${newScpt} Command Helper\`\`\``)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("⚡XΣTЯON⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix
 ${cyanArea}
-\`\`\``),
+\`\`\`**`),
         ],
       });
     }
@@ -69,13 +73,16 @@ ${cyanArea}
       })
       .then(() =>
         message.guild
-          .member(banMember)
-          .ban(banMember, { days: 1, reason: reason })
+        .member(banMember)
+        .ban(banMember, {
+          days: 1,
+          reason: reason
+        })
       )
       .then(() =>
         message.guild.members
-          .unban(banMember.id)
-          .catch((err) => console.log(err))
+        .unban(banMember.id)
+        .catch((err) => console.log(err))
       );
 
     let embed = new Discord.MessageEmbed()
@@ -87,7 +94,9 @@ ${cyanArea}
       .addField("Reason:", reason)
       .setTimestamp();
 
-    message.reply({ embeds: [embed] });
+    message.reply({
+      embeds: [embed]
+    });
   },
 };
 ("🐙");

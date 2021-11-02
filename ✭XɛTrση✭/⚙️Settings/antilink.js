@@ -5,7 +5,9 @@
 "🐙";
 const Discord = require("discord.js");
 const prefixModel = require("../../XɛTrση✭Database/antilink");
-const { PokeList } = require("../../pokelist");
+const {
+  PokeList
+} = require("../../pokelist");
 var path = require("path");
 let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
 console.log(poke);
@@ -28,60 +30,74 @@ This is a special <per server(guild) per channel> setting that will let no users
       return await message.reply({
         embeds: [
           new Discord.MessageEmbed()
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({
+            dynamic: true
+          }))
+          .setDescription(`**\`\`\`diff
+${redArea}\`\`\`
+
+\`\`\`fix
+${cyanArea}
+\`\`\`**`),
+        ],
+      });
+    }
+    if (args[0] === "On" || args[0] === "on") {
+      const data = await prefixModel.findOne({
+        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+      });
+      if (data) {
+        await prefixModel.findOneAndRemove({
+          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+        });
+        message.reply({
+          embeds: [
+            new Discord.MessageEmbed()
             .setTimestamp()
             .setURL("https://github.com/krakinz")
             .setColor(process.env.redArea || "#B33F40")
             .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
             .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
             .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({ dynamic: true }))
-            .setDescription(`\`\`\`diff
-${redArea}\`\`\`
-
-\`\`\`fix
-${cyanArea}
-\`\`\``),
-        ],
-      });
-    }
-    if (args[0] === "On" || args[0] === "on") {
-      const data = await prefixModel.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
-      if (data) {
-        await prefixModel.findOneAndRemove({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
-        message.reply({
-          embeds: [
-            new Discord.MessageEmbed()
-              .setTimestamp()
-              .setURL("https://github.com/krakinz")
-              .setColor(process.env.redArea || "#B33F40")
-              .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
-              .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-              .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-              .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({ dynamic: true }))
-              .setDescription(`\`\`\`diff
+            .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({
+              dynamic: true
+            }))
+            .setDescription(`**\`\`\`diff
 +Antilink is now active!
-\`\`\``),
+\`\`\`**`),
           ],
         });
-        let newData = new prefixModel({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
+        let newData = new prefixModel({
+          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+        });
         newData.save();
       } else if (!data) {
         message.reply({
           embeds: [
             new Discord.MessageEmbed()
-              .setTimestamp()
-              .setURL("https://github.com/krakinz")
-              .setColor(process.env.redArea || "#B33F40")
-              .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
-              .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-              .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-              .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({ dynamic: true }))
-              .setDescription(`\`\`\`diff
+            .setTimestamp()
+            .setURL("https://github.com/krakinz")
+            .setColor(process.env.redArea || "#B33F40")
+            .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
+            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+            .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+            .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({
+              dynamic: true
+            }))
+            .setDescription(`**\`\`\`diff
 +Antilink is now active!      
-\`\`\``),
+\`\`\`**`),
           ],
         });
-        let newData = new prefixModel({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
+        let newData = new prefixModel({
+          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+        });
         newData.save();
       }
     } else if (args[0] === "off" || args[0] === "Off") {
@@ -89,36 +105,42 @@ ${cyanArea}
         xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
       });
       if (data2) {
-        await prefixModel.findOneAndRemove({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
+        await prefixModel.findOneAndRemove({
+          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+        });
         return message.reply({
           embeds: [
             new Discord.MessageEmbed()
-              .setTimestamp()
-              .setURL("https://github.com/krakinz")
-              .setColor(process.env.redArea || "#B33F40")
-              .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
-              .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-              .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-              .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({ dynamic: true }))
-              .setDescription(`\`\`\`diff
+            .setTimestamp()
+            .setURL("https://github.com/krakinz")
+            .setColor(process.env.redArea || "#B33F40")
+            .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
+            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+            .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+            .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({
+              dynamic: true
+            }))
+            .setDescription(`**\`\`\`diff
 -Antilink has been turned off!     
-\`\`\``),
+\`\`\`**`),
           ],
         });
       } else if (!data2) {
         return message.reply({
           embeds: [
             new Discord.MessageEmbed()
-              .setTimestamp()
-              .setURL("https://github.com/krakinz")
-              .setColor(process.env.redArea || "#B33F40")
-              .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
-              .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-              .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-              .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({ dynamic: true }))
-              .setDescription(`\`\`\`diff
+            .setTimestamp()
+            .setURL("https://github.com/krakinz")
+            .setColor(process.env.redArea || "#B33F40")
+            .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
+            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+            .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+            .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({
+              dynamic: true
+            }))
+            .setDescription(`**\`\`\`diff
 -Antilink isn't setup!    
-\`\`\``),
+\`\`\`**`),
           ],
         });
       }

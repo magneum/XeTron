@@ -24,7 +24,7 @@ module.exports = async (channel) => {
 -Channel Name: ${channel.name}
 -Channel ID: ${channel.id}
 -Channel Type: ${channel.type}
-\`\`\``),
+\`\`\`**`),
     ],
   });
 };

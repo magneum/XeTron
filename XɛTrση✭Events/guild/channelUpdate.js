@@ -25,7 +25,7 @@ module.exports = async (oldChannel, newChannel) => {
 Channel Name Changed
 OLD: ${oldChannel.name}
 NEW: ${newChannel.name}
-\`\`\``),
+\`\`\`**`),
       ],
     });
   } else if (oldChannel.topic !== newChannel.topic) {
@@ -40,7 +40,7 @@ NEW: ${newChannel.name}
 Channel Topic Changed
 OLD: ${oldChannel.topic}
 NEW: ${newChannel.topic}
-\`\`\``),
+\`\`\`**`),
       ],
     });
   } else if (oldChannel.position !== newChannel.position) {
@@ -55,7 +55,7 @@ NEW: ${newChannel.topic}
 Channel Position Changed
 OLD: ${oldChannel.position}
 NEW: ${newChannel.position}
-\`\`\``),
+\`\`\`**`),
       ],
     });
   } else if (oldChannel.type !== newChannel.type) {
@@ -70,7 +70,7 @@ NEW: ${newChannel.position}
 Channel Type Changed
 OLD: ${oldChannel.type}
 NEW: ${newChannel.type}
-\`\`\``),
+\`\`\`**`),
       ],
     });
   } else if (oldChannel.nsfw !== newChannel.nsfw) {
@@ -85,7 +85,7 @@ NEW: ${newChannel.type}
 Channel NSFW Changed
 OLD: ${oldChannel.nsfw}
 NEW: ${newChannel.nsfw}
-\`\`\``),
+\`\`\`**`),
       ],
     });
   } else if (oldChannel.bitrate !== newChannel.bitrate) {
@@ -100,7 +100,7 @@ NEW: ${newChannel.nsfw}
 Channel Bitrate Changed
 OLD: ${oldChannel.bitrate}
 NEW: ${newChannel.bitrate}
-\`\`\``),
+\`\`\`**`),
       ],
     });
   } else if (oldChannel.userLimit !== newChannel.userLimit) {
@@ -115,7 +115,7 @@ NEW: ${newChannel.bitrate}
 Channel UserLimits Changed
 OLD: ${oldChannel.userLimit}
 NEW: ${newChannel.userLimit}
-\`\`\``),
+\`\`\`**`),
       ],
     });
   } else if (oldChannel.rateLimitPerUser !== newChannel.rateLimitPerUser) {
@@ -130,7 +130,7 @@ NEW: ${newChannel.userLimit}
 Channel SLowMode Changed
 OLD: ${oldChannel.rateLimitPerUser}
 NEW: ${newChannel.rateLimitPerUser}
-\`\`\``),
+\`\`\`**`),
       ],
     });
   } else {

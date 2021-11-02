@@ -6,7 +6,9 @@
 require("dotenv").config();
 const Discord = require("discord.js");
 const malScraper = require("mal-scraper");
-const { PokeList } = require("../../pokelist");
+const {
+  PokeList
+} = require("../../pokelist");
 var path = require("path");
 let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
 console.log(poke);
@@ -30,21 +32,23 @@ module.exports = {
       return await message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setURL("https://github.com/krakinz")
-            .setColor(process.env.redArea || "#B33F40")
-            .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
-            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-            .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ).setDescription(`\`\`\`diff
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix
 ${cyanArea}
-\`\`\``),
+\`\`\`**`),
         ],
       });
     }
@@ -53,39 +57,41 @@ ${cyanArea}
       message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setColor(process.env.XeTrons)
-            .setURL("https://github.com/krakinz")
-            .setAuthor("⚡XɛTrση☆", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setThumbnail(data.picture)
-            .setTitle(`My Anime Search result for ${args}`.split(",").join(" "))
-            .addField("Title", `\`${data.title}\``, true)
-            .addField("Premiered", `\`${data.premiered}\``, true)
-            .addField("Broadcast", `\`${data.broadcast}\``, true)
-            .addField("Genres", `\`${data.genres}\``, true)
-            .addField("English Title", `\`${data.englishTitle}\``, true)
-            .addField("Japanese Title", `\`${data.japaneseTitle}\``, true)
-            .addField("Type", `\`${data.type}\``, true)
-            .addField("Episodes", `\`${data.episodes}\``, true)
-            .addField("Rating", `\`${data.rating}\``, true)
-            .addField("Aired", `\`${data.aired}\``, true)
-            .addField("Score", `\`${data.score}\``, true)
-            .addField("Favorite", `\`${data.favorites}\``, true)
-            .addField("Ranked", `\`${data.ranked}\``, true)
-            .addField("Duration", `\`${data.duration}\``, true)
-            .addField("Studios", `\`${data.studios}\``, true)
-            .addField("Popularity", `\`${data.popularity}\``, true)
-            .addField("Members", `\`${data.members}\``, true)
-            .addField("Score Stats", `\`${data.scoreStats}\``, true)
-            .addField("Source", `\`${data.source}\``, true)
-            .addField("Synonyms", `\`${data.synonyms}\``, true)
-            .addField("Status", `\`${data.status}\``, true)
-            .addField("Identifier", `\`${data.id}\``, true)
-            .addField("Link", `[Website](${data.url})`, true)
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ),
+          .setTimestamp()
+          .setColor(process.env.XeTrons)
+          .setURL("https://github.com/krakinz")
+          .setAuthor("⚡XɛTrση☆", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setThumbnail(data.picture)
+          .setTitle(`My Anime Search result for ${args}`.split(",").join(" "))
+          .addField("Title", `\`${data.title}\``, true)
+          .addField("Premiered", `\`${data.premiered}\``, true)
+          .addField("Broadcast", `\`${data.broadcast}\``, true)
+          .addField("Genres", `\`${data.genres}\``, true)
+          .addField("English Title", `\`${data.englishTitle}\``, true)
+          .addField("Japanese Title", `\`${data.japaneseTitle}\``, true)
+          .addField("Type", `\`${data.type}\``, true)
+          .addField("Episodes", `\`${data.episodes}\``, true)
+          .addField("Rating", `\`${data.rating}\``, true)
+          .addField("Aired", `\`${data.aired}\``, true)
+          .addField("Score", `\`${data.score}\``, true)
+          .addField("Favorite", `\`${data.favorites}\``, true)
+          .addField("Ranked", `\`${data.ranked}\``, true)
+          .addField("Duration", `\`${data.duration}\``, true)
+          .addField("Studios", `\`${data.studios}\``, true)
+          .addField("Popularity", `\`${data.popularity}\``, true)
+          .addField("Members", `\`${data.members}\``, true)
+          .addField("Score Stats", `\`${data.scoreStats}\``, true)
+          .addField("Source", `\`${data.source}\``, true)
+          .addField("Synonyms", `\`${data.synonyms}\``, true)
+          .addField("Status", `\`${data.status}\``, true)
+          .addField("Identifier", `\`${data.id}\``, true)
+          .addField("Link", `[Website](${data.url})`, true)
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ),
         ],
       });
     });

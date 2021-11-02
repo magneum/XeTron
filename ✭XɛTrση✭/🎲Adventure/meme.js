@@ -12,12 +12,10 @@ module.exports = {
   run: async (client, message, args) => {
     var num = Math.floor(Math.random() * (500 - 1) + 1);
     message.reply({
-      files: [
-        {
-          attachment: `https://ctk-api.herokuapp.com/meme/${num}`,
-          name: "meme.jpg",
-        },
-      ],
+      files: [{
+        attachment: `https://ctk-api.herokuapp.com/meme/${num}`,
+        name: "meme.jpg",
+      }, ],
     });
   },
 };

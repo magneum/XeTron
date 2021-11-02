@@ -16,36 +16,34 @@ module.exports = {
 		let gameEnded = false;
 		let randomPos = positions[Object.keys(positions)[randomized]];
 
-		const componentsArray = [
-			{
-				type: 1,
-				components: [
-					{
-						type: 2,
-						style: 'SECONDARY',
-						custom_id: 'left',
-						label: 'Left',
-					},
-					{
-						type: 2,
-						style: 'PRIMARY',
-						custom_id: 'middle',
-						label: 'Middle',
-					},
-					{
-						type: 2,
-						style: 'SECONDARY',
-						custom_id: 'right',
-						label: 'Right',
-					},
-				],
-			},
-		];
+		const componentsArray = [{
+			type: 1,
+			components: [{
+					type: 2,
+					style: 'SECONDARY',
+					custom_id: 'left',
+					label: 'Left',
+				},
+				{
+					type: 2,
+					style: 'PRIMARY',
+					custom_id: 'middle',
+					label: 'Middle',
+				},
+				{
+					type: 2,
+					style: 'SECONDARY',
+					custom_id: 'right',
+					label: 'Right',
+				},
+			],
+		}, ];
 
 		const msg = await message.channel.send({
 			content: randomPos,
 			components: componentsArray,
 		});
+
 		function update() {
 			randomized = Math.floor(Math.random() * Object.keys(positions).length);
 			randomPos = positions[Object.keys(positions)[randomized]];
@@ -56,21 +54,28 @@ module.exports = {
 			});
 		}
 		setInterval(() => {
-			if(gameEnded == false) return update();
+			if (gameEnded == false) return update();
 		}, 1000);
 
 		const filter = button => {
 			return button.user.id === message.author.id;
 		};
-		const button = await msg.awaitMessageComponent({ filter: filter, componentType: 'BUTTON', max: 1 });
+		const button = await msg.awaitMessageComponent({
+			filter: filter,
+			componentType: 'BUTTON',
+			max: 1
+		});
 
-		if(button.customId !== Object.keys(positions)[randomized]) {
+		if (button.customId !== Object.keys(positions)[randomized]) {
 			gameEnded = true;
-			return button.reply({ content: 'You won!' });
-		}
-		else {
+			return button.reply({
+				content: 'You won!'
+			});
+		} else {
 			gameEnded = true;
-			return button.reply({ content: 'You lose...' });
+			return button.reply({
+				content: 'You lose...'
+			});
 		}
 	},
 };

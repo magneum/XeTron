@@ -4,7 +4,9 @@
 "🐙";
 "🐙";
 const Discord = module.require("discord.js");
-const { PokeList } = require("../../pokelist");
+const {
+  PokeList
+} = require("../../pokelist");
 var path = require("path");
 let poke = PokeList[Math.floor(Math.random() * PokeList.length)];
 console.log(poke);
@@ -31,21 +33,23 @@ Be sure to report it to our XeTron Moderation Team using this command.`;
       return await message.reply({
         embeds: [
           new Discord.MessageEmbed()
-            .setTimestamp()
-            .setURL("https://github.com/krakinz")
-            .setColor(process.env.redArea || "#B33F40")
-            .setTitle(`\`\`\`${newScpt} Command Helper\`\`\``)
-            .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
-            .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({ dynamic: true })
-            ).setDescription(`\`\`\`diff
+          .setTimestamp()
+          .setURL("https://github.com/krakinz")
+          .setColor(process.env.redArea || "#B33F40")
+          .setTitle(`\`\`\`${newScpt} Command Helper\`\`\``)
+          .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
+          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .setFooter(
+            `👈🏽Requested by ${message.author.username}`,
+            message.author.avatarURL({
+              dynamic: true
+            })
+          ).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix
 ${cyanArea}
-\`\`\``),
+\`\`\`**`),
         ],
       });
     }
@@ -57,9 +61,11 @@ ${cyanArea}
       .setDescription(`${report} \n\nBy: ${message.author.tag}`)
       .setFooter(`User ID: ${message.author.id}`)
       .setColor("RANDOM");
-    reportchannel.send({ embeds: [embed] });
+    reportchannel.send({
+      embeds: [embed]
+    });
   },
-  catch(error) {
+  catch (error) {
     const errorlogs = client.channels.cache.get("747750993583669258");
     message.reply(
       "Looks Like an Error has Ocurred. The Error has been reported to the Report Section!"

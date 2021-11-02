@@ -19,40 +19,41 @@ module.exports = {
 		let randomPos = positions[Object.keys(positions)[randomized]];
 		let data = 0;
 
-		const componentsArray = [
-			{
-				type: 1,
-				components: [
-					{
-						type: 2,
-						style: 'SECONDARY',
-						custom_id: 'e',
-						label: '\u200b',
-						disabled: true,
+		const componentsArray = [{
+			type: 1,
+			components: [{
+					type: 2,
+					style: 'SECONDARY',
+					custom_id: 'e',
+					label: '\u200b',
+					disabled: true,
+				},
+				{
+					type: 2,
+					style: 'PRIMARY',
+					custom_id: String(Math.random()),
+					emoji: {
+						id: '890611575227023391'
 					},
-					{
-						type: 2,
-						style: 'PRIMARY',
-						custom_id: String(Math.random()),
-						emoji: { id: '890611575227023391' },
-					},
-					{
-						type: 2,
-						style: 'SECONDARY',
-						custom_id: 'ee',
-						label: '\u200b',
-						disabled: true,
-					},
-				],
-			},
-		];
+				},
+				{
+					type: 2,
+					style: 'SECONDARY',
+					custom_id: 'ee',
+					label: '\u200b',
+					disabled: true,
+				},
+			],
+		}, ];
 
 		const msg = await message.reply({
 			content: `Catch 3 fishes to win!\n\n${randomPos}`,
 			components: componentsArray,
 		});
 
-		const filter = (button => { return button.user.id === message.author.id; });
+		const filter = (button => {
+			return button.user.id === message.author.id;
+		});
 		const game = await message.channel.createMessageComponentCollector({
 			filter,
 			componentType: 'BUTTON',
@@ -71,9 +72,10 @@ module.exports = {
 					content: positions.win,
 					components: componentsArray,
 				});
-				button.reply({ content: 'GG! You caught 3 fishes!' });
-			}
-			else if (data <= -9) {
+				button.reply({
+					content: 'GG! You caught 3 fishes!'
+				});
+			} else if (data <= -9) {
 				gameEnded = true;
 				game.stop();
 				componentsArray[0].components[1].disabled = true;
@@ -82,9 +84,10 @@ module.exports = {
 					content: positions.lose,
 					components: componentsArray,
 				});
-				button.reply({ content: 'GG You lost XD' });
-			}
-			else {
+				button.reply({
+					content: 'GG You lost XD'
+				});
+			} else {
 				if (button) return button.deferUpdate();
 				msg.edit({
 					content: randomPos + `           **${data}**`,
@@ -101,8 +104,7 @@ module.exports = {
 			if (randomized !== 0) {
 				data -= 3;
 				update(button);
-			}
-			else {
+			} else {
 				data++;
 				update(button);
 			}
