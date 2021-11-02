@@ -10,7 +10,7 @@ const {
 } = require("discord.js");
 module.exports = async (oldChannel, newChannel) => {
   const data = await channelData.findOne({
-    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newChannel.guild.id
+    Ӽɛȶʀօռֆɨɖ: newChannel.guild.id
   });
   if (!data) return;
   if (oldChannel.name !== newChannel.name) {

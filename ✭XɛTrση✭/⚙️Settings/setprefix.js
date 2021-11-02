@@ -21,7 +21,7 @@ module.exports = {
   userPerms: ["MANAGE_GUILD"],
   run: async (client, message, args) => {
     const data = await prefixModel.findOne({
-      xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+      Ӽɛȶʀօռֆɨɖ: message.guild.id
     });
     if (!args[0] || args[0].length > 5) {
       // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -57,7 +57,7 @@ ${cyanArea}
     }
     if (data) {
       await prefixModel.findOneAndRemove({
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+        Ӽɛȶʀօռֆɨɖ: message.guild.id
       });
       message.reply({
         embeds: [
@@ -80,7 +80,7 @@ ${cyanArea}
       });
       let newData = new prefixModel({
         Prefix: args[0],
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+        Ӽɛȶʀօռֆɨɖ: message.guild.id,
       });
       newData.save();
     } else if (!data) {
@@ -105,7 +105,7 @@ ${cyanArea}
       });
       let newData = new prefixModel({
         Prefix: args[0],
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+        Ӽɛȶʀօռֆɨɖ: message.guild.id,
       });
       newData.save();
     }

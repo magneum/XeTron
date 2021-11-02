@@ -7,7 +7,7 @@ const roleData = require("../../XɛTrση✭Database/autorole");
 module.exports = async (member) => {
   const data = await roleData
     .findOne({
-      xᴇᴛʀᴏɴꜱᴇʀɪᴅ: member.guild.id,
+      Ӽɛȶʀօռֆɨɖ: member.guild.id,
     })
     .catch((err) => console.log(err));
 

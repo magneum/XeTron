@@ -21,7 +21,7 @@ module.exports = {
   userPerms: ["MANAGE_GUILD"],
   run: async (client, message, args) => {
     const data = await channelModel.findOne({
-      xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+      Ӽɛȶʀօռֆɨɖ: message.guild.id
     });
     if (!args[0] || args[0].length > 18) {
       // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -57,7 +57,7 @@ ${cyanArea}
     if (data) {
       try {
         await channelModel.findOneAndRemove({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+          Ӽɛȶʀօռֆɨɖ: message.guild.id
         });
         await client.channels.cache.get(`${args[0]}`).send({
           content: `**Channel :** <#${args[0]}>`,
@@ -82,7 +82,7 @@ ${cyanArea}
         });
         let newChannel = new channelModel({
           xᴇᴛʀᴏɴᴄʜɪᴅ: args[0],
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+          Ӽɛȶʀօռֆɨɖ: message.guild.id,
         });
         await newChannel.save();
         await message.reply({
@@ -131,7 +131,7 @@ ${cyanArea}
     } else if (!data) {
       try {
         await channelModel.findOneAndRemove({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+          Ӽɛȶʀօռֆɨɖ: message.guild.id
         });
         await client.channels.cache.get(`${args[0]}`).send({
           content: `**Channel :** <#${args[0]}>`,
@@ -156,7 +156,7 @@ ${cyanArea}
         });
         let newChannel = new channelModel({
           xᴇᴛʀᴏɴᴄʜɪᴅ: args[0],
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+          Ӽɛȶʀօռֆɨɖ: message.guild.id,
         });
         await newChannel.save();
         await message.reply({

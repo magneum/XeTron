@@ -7,7 +7,7 @@ const antilinkData = require("../../XɛTrση✭Database/antilink");
 const ms = require("ms");
 module.exports = async (message) => {
   const antilink = await antilinkData.findOne({
-    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+    Ӽɛȶʀօռֆɨɖ: message.guild.id,
   });
   if (antilink) {
     if (

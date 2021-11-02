@@ -78,7 +78,7 @@ module.exports = async (message, cooldowns) => {
     let client = message.client;
 
     const prefixData = await prefixModel.findOne({
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+        Ӽɛȶʀօռֆɨɖ: message.guild.id,
     }).catch(err => console.log(err))
 
     if (prefixData) {

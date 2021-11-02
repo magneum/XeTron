@@ -55,33 +55,33 @@ ${cyanArea}
     }
     if (text !== "off") {
       const data = await prefixModel.findOne({
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+        Ӽɛȶʀօռֆɨɖ: message.guild.id
       });
       if (data) {
         await prefixModel.findOneAndRemove({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+          Ӽɛȶʀօռֆɨɖ: message.guild.id
         });
         let newData = new prefixModel({
           JoinMsg: args.join(" "),
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+          Ӽɛȶʀօռֆɨɖ: message.guild.id,
         });
         newData.save();
         message.reply(`Join Message set to ${newData.JoinMsg}`);
       } else if (!data) {
         let newData = new prefixModel({
           JoinMsg: args.join(" "),
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+          Ӽɛȶʀօռֆɨɖ: message.guild.id,
         });
         newData.save();
         message.reply(`Join Message set to ${newData.JoinMsg}`);
       }
     } else if (text === "off") {
       const data2 = await prefixModel.findOne({
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+        Ӽɛȶʀօռֆɨɖ: message.guild.id,
       });
       if (data2) {
         await prefixModel.findOneAndRemove({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+          Ӽɛȶʀօռֆɨɖ: message.guild.id
         });
         return message.reply(`Join Message has been turned off!`);
       } else if (!data2) {

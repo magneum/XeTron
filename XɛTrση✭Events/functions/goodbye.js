@@ -21,11 +21,11 @@ const Greeters = [
 ];
 module.exports = async (member) => {
   const data = await byeData.findOne({
-    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: member.guild.id,
+    Ӽɛȶʀօռֆɨɖ: member.guild.id,
   });
   if (data) {
     const data2 = await byemsg.findOne({
-      xᴇᴛʀᴏɴꜱᴇʀɪᴅ: member.guild.id,
+      Ӽɛȶʀօռֆɨɖ: member.guild.id,
     });
     if (data2) {
       var leavemessage = data2.JoinMsg;

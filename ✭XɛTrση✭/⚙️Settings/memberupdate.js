@@ -21,7 +21,7 @@ module.exports = {
   userPerms: ["MANAGE_GUILD"],
   run: async (client, message, args) => {
     const data = await memberModel.findOne({
-      xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+      Ӽɛȶʀօռֆɨɖ: message.guild.id
     });
     if (!args[0] || args[0].length > 18) {
       // """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -56,7 +56,7 @@ ${cyanArea}
     }
     if (data) {
       await memberModel.findOneAndRemove({
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+        Ӽɛȶʀօռֆɨɖ: message.guild.id
       });
       try {
         await client.channels.cache.get(`${args[0]}`).send({
@@ -126,7 +126,7 @@ ${cyanArea}
       }
       let memberData = new memberModel({
         xᴇᴛʀᴏɴᴄʜɪᴅ: args[0],
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+        Ӽɛȶʀօռֆɨɖ: message.guild.id,
       });
       memberData.save();
     } else if (!data) {
@@ -198,7 +198,7 @@ ${cyanArea}
       }
       let memberData = new memberModel({
         xᴇᴛʀᴏɴᴄʜɪᴅ: args[0],
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+        Ӽɛȶʀօռֆɨɖ: message.guild.id,
       });
       memberData.save();
     }

@@ -10,7 +10,7 @@ const {
 } = require("discord.js");
 module.exports = async (member) => {
   const data = await memberData.findOne({
-    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: member.guild.id
+    Ӽɛȶʀօռֆɨɖ: member.guild.id
   });
   if (!data) return;
   member.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({

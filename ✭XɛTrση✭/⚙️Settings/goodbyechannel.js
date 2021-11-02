@@ -54,18 +54,18 @@ ${cyanArea}
     }
     if (message.mentions.channels.first()) {
       const data = await prefixModel.findOne({
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+        Ӽɛȶʀօռֆɨɖ: message.guild.id
       });
       if (data) {
         await prefixModel.findOneAndRemove({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+          Ӽɛȶʀօռֆɨɖ: message.guild.id
         });
         message.reply(
           `Leave Channel set to ${message.mentions.channels.first()}`
         );
         let newData = new prefixModel({
           Bye: message.mentions.channels.first().id,
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+          Ӽɛȶʀօռֆɨɖ: message.guild.id,
         });
         newData.save();
       } else if (!data) {
@@ -93,17 +93,17 @@ ${cyanArea}
         });
         let newData = new prefixModel({
           Bye: message.mentions.channels.first().id,
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+          Ӽɛȶʀօռֆɨɖ: message.guild.id,
         });
         newData.save();
       }
     } else if (args[0] === "off") {
       const data2 = await prefixModel.findOne({
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+        Ӽɛȶʀօռֆɨɖ: message.guild.id,
       });
       if (data2) {
         await prefixModel.findOneAndRemove({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+          Ӽɛȶʀօռֆɨɖ: message.guild.id
         });
         message.reply({
           embeds: [

@@ -10,7 +10,7 @@ const {
 const channelData = require("../../XɛTrση✭Database/channelupdate");
 module.exports = async (oldThreadMembers, newThreadMembers) => {
   const data = await channelData.findOne({
-    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newThread.guild.id
+    Ӽɛȶʀօռֆɨɖ: newThread.guild.id
   });
   if (!data) return;
   if (oldThreadMembers.size < newThreadMembers.size) {

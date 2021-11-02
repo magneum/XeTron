@@ -10,7 +10,7 @@ const {
 } = require("discord.js");
 module.exports = async (oldGuild, newGuild) => {
   const data = await serverData.findOne({
-    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newGuild.id
+    Ӽɛȶʀօռֆɨɖ: newGuild.id
   });
   if (!data) return;
   if (newGuild.name !== oldGuild.name) {

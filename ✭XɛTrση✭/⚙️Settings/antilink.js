@@ -50,11 +50,11 @@ ${cyanArea}
     }
     if (args[0] === "On" || args[0] === "on") {
       const data = await prefixModel.findOne({
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+        Ӽɛȶʀօռֆɨɖ: message.guild.id
       });
       if (data) {
         await prefixModel.findOneAndRemove({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+          Ӽɛȶʀօռֆɨɖ: message.guild.id
         });
         message.reply({
           embeds: [
@@ -74,7 +74,7 @@ ${cyanArea}
           ],
         });
         let newData = new prefixModel({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+          Ӽɛȶʀօռֆɨɖ: message.guild.id
         });
         newData.save();
       } else if (!data) {
@@ -96,17 +96,17 @@ ${cyanArea}
           ],
         });
         let newData = new prefixModel({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+          Ӽɛȶʀօռֆɨɖ: message.guild.id
         });
         newData.save();
       }
     } else if (args[0] === "off" || args[0] === "Off") {
       const data2 = await prefixModel.findOne({
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+        Ӽɛȶʀօռֆɨɖ: message.guild.id,
       });
       if (data2) {
         await prefixModel.findOneAndRemove({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+          Ӽɛȶʀօռֆɨɖ: message.guild.id
         });
         return message.reply({
           embeds: [

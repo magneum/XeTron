@@ -12,7 +12,7 @@ module.exports = async (interaction) => {
   if (interaction.customId === "XɛTrση_Help_Menu") {
     let msg = await interaction.channel.messages.fetch(interaction.message.id);
     const prefixData = await prefixModel.findOne({
-      xᴇᴛʀᴏɴꜱᴇʀɪᴅ: msg.guild.id,
+      Ӽɛȶʀօռֆɨɖ: msg.guild.id,
     }).catch((err) => console.log(err));
     if (prefixData) {
       var PREFIX = prefixData.Prefix;

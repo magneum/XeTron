@@ -10,7 +10,7 @@ const {
 } = require("discord.js");
 module.exports = async (oldState, newState) => {
   const data = await voiceData.findOne({
-    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newState.guild.id
+    Ӽɛȶʀօռֆɨɖ: newState.guild.id
   });
   if (!data) return;
   let oldUser = oldState.member;

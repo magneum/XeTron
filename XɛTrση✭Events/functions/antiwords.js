@@ -6,7 +6,7 @@
 const antiwordsData = require("../../XɛTrση✭Database/antiwords");
 module.exports = async (message) => {
   const antiwords = await antiwordsData.findOne({
-    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+    Ӽɛȶʀօռֆɨɖ: message.guild.id,
   });
   if (antiwords) {
     if (

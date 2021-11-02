@@ -5,7 +5,7 @@ const {
 
 module.exports = async (role) => {
   const data = await roleData.findOne({
-    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: role.guild.id,
+    Ӽɛȶʀօռֆɨɖ: role.guild.id,
   });
 
   if (!data) return;

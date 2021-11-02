@@ -53,11 +53,11 @@ ${cyanArea}
     }
     if (args[0] === "On" || args[0] === "on") {
       const data = await antiwordsSchema.findOne({
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+        Ӽɛȶʀօռֆɨɖ: message.guild.id,
       });
       if (data) {
         await antiwordsSchema.findOneAndRemove({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+          Ӽɛȶʀօռֆɨɖ: message.guild.id,
         });
         message.reply({
           embeds: [
@@ -82,7 +82,7 @@ ${cyanArea}
           ],
         });
         let newData = new antiwordsSchema({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+          Ӽɛȶʀօռֆɨɖ: message.guild.id
         });
         newData.save();
       } else if (!data) {
@@ -109,17 +109,17 @@ ${cyanArea}
           ],
         });
         let newData = new antiwordsSchema({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+          Ӽɛȶʀօռֆɨɖ: message.guild.id
         });
         newData.save();
       }
     } else if (args[0] === "Off" || args[0] === "off") {
       const data2 = await antiwordsSchema.findOne({
-        xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+        Ӽɛȶʀօռֆɨɖ: message.guild.id,
       });
       if (data2) {
         await antiwordsSchema.findOneAndRemove({
-          xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id,
+          Ӽɛȶʀօռֆɨɖ: message.guild.id,
         });
         return message.reply({
           embeds: [

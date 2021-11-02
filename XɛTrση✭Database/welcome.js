@@ -1,13 +1,8 @@
 const mongoose = require("mongoose");
-
 const welcomeSchema = new mongoose.Schema({
   Welcome: {
     type: String,
   },
-  xᴇᴛʀᴏɴꜱᴇʀɪᴅ: String,
+  Ӽɛȶʀօռֆɨɖ: String,
 });
-
-const MessageModel = (module.exports = mongoose.model(
-  "welcomer",
-  welcomeSchema
-));
+const MessageModel = (module.exports = mongoose.model("welcomer", welcomeSchema));

@@ -1,10 +1,5 @@
 const mongoose = require("mongoose");
-
 const antilinkSchema = new mongoose.Schema({
-  xᴇᴛʀᴏɴꜱᴇʀɪᴅ: String,
+  Ӽɛȶʀօռֆɨɖ: String,
 });
-
-const antilinkModel = (module.exports = new mongoose.model(
-  "antilink",
-  antilinkSchema
-));
+const antilinkModel = (module.exports = new mongoose.model("antilink", antilinkSchema));
