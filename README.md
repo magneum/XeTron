@@ -1,6 +1,6 @@
 [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)<img align="centre" src="https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg" alt="Krakinz"/><img align="centre" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/>
 
-# 『 👑XeTron-Discord-Multi☣️purpose bot™] 』
+# 『 👑XeTron-Discord-Multi☣️purpose bot™ ] 』
 
 - [![Generic badge](https://img.shields.io/badge/👑XeTron™-yellow.svg)](https://discord.com/api/oauth2/authorize?client_id=897486855233216562&permissions=8&scope=bot%20applications.commands)
 - 𝙳𝚒𝚛𝚎𝚌𝚝𝚕𝚢 𝚞𝚜𝚎 𝚃𝚑𝚎 𝙱𝚘𝚝 𝚒𝚗 Discord
