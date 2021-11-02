@@ -42,12 +42,9 @@ module.exports = {
               "⚡乂ΣTЯỖN☆•",
               "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
             )
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({
-                dynamic: true
-              })
-            ).setDescription(`**\`\`\`diff
+            .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({
+              dynamic: true
+            })).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix

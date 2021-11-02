@@ -40,12 +40,9 @@ Set the goodbye channel <per server>!`;
           .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
           .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
           .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setFooter(
-            `👈🏽Requested by ${message.author.username}`,
-            message.author.avatarURL({
-              dynamic: true
-            })
-          ).setDescription(`**\`\`\`diff
+          .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({
+            dynamic: true
+          })).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix

@@ -39,12 +39,9 @@ module.exports = {
           .setTitle(`**\`\`\`${newScpt} Command Helper\`\`\`**`)
           .setThumbnail(`https://i.some-random-api.ml/pokemon/${poke}.png`)
           .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setFooter(
-            `👈🏽Requested by ${message.author.username}`,
-            message.author.avatarURL({
-              dynamic: true
-            })
-          ).setDescription(`**\`\`\`diff
+          .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({
+            dynamic: true
+          })).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix
@@ -74,12 +71,9 @@ ${cyanArea}
             .setImage(image.common.file_url)
             .setColor(process.env.XeTrons)
             .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({
-                dynamic: true
-              })
-            )
+            .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({
+              dynamic: true
+            }))
             .setURL(image.common.file_url);
           return message.reply({
             embeds: [embed]

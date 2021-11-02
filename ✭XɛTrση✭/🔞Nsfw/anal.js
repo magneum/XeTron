@@ -43,12 +43,9 @@ module.exports = {
               "⚡乂ΣTЯỖN☆•",
               "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
             )
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({
-                dynamic: true
-              })
-            ).setDescription(`**\`\`\`diff
+            .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({
+              dynamic: true
+            })).setDescription(`**\`\`\`diff
 ${redArea}\`\`\`
 
 \`\`\`fix
@@ -67,12 +64,9 @@ ${cyanArea}
             .setDescription(`**` + title + `**`)
             .setImage(amazeme)
             .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-            .setFooter(
-              `👈🏽Requested by ${message.author.username}`,
-              message.author.avatarURL({
-                dynamic: true
-              })
-            )
+            .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({
+              dynamic: true
+            }))
             .setColor(process.env.XeTrons);
           message.reply({
             embeds: [wow]
