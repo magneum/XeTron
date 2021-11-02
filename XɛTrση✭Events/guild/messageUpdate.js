@@ -5,28 +5,32 @@
 "🐙";
 require("dotenv").config();
 const messageData = require("../../XɛTrση✭Database/messagelog");
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 module.exports = async (oldMessage, newMessage) => {
-  const data = await messageData.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newMessage.guild.id });
+  const data = await messageData.findOne({
+    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newMessage.guild.id
+  });
   if (!data) return;
   const channel = data.xᴇᴛʀᴏɴᴄʜɪᴅ;
   newMessage.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
     embeds: [
       new MessageEmbed()
-        .setTimestamp()
-        .setColor(process.env.XeTrons)
-        .setURL("https://github.com/krakinz")
-        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-        .setTitle("Message Edited")
-        .setDescription(
-          `${newMessage.author} edited their message in ${newMessage.channel}`
-        )
-        .addField(
-          "Jump to Message",
-          `[Click Me](https://discord.com/channels/${newMessage.guild.id}/${newMessage.channel.id}/${newMessage.id})`
-        )
-        .addField(`Old Message`, `${oldMessage.content}`, true)
-        .addField("New Message", `${newMessage.content}`, true),
+      .setTimestamp()
+      .setColor(process.env.XeTrons)
+      .setURL("https://github.com/krakinz")
+      .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+      .setTitle("Message Edited")
+      .setDescription(
+        `${newMessage.author} edited their message in ${newMessage.channel}`
+      )
+      .addField(
+        "Jump to Message",
+        `[Click Me](https://discord.com/channels/${newMessage.guild.id}/${newMessage.channel.id}/${newMessage.id})`
+      )
+      .addField(`Old Message`, `${oldMessage.content}`, true)
+      .addField("New Message", `${newMessage.content}`, true),
     ],
   });
 };

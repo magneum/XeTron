@@ -14,9 +14,16 @@ const menuEvents = (event) => require(`./XɛTrση✭Events/menus/${event}`);
 const guildEvent = (event) => require(`./XɛTrση✭Events/guild/${event}`);
 const clientEvent = (event) => require(`./XɛTrση✭Events/client/${event}`);
 const otherEvent = (event) => require(`./XɛTrση✭Events/functions/${event}`);
-const { Client, Collection, Intents, MessageEmbed } = require("discord.js");
+const {
+  Client,
+  Collection,
+  Intents,
+  MessageEmbed
+} = require("discord.js");
 const XɛTrση = new Client({
-  allowedMentions: { parse: ["users", "roles", "everyone"] },
+  allowedMentions: {
+    parse: ["users", "roles", "everyone"]
+  },
   intents: [
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MESSAGES,
@@ -40,7 +47,8 @@ process.on("uncaughtException", (err) => {
   XɛTrση.channels.cache.get(process.env.KRAKINZLAB).send({
     embeds: [new MessageEmbed()
       .setTitle("Uncaught Exception")
-      .setDescription(`${err}`).setColor("RED"),],
+      .setDescription(`${err}`).setColor("RED"),
+    ],
   });
 });
 process.on("unhandledRejection", (reason, promise) => {
@@ -50,7 +58,8 @@ process.on("unhandledRejection", (reason, promise) => {
       .setTitle("Unhandled Promise Rejection")
       .addField("Promise", `${promise}`)
       .addField("Reason", `${reason.message}`)
-      .setColor("RED"),],
+      .setColor("RED"),
+    ],
   });
 });
 

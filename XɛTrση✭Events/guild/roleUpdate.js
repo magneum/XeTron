@@ -1,5 +1,7 @@
 const roleData = require("../../XɛTrση✭Database/roleupdates");
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 
 module.exports = async (oldRole, newRole) => {
   const data = await roleData.findOne({
@@ -18,7 +20,9 @@ module.exports = async (oldRole, newRole) => {
 
     newRole.guild.channels.cache
       .get(data.xᴇᴛʀᴏɴᴄʜɪᴅ)
-      .send({ embeds: [nameEmbed] });
+      .send({
+        embeds: [nameEmbed]
+      });
   } else if (newRole.color !== oldRole.color) {
     let colorEmbed = new MessageEmbed()
       .setTitle("Role Updates")
@@ -29,7 +33,9 @@ module.exports = async (oldRole, newRole) => {
 
     newRole.guild.channels.cache
       .get(data.xᴇᴛʀᴏɴᴄʜɪᴅ)
-      .send({ embeds: [colorEmbed] });
+      .send({
+        embeds: [colorEmbed]
+      });
   } else if (newRole.hoist !== oldRole.hoist) {
     let oldHoist = oldRole.hoist ? "Yes" : "No";
     let newHoist = newRole.hoist ? "Yes" : "No";
@@ -42,7 +48,9 @@ module.exports = async (oldRole, newRole) => {
 
     newRole.guild.channels.cache
       .get(data.xᴇᴛʀᴏɴᴄʜɪᴅ)
-      .send({ embeds: [hoistEmbed] });
+      .send({
+        embeds: [hoistEmbed]
+      });
   } else if (newRole.mentionable !== oldRole.mentionable) {
     let oldMentionable = oldRole.mentionable ? "Yes" : "No";
     let newMentionable = newRole.mentionable ? "Yes" : "No";
@@ -55,6 +63,8 @@ module.exports = async (oldRole, newRole) => {
 
     newRole.guild.channels.cache
       .get(data.xᴇᴛʀᴏɴᴄʜɪᴅ)
-      .send({ embeds: [mentionableEmbed] });
+      .send({
+        embeds: [mentionableEmbed]
+      });
   }
 };

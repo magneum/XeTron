@@ -5,22 +5,26 @@
 "🐙";
 require("dotenv").config();
 const memberData = require("../../XɛTrση✭Database/memberupdate");
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 module.exports = async (member) => {
-  const data = await memberData.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: member.guild.id });
+  const data = await memberData.findOne({
+    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: member.guild.id
+  });
   if (!data) return;
   member.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
     embeds: [
       new MessageEmbed()
-        .setTimestamp()
-        .setColor(process.env.XeTrons)
-        .setURL("https://github.com/krakinz")
-        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-        .setTitle("Member Left")
-        .setDescription(
-          `User: ${member.user.tag} (${member})\nUser ID: ${member.id}\nAcc. Created: ${member.user.createdAt}\nServer Mmebr Count: ${member.guild.memberCount}`
-        )
-        .setImage(`${member.user.avatarURL}`),
+      .setTimestamp()
+      .setColor(process.env.XeTrons)
+      .setURL("https://github.com/krakinz")
+      .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+      .setTitle("Member Left")
+      .setDescription(
+        `User: ${member.user.tag} (${member})\nUser ID: ${member.id}\nAcc. Created: ${member.user.createdAt}\nServer Mmebr Count: ${member.guild.memberCount}`
+      )
+      .setImage(`${member.user.avatarURL}`),
     ],
   });
 };

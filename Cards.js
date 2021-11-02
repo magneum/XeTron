@@ -5,9 +5,13 @@
 "🐙";
 var Canvas = require("canvas");
 const Discord = require("discord.js");
-var { getMember } = require("./XpMem");
+var {
+  getMember
+} = require("./XpMem");
 const Cards = require("./XɛTrση✭Database/card");
-const { MessageAttachment } = require("discord.js");
+const {
+  MessageAttachment
+} = require("discord.js");
 module.exports = {
   //Level up image
   async lvlupimg(message, users) {
@@ -21,8 +25,7 @@ module.exports = {
     };
     var canvas = Canvas.createCanvas(840, 300);
     var ctx = canvas.getContext("2d");
-    Cards.findOne(
-      {
+    Cards.findOne({
         did: message.author.id,
       },
       async (err, cards) => {
@@ -55,7 +58,9 @@ module.exports = {
         ctx.fillText("Next Level in " + xpleft + " xp", 280, 225);
         //Get avatar
         var avatar = await Canvas.loadImage(
-          message.author.displayAvatarURL({ format: "jpg" })
+          message.author.displayAvatarURL({
+            format: "jpg"
+          })
         );
         ctx.beginPath();
         ctx.arc(125, 140, 100, 0, Math.PI * 2);

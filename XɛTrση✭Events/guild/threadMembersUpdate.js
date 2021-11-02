@@ -4,39 +4,43 @@
 "🐙";
 "🐙";
 require("dotenv").config();
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 const channelData = require("../../XɛTrση✭Database/channelupdate");
 module.exports = async (oldThreadMembers, newThreadMembers) => {
-  const data = await channelData.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newThread.guild.id });
+  const data = await channelData.findOne({
+    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newThread.guild.id
+  });
   if (!data) return;
   if (oldThreadMembers.size < newThreadMembers.size) {
     newThread.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle(`${oldThreadMembers.thread.name}`)
-          .addField(
-            "Thread Member Count Updated",
-            `${oldThreadMembers.size} => ${newThreadMembers.size}`
-          ),
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle(`${oldThreadMembers.thread.name}`)
+        .addField(
+          "Thread Member Count Updated",
+          `${oldThreadMembers.size} => ${newThreadMembers.size}`
+        ),
       ],
     });
   } else if (oldThreadMembers.size > newThreadMembers.size) {
     newThread.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle(`${oldThreadMembers.thread.name}`)
-          .addField(
-            "Thread Member Count Updated",
-            `${oldThreadMembers.size} => ${newThreadMembers.size}`
-          ),
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle(`${oldThreadMembers.thread.name}`)
+        .addField(
+          "Thread Member Count Updated",
+          `${oldThreadMembers.size} => ${newThreadMembers.size}`
+        ),
       ],
     });
   }

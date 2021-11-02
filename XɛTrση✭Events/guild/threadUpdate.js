@@ -4,57 +4,61 @@
 "🐙";
 "🐙";
 require("dotenv").config();
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 const channelData = require("../../XɛTrση✭Database/channelupdate");
 module.exports = async (oldThread, newThread) => {
-  const data = await channelData.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newThread.guild.id });
+  const data = await channelData.findOne({
+    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newThread.guild.id
+  });
   if (!data) return;
   if (oldThread.name !== newThread.name) {
     newThread.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle(`${oldThread.name}`)
-          .addField(
-            "Thread Name Changed",
-            `${oldThread.name} => ${newThread.name}`,
-            true
-          ),
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle(`${oldThread.name}`)
+        .addField(
+          "Thread Name Changed",
+          `${oldThread.name} => ${newThread.name}`,
+          true
+        ),
       ],
     });
   } else if (oldThread.rateLimitPerUser !== newThread.rateLimitPerUser) {
     newThread.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle(`${oldThread.name}`)
-          .addField(
-            "Thread Slowmode Updated",
-            `${oldThread.rateLimitPerUser} => ${newThread.rateLimitPerUser}`
-          ),
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle(`${oldThread.name}`)
+        .addField(
+          "Thread Slowmode Updated",
+          `${oldThread.rateLimitPerUser} => ${newThread.rateLimitPerUser}`
+        ),
       ],
     });
   } else if (oldThread.archived !== newThread.archived) {
     newThread.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle(`${oldThread.name}`)
-          .addField(
-            "Thread Archive Status Changed",
-            `${oldThread.archived ? "Yes" : "No"} => ${
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle(`${oldThread.name}`)
+        .addField(
+          "Thread Archive Status Changed",
+          `${oldThread.archived ? "Yes" : "No"} => ${
               newThread.archived ? "Yes" : "No"
             }`
-          ),
+        ),
       ],
     });
   }

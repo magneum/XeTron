@@ -7,8 +7,12 @@ const chalk = require("chalk");
 const mongoose = require("mongoose");
 require("dotenv").config();
 module.exports = (client) => {
-  client.user.setPresence({ status: "online" });
-  client.user.setActivity("Hello", { type: "STREAMING" });
+  client.user.setPresence({
+    status: "online"
+  });
+  client.user.setActivity("Hello", {
+    type: "STREAMING"
+  });
 
   let allMembers = new Set();
   client.guilds.cache.forEach((guild) => {

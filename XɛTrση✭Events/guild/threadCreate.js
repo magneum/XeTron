@@ -4,19 +4,23 @@
 "🐙";
 "🐙";
 require("dotenv").config();
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 const channelData = require("../../XɛTrση✭Database/channelupdate");
 module.exports = async (thread) => {
-  const data = await channelData.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: thread.guild.id });
+  const data = await channelData.findOne({
+    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: thread.guild.id
+  });
   if (!data) return;
   thread.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
     embeds: [
       new MessageEmbed()
-        .setTimestamp()
-        .setColor(process.env.XeTrons)
-        .setURL("https://github.com/krakinz")
-        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-        .setTitle("Thread Created").setDescription(`Name: ${thread.name}
+      .setTimestamp()
+      .setColor(process.env.XeTrons)
+      .setURL("https://github.com/krakinz")
+      .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+      .setTitle("Thread Created").setDescription(`Name: ${thread.name}
 ID: ${thread.id}
 Created By: ${thread.guild.members.cache.get(thread.ownerId)}
 Parent Channel: ${thread.parent.name}`),

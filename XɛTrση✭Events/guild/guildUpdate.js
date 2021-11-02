@@ -5,85 +5,89 @@
 "🐙";
 require("dotenv").config();
 const serverData = require("../../XɛTrση✭Database/serverupdate");
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 module.exports = async (oldGuild, newGuild) => {
-  const data = await serverData.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newGuild.id });
+  const data = await serverData.findOne({
+    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newGuild.id
+  });
   if (!data) return;
   if (newGuild.name !== oldGuild.name) {
     newGuild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Server Updates")
-          .addField(
-            "Server Name Changed",
-            `${oldGuild.name} => ${newGuild.name}`
-          ),
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Server Updates")
+        .addField(
+          "Server Name Changed",
+          `${oldGuild.name} => ${newGuild.name}`
+        ),
       ],
     });
   } else if (newGuild.iconURL() !== oldGuild.iconURL()) {
     newGuild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Server Updates")
-          .addField(
-            "Server Icon Changed",
-            `[Old Icon](${oldGuild.iconURL()}) => [New Icon](${newGuild.iconURL()})`
-          ),
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Server Updates")
+        .addField(
+          "Server Icon Changed",
+          `[Old Icon](${oldGuild.iconURL()}) => [New Icon](${newGuild.iconURL()})`
+        ),
       ],
     });
   } else if (newGuild.splashURL() !== oldGuild.splashURL()) {
     newGuild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Server Updates")
-          .addField(
-            "Server Splash Changed",
-            `[Old Splash](${oldGuild.splashURL()}) => [New Splash](${newGuild.splashURL()})`
-          )
-          .setThumbnail(`${newGuild.splashURL()}`)
-          .setTimestamp(),
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Server Updates")
+        .addField(
+          "Server Splash Changed",
+          `[Old Splash](${oldGuild.splashURL()}) => [New Splash](${newGuild.splashURL()})`
+        )
+        .setThumbnail(`${newGuild.splashURL()}`)
+        .setTimestamp(),
       ],
     });
   } else if (newGuild.memberCount !== oldGuild.memberCount) {
     newGuild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Server Updates")
-          .addField(
-            "Server Members Changed",
-            `${oldGuild.memberCount} => ${newGuild.memberCount}`
-          ),
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Server Updates")
+        .addField(
+          "Server Members Changed",
+          `${oldGuild.memberCount} => ${newGuild.memberCount}`
+        ),
       ],
     });
   } else if (newGuild.ownerId !== oldGuild.ownerId) {
     newGuild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Server Updates")
-          .addField(
-            "Server Owner Changed",
-            `${oldGuild.owner.user.username} => ${newGuild.owner.user.username}`
-          ),
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Server Updates")
+        .addField(
+          "Server Owner Changed",
+          `${oldGuild.owner.user.username} => ${newGuild.owner.user.username}`
+        ),
       ],
     });
   } else {

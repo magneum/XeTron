@@ -1,5 +1,7 @@
 const roleData = require("../../XɛTrση✭Database/roleupdates");
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 
 module.exports = async (role) => {
   const data = await roleData.findOne({
@@ -18,5 +20,7 @@ module.exports = async (role) => {
     .setColor("GREEN")
     .setTimestamp();
 
-  role.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({ embeds: [embed] });
+  role.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    embeds: [embed]
+  });
 };

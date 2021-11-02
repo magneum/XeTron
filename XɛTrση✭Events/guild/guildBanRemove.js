@@ -5,21 +5,25 @@
 "🐙";
 require("dotenv").config();
 const memberData = require("../../XɛTrση✭Database/memberupdate");
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 module.exports = async (member) => {
-  const data = await memberData.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: member.guild.id });
+  const data = await memberData.findOne({
+    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: member.guild.id
+  });
   if (!data) return;
   member.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
     embeds: [
       new MessageEmbed()
-        .setTimestamp()
-        .setColor(process.env.XeTrons)
-        .setURL("https://github.com/krakinz")
-        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-        .setTitle("Member Unbanned")
-        .setDescription(
-          `User: ${member.user.tag} (${member})\nUser ID: ${member.id}\nAcc Created On: ${member.user.createdAt}`
-        ),
+      .setTimestamp()
+      .setColor(process.env.XeTrons)
+      .setURL("https://github.com/krakinz")
+      .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+      .setTitle("Member Unbanned")
+      .setDescription(
+        `User: ${member.user.tag} (${member})\nUser ID: ${member.id}\nAcc Created On: ${member.user.createdAt}`
+      ),
     ],
   });
 };

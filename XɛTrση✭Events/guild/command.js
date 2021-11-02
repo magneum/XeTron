@@ -6,9 +6,13 @@
 const prefixModel = require("../../XɛTrση✭Database/setprefix");
 const Users = require("../../XɛTrση✭Database/xp");
 const Cards = require("../../XɛTrση✭Database/card");
-const { lvlupimg } = require('../../Cards')
+const {
+    lvlupimg
+} = require('../../Cards')
 const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-const { Collection } = require("discord.js")
+const {
+    Collection
+} = require("discord.js")
 module.exports = async (message, cooldowns) => {
     if (message.author.bot) {
         return;
@@ -103,7 +107,9 @@ module.exports = async (message, cooldowns) => {
             (cmd) => cmd.aliases && cmd.aliases.includes(commandName)
         );
 
-    if (!command) { return message.reply(`\`❌\` **${message.author} - Sorry, that command does not exist!**`); }
+    if (!command) {
+        return message.reply(`\`❌\` **${message.author} - Sorry, that command does not exist!**`);
+    }
 
     //command enaled thing
     if (command.enabled === false) {
@@ -184,7 +190,9 @@ module.exports = async (message, cooldowns) => {
         let embed2000 = new MessageEmbed()
             .setDescription("There was an error executing that command.")
             .setColor("BLUE");
-        message.channel.send({ embeds: [embed2000] }).catch(console.error);
+        message.channel.send({
+            embeds: [embed2000]
+        }).catch(console.error);
     }
 };
 /*

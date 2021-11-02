@@ -5,18 +5,23 @@
 "🐙";
 require("dotenv").config();
 const channelData = require("../../XɛTrση✭Database/channelupdate");
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 module.exports = async (channel) => {
-  const data = await channelData.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: channel.guild.id });
+  const data = await channelData.findOne({
+    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: channel.guild.id
+  });
   if (!data) return;
   channel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
     embeds: [
       new MessageEmbed()
-        .setTimestamp()
-        .setColor(process.env.XeTrons)
-        .setURL("https://github.com/krakinz")
-        .setAuthor("⚡XΣƬЯӨП⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-        .setTitle("Channel Created").setDescription(`\`\`\`diff
+      .setTimestamp()
+      .setColor(process.env.XeTrons)
+      .setURL("https://github.com/krakinz")
+      .setAuthor("⚡XΣƬЯӨП⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+      .setTitle("Channel Created")
+      .setDescription(`**\`\`\`diff
 +Channel Name: ${channel.name}
 +Channel ID: ${channel.id}
 +Channel Type: ${channel.type}

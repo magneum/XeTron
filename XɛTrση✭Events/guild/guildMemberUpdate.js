@@ -5,9 +5,13 @@
 "🐙";
 require("dotenv").config();
 const memberData = require("../../XɛTrση✭Database/memberupdate");
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 module.exports = async (oldMember, newMember) => {
-  const data = await memberData.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newMember.guild.id });
+  const data = await memberData.findOne({
+    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newMember.guild.id
+  });
   if (!data) return;
   if (newMember.nickname !== oldMember.nickname) {
     let oldNickname = oldMember.nickname ? oldMember.nickname : oldMember.user.username;

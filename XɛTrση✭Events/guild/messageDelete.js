@@ -5,23 +5,27 @@
 "🐙";
 require("dotenv").config();
 const messageData = require("../../XɛTrση✭Database/messagelog");
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 module.exports = async (message) => {
-  const data = await messageData.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id });
+  const data = await messageData.findOne({
+    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: message.guild.id
+  });
   if (!data) return;
   const channel = data.xᴇᴛʀᴏɴᴄʜɪᴅ;
   message.guild.channels.cache.get(channel).send({
     embeds: [
       new MessageEmbed()
-        .setTimestamp()
-        .setColor(process.env.XeTrons)
-        .setURL("https://github.com/krakinz")
-        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-        .setTitle("Message Deleted")
-        .setDescription(
-          `${message.author.username}'s messages was deleted in ${message.channel}`
-        )
-        .addField("Message Content", `${message.content}`),
+      .setTimestamp()
+      .setColor(process.env.XeTrons)
+      .setURL("https://github.com/krakinz")
+      .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+      .setTitle("Message Deleted")
+      .setDescription(
+        `${message.author.username}'s messages was deleted in ${message.channel}`
+      )
+      .addField("Message Content", `${message.content}`),
     ],
   });
 };

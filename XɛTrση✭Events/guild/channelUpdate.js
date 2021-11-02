@@ -5,19 +5,23 @@
 "🐙";
 require("dotenv").config();
 const channelData = require("../../XɛTrση✭Database/channelupdate");
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 module.exports = async (oldChannel, newChannel) => {
-  const data = await channelData.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newChannel.guild.id });
+  const data = await channelData.findOne({
+    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newChannel.guild.id
+  });
   if (!data) return;
   if (oldChannel.name !== newChannel.name) {
     newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Channel Updates").setDescription(`\`\`\`fix
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Channel Updates").setDescription(`**\`\`\`fix
 Channel Name Changed
 OLD: ${oldChannel.name}
 NEW: ${newChannel.name}
@@ -28,11 +32,11 @@ NEW: ${newChannel.name}
     newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Channel Updates").setDescription(`\`\`\`fix
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Channel Updates").setDescription(`**\`\`\`fix
 Channel Topic Changed
 OLD: ${oldChannel.topic}
 NEW: ${newChannel.topic}
@@ -43,11 +47,11 @@ NEW: ${newChannel.topic}
     newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Channel Updates").setDescription(`\`\`\`fix
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Channel Updates").setDescription(`**\`\`\`fix
 Channel Position Changed
 OLD: ${oldChannel.position}
 NEW: ${newChannel.position}
@@ -58,11 +62,11 @@ NEW: ${newChannel.position}
     newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Channel Updates").setDescription(`\`\`\`fix
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Channel Updates").setDescription(`**\`\`\`fix
 Channel Type Changed
 OLD: ${oldChannel.type}
 NEW: ${newChannel.type}
@@ -73,11 +77,11 @@ NEW: ${newChannel.type}
     newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Channel Updates").setDescription(`\`\`\`fix
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Channel Updates").setDescription(`**\`\`\`fix
 Channel NSFW Changed
 OLD: ${oldChannel.nsfw}
 NEW: ${newChannel.nsfw}
@@ -88,11 +92,11 @@ NEW: ${newChannel.nsfw}
     newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Channel Updates").setDescription(`\`\`\`fix
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Channel Updates").setDescription(`**\`\`\`fix
 Channel Bitrate Changed
 OLD: ${oldChannel.bitrate}
 NEW: ${newChannel.bitrate}
@@ -103,11 +107,11 @@ NEW: ${newChannel.bitrate}
     newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Channel Updates").setDescription(`\`\`\`fix
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Channel Updates").setDescription(`**\`\`\`fix
 Channel UserLimits Changed
 OLD: ${oldChannel.userLimit}
 NEW: ${newChannel.userLimit}
@@ -118,11 +122,11 @@ NEW: ${newChannel.userLimit}
     newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Channel Updates").setDescription(`\`\`\`fix
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Channel Updates").setDescription(`**\`\`\`fix
 Channel SLowMode Changed
 OLD: ${oldChannel.rateLimitPerUser}
 NEW: ${newChannel.rateLimitPerUser}

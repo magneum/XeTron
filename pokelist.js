@@ -718,4 +718,6 @@ const PokeList = [
   "Diancie",
 ];
 
-module.exports = { PokeList };
+module.exports = {
+  PokeList
+};

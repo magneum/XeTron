@@ -5,9 +5,13 @@
 "🐙";
 require("dotenv").config();
 const voiceData = require("../../XɛTrση✭Database/voiceupdate");
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 module.exports = async (oldState, newState) => {
-  const data = await voiceData.findOne({ xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newState.guild.id });
+  const data = await voiceData.findOne({
+    xᴇᴛʀᴏɴꜱᴇʀɪᴅ: newState.guild.id
+  });
   if (!data) return;
   let oldUser = oldState.member;
   let newUser = newState.member;
@@ -19,14 +23,14 @@ module.exports = async (oldState, newState) => {
     newState.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Voice State Updates")
-          .setDescription(
-            `${newUser} joined the voice channel <#${newUser.voice.channelId}>`
-          ),
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Voice State Updates")
+        .setDescription(
+          `${newUser} joined the voice channel <#${newUser.voice.channelId}>`
+        ),
       ],
     });
   } else if (
@@ -37,45 +41,45 @@ module.exports = async (oldState, newState) => {
     newState.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.NaNKol)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Voice State Updates")
-          .setDescription(
-            `${newUser} left the voice channel <#${oldUser.voice.channelId}>`
-          ),
+        .setTimestamp()
+        .setColor(process.env.NaNKol)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Voice State Updates")
+        .setDescription(
+          `${newUser} left the voice channel <#${oldUser.voice.channelId}>`
+        ),
       ],
     });
   } else if (oldState.mute !== newState.mute) {
     newState.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Voice State Updates")
-          .setDescription(
-            `${newUser} was ${newState.mute ? "muted" : "unmuted"}`
-          ),
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Voice State Updates")
+        .setDescription(
+          `${newUser} was ${newState.mute ? "muted" : "unmuted"}`
+        ),
       ],
     });
   } else if (oldState.deaf !== newState.deaf) {
     newState.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
       embeds: [
         new MessageEmbed()
-          .setTimestamp()
-          .setColor(process.env.XeTrons)
-          .setURL("https://github.com/krakinz")
-          .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
-          .setTitle("Voice State Updates")
-          .setDescription(
-            `${newUser} was ${newState.deaf ? "deafened" : "undeafened"}`
-          ),
+        .setTimestamp()
+        .setColor(process.env.XeTrons)
+        .setURL("https://github.com/krakinz")
+        .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+        .setTitle("Voice State Updates")
+        .setDescription(
+          `${newUser} was ${newState.deaf ? "deafened" : "undeafened"}`
+        ),
       ],
     });
   }
