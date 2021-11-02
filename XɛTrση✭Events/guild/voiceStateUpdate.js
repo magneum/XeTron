@@ -20,7 +20,7 @@ module.exports = async (oldState, newState) => {
       newUser.voice.channelId !== null) ||
     undefined
   ) {
-    newState.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newState.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -38,7 +38,7 @@ module.exports = async (oldState, newState) => {
       newUser.voice.channelId === null) ||
     undefined
   ) {
-    newState.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newState.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -53,7 +53,7 @@ module.exports = async (oldState, newState) => {
       ],
     });
   } else if (oldState.mute !== newState.mute) {
-    newState.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newState.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -68,7 +68,7 @@ module.exports = async (oldState, newState) => {
       ],
     });
   } else if (oldState.deaf !== newState.deaf) {
-    newState.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newState.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()

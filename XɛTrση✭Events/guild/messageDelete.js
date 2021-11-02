@@ -13,7 +13,7 @@ module.exports = async (message) => {
     Ӽɛȶʀօռֆɨɖ: message.guild.id
   });
   if (!data) return;
-  const channel = data.xᴇᴛʀᴏɴᴄʜɪᴅ;
+  const channel = data.Ӽɛȶʀօռƈɦɨɖ;
   message.guild.channels.cache.get(channel).send({
     embeds: [
       new MessageEmbed()

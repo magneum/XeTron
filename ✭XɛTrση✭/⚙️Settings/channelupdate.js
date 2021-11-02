@@ -81,7 +81,7 @@ ${cyanArea}
           ],
         });
         let newChannel = new channelModel({
-          xᴇᴛʀᴏɴᴄʜɪᴅ: args[0],
+          Ӽɛȶʀօռƈɦɨɖ: args[0],
           Ӽɛȶʀօռֆɨɖ: message.guild.id,
         });
         await newChannel.save();
@@ -117,7 +117,7 @@ ${cyanArea}
               "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
             )
             .setDescription(
-              `\`\`\`diff\n-Error sending Confirmation!\n+Please enter a valid xᴇᴛʀᴏɴᴄʜɪᴅ and Try-Again.\`\`\``
+              `\`\`\`diff\n-Error sending Confirmation!\n+Please enter a valid Ӽɛȶʀօռƈɦɨɖ and Try-Again.\`\`\``
             )
             .setFooter(
               `👈🏽Requested by ${message.author.username}`,
@@ -155,7 +155,7 @@ ${cyanArea}
           ],
         });
         let newChannel = new channelModel({
-          xᴇᴛʀᴏɴᴄʜɪᴅ: args[0],
+          Ӽɛȶʀօռƈɦɨɖ: args[0],
           Ӽɛȶʀօռֆɨɖ: message.guild.id,
         });
         await newChannel.save();
@@ -191,7 +191,7 @@ ${cyanArea}
               "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
             )
             .setDescription(
-              `\`\`\`diff\n-Error sending Confirmation!\n+Please enter a valid xᴇᴛʀᴏɴᴄʜɪᴅ and Try-Again.\`\`\``
+              `\`\`\`diff\n-Error sending Confirmation!\n+Please enter a valid Ӽɛȶʀօռƈɦɨɖ and Try-Again.\`\`\``
             )
             .setFooter(
               `👈🏽Requested by ${message.author.username}`,

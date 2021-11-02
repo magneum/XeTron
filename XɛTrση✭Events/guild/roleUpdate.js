@@ -19,7 +19,7 @@ module.exports = async (oldRole, newRole) => {
       .setTimestamp();
 
     newRole.guild.channels.cache
-      .get(data.xᴇᴛʀᴏɴᴄʜɪᴅ)
+      .get(data.Ӽɛȶʀօռƈɦɨɖ)
       .send({
         embeds: [nameEmbed]
       });
@@ -32,7 +32,7 @@ module.exports = async (oldRole, newRole) => {
       .setTimestamp();
 
     newRole.guild.channels.cache
-      .get(data.xᴇᴛʀᴏɴᴄʜɪᴅ)
+      .get(data.Ӽɛȶʀօռƈɦɨɖ)
       .send({
         embeds: [colorEmbed]
       });
@@ -47,7 +47,7 @@ module.exports = async (oldRole, newRole) => {
       .setTimestamp();
 
     newRole.guild.channels.cache
-      .get(data.xᴇᴛʀᴏɴᴄʜɪᴅ)
+      .get(data.Ӽɛȶʀօռƈɦɨɖ)
       .send({
         embeds: [hoistEmbed]
       });
@@ -62,7 +62,7 @@ module.exports = async (oldRole, newRole) => {
       .setTimestamp();
 
     newRole.guild.channels.cache
-      .get(data.xᴇᴛʀᴏɴᴄʜɪᴅ)
+      .get(data.Ӽɛȶʀօռƈɦɨɖ)
       .send({
         embeds: [mentionableEmbed]
       });

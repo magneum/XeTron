@@ -16,7 +16,7 @@ module.exports = async (oldMember, newMember) => {
   if (newMember.nickname !== oldMember.nickname) {
     let oldNickname = oldMember.nickname ? oldMember.nickname : oldMember.user.username;
     let newNickname = newMember.nickname ? newMember.nickname : newMember.user.username;
-    newMember.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newMember.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [new MessageEmbed().setTimestamp()
         .setColor(process.env.XeTrons)
         .setURL(`https://github.com/krakinz`)
@@ -32,7 +32,7 @@ module.exports = async (oldMember, newMember) => {
   } else if (newMember.user.username !== oldMember.user.username) {
     let oldusername = oldMember.user.username;
     let newusername = newMember.user.username;
-    newMember.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newMember.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [new Discord.MessageEmbed().setTimestamp()
         .setColor(process.env.XeTrons)
         .setURL(`https://github.com/krakinz`)
@@ -48,7 +48,7 @@ module.exports = async (oldMember, newMember) => {
   } else if (newMember.user.avatarURL() !== oldMember.user.avatarURL()) {
     let oldavatar = oldMember.user.avatarURL();
     let newavatar = newMember.user.avatarURL();
-    newMember.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newMember.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [new Discord.MessageEmbed().setTimestamp()
         .setImage(`${newavatar}`)
         .setThumbnail(`${oldavatar}`)

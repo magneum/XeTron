@@ -13,8 +13,8 @@ module.exports = async (oldMessage, newMessage) => {
     Ӽɛȶʀօռֆɨɖ: newMessage.guild.id
   });
   if (!data) return;
-  const channel = data.xᴇᴛʀᴏɴᴄʜɪᴅ;
-  newMessage.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+  const channel = data.Ӽɛȶʀօռƈɦɨɖ;
+  newMessage.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
     embeds: [
       new MessageEmbed()
       .setTimestamp()

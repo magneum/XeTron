@@ -20,7 +20,7 @@ module.exports = async (role) => {
     .setColor("GREEN")
     .setTimestamp();
 
-  role.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+  role.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
     embeds: [embed]
   });
 };

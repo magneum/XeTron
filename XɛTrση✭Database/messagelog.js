@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const messageSchema = new mongoose.Schema({
   Ӽɛȶʀօռֆɨɖ: String,
-  xᴇᴛʀᴏɴᴄʜɪᴅ: String,
+  Ӽɛȶʀօռƈɦɨɖ: String,
 });
 const messageModel = (module.exports = mongoose.model(
   "messagelogs",

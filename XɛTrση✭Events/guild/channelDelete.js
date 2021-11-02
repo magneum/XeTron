@@ -13,7 +13,7 @@ module.exports = async (channel) => {
     Ӽɛȶʀօռֆɨɖ: channel.guild.id
   });
   if (!data) return;
-  channel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+  channel.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
     embeds: [
       new MessageEmbed()
       .setTimestamp()

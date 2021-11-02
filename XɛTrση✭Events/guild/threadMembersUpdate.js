@@ -14,7 +14,7 @@ module.exports = async (oldThreadMembers, newThreadMembers) => {
   });
   if (!data) return;
   if (oldThreadMembers.size < newThreadMembers.size) {
-    newThread.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newThread.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -29,7 +29,7 @@ module.exports = async (oldThreadMembers, newThreadMembers) => {
       ],
     });
   } else if (oldThreadMembers.size > newThreadMembers.size) {
-    newThread.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newThread.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()

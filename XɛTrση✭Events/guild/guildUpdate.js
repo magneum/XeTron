@@ -14,7 +14,7 @@ module.exports = async (oldGuild, newGuild) => {
   });
   if (!data) return;
   if (newGuild.name !== oldGuild.name) {
-    newGuild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newGuild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -29,7 +29,7 @@ module.exports = async (oldGuild, newGuild) => {
       ],
     });
   } else if (newGuild.iconURL() !== oldGuild.iconURL()) {
-    newGuild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newGuild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -44,7 +44,7 @@ module.exports = async (oldGuild, newGuild) => {
       ],
     });
   } else if (newGuild.splashURL() !== oldGuild.splashURL()) {
-    newGuild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newGuild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -61,7 +61,7 @@ module.exports = async (oldGuild, newGuild) => {
       ],
     });
   } else if (newGuild.memberCount !== oldGuild.memberCount) {
-    newGuild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newGuild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -76,7 +76,7 @@ module.exports = async (oldGuild, newGuild) => {
       ],
     });
   } else if (newGuild.ownerId !== oldGuild.ownerId) {
-    newGuild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newGuild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()

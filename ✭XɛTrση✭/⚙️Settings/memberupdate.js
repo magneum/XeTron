@@ -119,13 +119,13 @@ ${cyanArea}
               "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
             )
             .setDescription(
-              `\`\`\`diff\nMEMBER🤩UPDATES\n-The new xᴇᴛʀᴏɴᴄʜɪᴅ **\`${args[0]}\` is wrong!**!\`\`\``
+              `\`\`\`diff\nMEMBER🤩UPDATES\n-The new Ӽɛȶʀօռƈɦɨɖ **\`${args[0]}\` is wrong!**!\`\`\``
             ),
           ],
         });
       }
       let memberData = new memberModel({
-        xᴇᴛʀᴏɴᴄʜɪᴅ: args[0],
+        Ӽɛȶʀօռƈɦɨɖ: args[0],
         Ӽɛȶʀօռֆɨɖ: message.guild.id,
       });
       memberData.save();
@@ -191,13 +191,13 @@ ${cyanArea}
               "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
             )
             .setDescription(
-              `\`\`\`diff\nMEMBER🤩UPDATES\n-The new xᴇᴛʀᴏɴᴄʜɪᴅ **\`${args[0]}\` is wrong!**!\`\`\``
+              `\`\`\`diff\nMEMBER🤩UPDATES\n-The new Ӽɛȶʀօռƈɦɨɖ **\`${args[0]}\` is wrong!**!\`\`\``
             ),
           ],
         });
       }
       let memberData = new memberModel({
-        xᴇᴛʀᴏɴᴄʜɪᴅ: args[0],
+        Ӽɛȶʀօռƈɦɨɖ: args[0],
         Ӽɛȶʀօռֆɨɖ: message.guild.id,
       });
       memberData.save();

@@ -14,7 +14,7 @@ module.exports = async (oldChannel, newChannel) => {
   });
   if (!data) return;
   if (oldChannel.name !== newChannel.name) {
-    newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newChannel.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -29,7 +29,7 @@ NEW: ${newChannel.name}
       ],
     });
   } else if (oldChannel.topic !== newChannel.topic) {
-    newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newChannel.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -44,7 +44,7 @@ NEW: ${newChannel.topic}
       ],
     });
   } else if (oldChannel.position !== newChannel.position) {
-    newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newChannel.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -59,7 +59,7 @@ NEW: ${newChannel.position}
       ],
     });
   } else if (oldChannel.type !== newChannel.type) {
-    newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newChannel.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -74,7 +74,7 @@ NEW: ${newChannel.type}
       ],
     });
   } else if (oldChannel.nsfw !== newChannel.nsfw) {
-    newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newChannel.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -89,7 +89,7 @@ NEW: ${newChannel.nsfw}
       ],
     });
   } else if (oldChannel.bitrate !== newChannel.bitrate) {
-    newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newChannel.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -104,7 +104,7 @@ NEW: ${newChannel.bitrate}
       ],
     });
   } else if (oldChannel.userLimit !== newChannel.userLimit) {
-    newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newChannel.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -119,7 +119,7 @@ NEW: ${newChannel.userLimit}
       ],
     });
   } else if (oldChannel.rateLimitPerUser !== newChannel.rateLimitPerUser) {
-    newChannel.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newChannel.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()

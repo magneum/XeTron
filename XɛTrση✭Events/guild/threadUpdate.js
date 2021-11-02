@@ -14,7 +14,7 @@ module.exports = async (oldThread, newThread) => {
   });
   if (!data) return;
   if (oldThread.name !== newThread.name) {
-    newThread.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newThread.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -30,7 +30,7 @@ module.exports = async (oldThread, newThread) => {
       ],
     });
   } else if (oldThread.rateLimitPerUser !== newThread.rateLimitPerUser) {
-    newThread.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newThread.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
@@ -45,7 +45,7 @@ module.exports = async (oldThread, newThread) => {
       ],
     });
   } else if (oldThread.archived !== newThread.archived) {
-    newThread.guild.channels.cache.get(data.xᴇᴛʀᴏɴᴄʜɪᴅ).send({
+    newThread.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [
         new MessageEmbed()
         .setTimestamp()
