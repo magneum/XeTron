@@ -42,7 +42,7 @@ module.exports = {
         //Show Level & XP
         let nxtlvl = 300 * Math.pow(2, users.level);
         var xpleft = nxtlvl - users.xp;
-        ctx.font = "40px Symbola";
+        ctx.font = "30px Symbola";
         ctx.fillStyle = "#000";
         ctx.fillText(
           "You are level now " + users.level + " - " + users.xp + " XP",
@@ -50,7 +50,7 @@ module.exports = {
           180
         );
         //xp Left
-        ctx.font = "50px Symbola";
+        ctx.font = "40px Symbola";
         ctx.fillStyle = "#000";
         ctx.fillText("Next Level in " + xpleft + " xp", 280, 225);
         //Get avatar
