@@ -16,17 +16,17 @@ module.exports = async (message, client) => {
     })
     .catch((err) => console.log(err));
   if (prefixData) {
-    var PREFIX = prefixData.Prefix;
+    var XeRunner = prefixData.Prefix;
   } else if (!prefixData) {
-    PREFIX = process.env.XeFixer;
+    XeRunner = process.env.XeFixer;
   }
-  client.prefix = PREFIX;
+  client.prefix = XeRunner;
   if (
     message.content === `<@!${client.user.id}>` ||
     message.content === `<@${client.user.id}>`
   ) {
     return message.channel.send(
-      `My prefix in this server is \`${PREFIX}\`\n\nTo get a list of commands, type \`${PREFIX}help\``
+      `My prefix in this server is \`${XeRunner}\`\n\nTo get a list of commands, type \`${XeRunner}help\``
     );
   }
 };

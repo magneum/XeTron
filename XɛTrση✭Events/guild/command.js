@@ -82,16 +82,16 @@ module.exports = async (message, cooldowns) => {
     }).catch(err => console.log(err))
 
     if (prefixData) {
-        var PREFIX = prefixData.Prefix
+        var XeRunner = prefixData.Prefix
     } else if (!prefixData) {
-        PREFIX = process.env.XeFixer;
+        XeRunner = process.env.XeFixer;
     }
-    client.prefix = PREFIX;
+    client.prefix = XeRunner;
 
 
 
     const prefixRegex = new RegExp(
-        `^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`
+        `^(<@!?${client.user.id}>|${escapeRegex(XeRunner)})\\s*`
     );
     if (!prefixRegex.test(message.content)) return;
 
