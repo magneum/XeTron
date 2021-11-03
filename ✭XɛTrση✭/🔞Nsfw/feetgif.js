@@ -63,7 +63,7 @@ ${cyanArea}
             dynamic: true
           })
         )
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
         .setURL(owo.url);
       message.reply({
         embeds: [cumslut]

@@ -57,7 +57,7 @@ ${cyanArea}
     const DeadlyPunch = new Discord.MessageEmbed()
       .setTimestamp()
       .setImage(data)
-      .setColor(process.env.XeTrons)
+      .setColor(process.env.XeTrons || "#FFBF00")
       .setTitle("Deadly👊🏽‍Punch")
       .setURL("https://github.com/krakinz")
       .setAuthor("⚡XɛTrση☆")

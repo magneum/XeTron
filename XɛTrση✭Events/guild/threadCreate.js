@@ -17,7 +17,7 @@ module.exports = async (thread) => {
     embeds: [
       new MessageEmbed()
       .setTimestamp()
-      .setColor(process.env.XeTrons)
+      .setColor(process.env.XeTrons || "#FFBF00")
       .setURL("https://github.com/krakinz")
       .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
       .setTitle("Thread Created").setDescription(`Name: ${thread.name}

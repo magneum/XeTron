@@ -89,7 +89,7 @@ module.exports = async (member) => {
           new MessageEmbed()
             .setTimestamp()
             .setTitle("Welcome")
-            .setColor(process.env.XeTrons)
+            .setColor(process.env.XeTrons || "#FFBF00")
             .setDescription(
               `${member}, Welcome to **${member.guild.name}**! We hope you like our Server! Enjoy Your Stay here!`
             )

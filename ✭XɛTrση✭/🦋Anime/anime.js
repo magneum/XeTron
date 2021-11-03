@@ -55,7 +55,7 @@ ${cyanArea}
         embeds: [
           new Discord.MessageEmbed()
           .setTimestamp()
-          .setColor(process.env.XeTrons)
+          .setColor(process.env.XeTrons || "#FFBF00")
           .setURL("https://github.com/krakinz")
           .setAuthor("⚡XɛTrση☆", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
           .setThumbnail(data.picture)

@@ -54,7 +54,7 @@ ${cyanArea}
     let danteysex = new Discord.MessageEmbed()
       .setImage(hub.getRandomHub())
       .setTimestamp()
-      .setColor(process.env.XeTrons)
+      .setColor(process.env.XeTrons || "#FFBF00")
       .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
       .setFooter(
         `👈🏽Requested by ${message.author.username}`,

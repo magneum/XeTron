@@ -18,7 +18,7 @@ module.exports = async (oldGuild, newGuild) => {
       embeds: [
         new MessageEmbed()
         .setTimestamp()
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
         .setURL("https://github.com/krakinz")
         .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
         .setTitle("Server Updates")
@@ -33,7 +33,7 @@ module.exports = async (oldGuild, newGuild) => {
       embeds: [
         new MessageEmbed()
         .setTimestamp()
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
         .setURL("https://github.com/krakinz")
         .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
         .setTitle("Server Updates")
@@ -48,7 +48,7 @@ module.exports = async (oldGuild, newGuild) => {
       embeds: [
         new MessageEmbed()
         .setTimestamp()
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
         .setURL("https://github.com/krakinz")
         .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
         .setTitle("Server Updates")
@@ -65,7 +65,7 @@ module.exports = async (oldGuild, newGuild) => {
       embeds: [
         new MessageEmbed()
         .setTimestamp()
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
         .setURL("https://github.com/krakinz")
         .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
         .setTitle("Server Updates")
@@ -80,7 +80,7 @@ module.exports = async (oldGuild, newGuild) => {
       embeds: [
         new MessageEmbed()
         .setTimestamp()
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
         .setURL("https://github.com/krakinz")
         .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
         .setTitle("Server Updates")

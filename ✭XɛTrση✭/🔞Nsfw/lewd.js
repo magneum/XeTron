@@ -60,7 +60,7 @@ ${cyanArea}
           dynamic: true
         })
       )
-      .setColor(process.env.XeTrons)
+      .setColor(process.env.XeTrons || "#FFBF00")
       .setImage(image);
     message.reply({
       embeds: [embed]

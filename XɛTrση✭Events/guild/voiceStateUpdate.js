@@ -24,7 +24,7 @@ module.exports = async (oldState, newState) => {
       embeds: [
         new MessageEmbed()
         .setTimestamp()
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
         .setURL("https://github.com/krakinz")
         .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
         .setTitle("Voice State Updates")
@@ -57,7 +57,7 @@ module.exports = async (oldState, newState) => {
       embeds: [
         new MessageEmbed()
         .setTimestamp()
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
         .setURL("https://github.com/krakinz")
         .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
         .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
@@ -72,7 +72,7 @@ module.exports = async (oldState, newState) => {
       embeds: [
         new MessageEmbed()
         .setTimestamp()
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
         .setURL("https://github.com/krakinz")
         .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
         .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")

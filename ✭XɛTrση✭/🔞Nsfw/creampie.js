@@ -51,7 +51,7 @@ ${cyanArea}
     }
     `❌""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""❌`;
     const danteysex = new Discord.MessageEmbed()
-      .setColor(process.env.XeTrons)
+      .setColor(process.env.XeTrons || "#FFBF00")
       .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
       .setFooter(
         `👈🏽Requested by ${message.author.username}`,

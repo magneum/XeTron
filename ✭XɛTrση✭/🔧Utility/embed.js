@@ -50,7 +50,7 @@ ${cyanArea}
     message.reply({
       embeds: [new MessageEmbed()
         .setDescription(`${msg}`)
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
       ]
     });
   },

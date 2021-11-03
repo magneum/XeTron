@@ -29,7 +29,9 @@ module.exports = {
     cpuStat.usagePercent(function (err, percent, seconds) {
       const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
       message.reply({
-        embeds: [new Discord.MessageEmbed().setTimestamp().setColor(process.env.XeTrons)
+        embeds: [new Discord.MessageEmbed()
+          .setTimestamp()
+          .setColor(process.env.XeTrons || "#FFBF00")
           .setURL("https://github.com/krakinz")
           .setTitle(`⚡乂ΣTЯỖN☆•version: ${XeTronGen}`)
           .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")

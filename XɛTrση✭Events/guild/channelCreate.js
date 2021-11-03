@@ -17,14 +17,17 @@ module.exports = async (channel) => {
     embeds: [
       new MessageEmbed()
       .setTimestamp()
-      .setColor(process.env.XeTrons)
+      .setColor(process.env.XeTrons || "#FFBF00")
       .setURL("https://github.com/krakinz")
       .setAuthor("⚡XΣƬЯӨП⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
       .setTitle("Channel Created")
       .setDescription(`**\`\`\`diff
-+Channel Name: ${channel.name}
-+Channel ID: ${channel.id}
-+Channel Type: ${channel.type}
+!⪢ CHANNEL NAME 
++${channel.name}
+!⪢ CHANNEL ID
++${channel.id}
+!⪢ CHANNEL TYPE
++${channel.type}
 \`\`\`**`),
     ],
   });

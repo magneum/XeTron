@@ -18,7 +18,7 @@ module.exports = async (oldMember, newMember) => {
     let newNickname = newMember.nickname ? newMember.nickname : newMember.user.username;
     newMember.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [new MessageEmbed().setTimestamp()
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
         .setURL(`https://github.com/krakinz`)
         .setThumbnail(`${newMember.user.avatarURL()}`)
         .setTitle(`\`\`\`Member🔔Update\`\`\``)
@@ -34,7 +34,7 @@ module.exports = async (oldMember, newMember) => {
     let newusername = newMember.user.username;
     newMember.guild.channels.cache.get(data.Ӽɛȶʀօռƈɦɨɖ).send({
       embeds: [new Discord.MessageEmbed().setTimestamp()
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
         .setURL(`https://github.com/krakinz`)
         .setThumbnail(`${newMember.user.avatarURL()}`)
         .setTitle(`\`\`\`Member🔔Update\`\`\``)
@@ -52,7 +52,7 @@ module.exports = async (oldMember, newMember) => {
       embeds: [new Discord.MessageEmbed().setTimestamp()
         .setImage(`${newavatar}`)
         .setThumbnail(`${oldavatar}`)
-        .setColor(process.env.XeTrons)
+        .setColor(process.env.XeTrons || "#FFBF00")
         .setURL(`https://github.com/krakinz`)
         .setImage(`${newMember.user.avatarURL()}`)
         .setTitle(`\`\`\`Member🔔Update\`\`\``)

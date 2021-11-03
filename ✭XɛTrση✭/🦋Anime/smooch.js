@@ -57,7 +57,7 @@ ${cyanArea}
     const smoochhard = new Discord.MessageEmbed()
       .setTimestamp()
       .setImage(data)
-      .setColor(process.env.XeTrons)
+      .setColor(process.env.XeTrons || "#FFBF00")
       .setTitle("So Wet Smooch wow💋")
       .setURL("https://github.com/krakinz")
       .setAuthor("⚡𝐗𝐞𝐓𝐫𝐨𝐧⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")

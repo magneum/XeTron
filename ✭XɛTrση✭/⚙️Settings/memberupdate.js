@@ -61,7 +61,7 @@ ${cyanArea}
           embeds: [
             new Discord.MessageEmbed()
             .setTimestamp()
-            .setColor(process.env.XeTrons)
+            .setColor(process.env.XeTrons || "#FFBF00")
             .setFooter(
               `👈🏽Requested by ${message.author.username}`,
               message.author.avatarURL({
@@ -82,7 +82,7 @@ ${cyanArea}
           embeds: [
             new Discord.MessageEmbed()
             .setTimestamp()
-            .setColor(process.env.XeTrons)
+            .setColor(process.env.XeTrons || "#FFBF00")
             .setAuthor(
               "⚡XɛTrση☆",
               "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
@@ -104,7 +104,7 @@ ${cyanArea}
           embeds: [
             new Discord.MessageEmbed()
             .setTimestamp()
-            .setColor(process.env.XeTrons)
+            .setColor(process.env.XeTrons || "#FFBF00")
             .setFooter(
               `👈🏽Requested by ${message.author.username}`,
               message.author.avatarURL({
@@ -133,7 +133,7 @@ ${cyanArea}
           embeds: [
             new Discord.MessageEmbed()
             .setTimestamp()
-            .setColor(process.env.XeTrons)
+            .setColor(process.env.XeTrons || "#FFBF00")
             .setFooter(
               `👈🏽Requested by ${message.author.username}`,
               message.author.avatarURL({
@@ -154,7 +154,7 @@ ${cyanArea}
           embeds: [
             new Discord.MessageEmbed()
             .setTimestamp()
-            .setColor(process.env.XeTrons)
+            .setColor(process.env.XeTrons || "#FFBF00")
             .setAuthor(
               "⚡XɛTrση☆",
               "https://i.postimg.cc/bwrSWMdK/XeTron.gif"
@@ -176,7 +176,7 @@ ${cyanArea}
           embeds: [
             new Discord.MessageEmbed()
             .setTimestamp()
-            .setColor(process.env.XeTrons)
+            .setColor(process.env.XeTrons || "#FFBF00")
             .setFooter(
               `👈🏽Requested by ${message.author.username}`,
               message.author.avatarURL({

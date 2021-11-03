@@ -62,7 +62,7 @@ ${cyanArea}
       .then(function (res) {
         const ass = new Discord.MessageEmbed()
           .setTitle("Ass")
-          .setColor(process.env.XeTrons)
+          .setColor(process.env.XeTrons || "#FFBF00")
           .setImage("attachment://file.png")
           .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
           .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({

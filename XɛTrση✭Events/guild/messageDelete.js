@@ -18,13 +18,11 @@ module.exports = async (message) => {
     embeds: [
       new MessageEmbed()
       .setTimestamp()
-      .setColor(process.env.XeTrons)
+      .setColor(process.env.XeTrons || "#FFBF00")
       .setURL("https://github.com/krakinz")
       .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
       .setTitle("Message Deleted")
-      .setDescription(
-        `${message.author.username}'s messages was deleted in ${message.channel}`
-      )
+      .setDescription(`${message.author.username}'s messages was deleted in ${message.channel}`)
       .addField("Message Content", `${message.content}`),
     ],
   });

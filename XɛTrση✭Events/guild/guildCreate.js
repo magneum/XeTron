@@ -33,7 +33,7 @@ ${Seconds} ${Seconds > 1 ? "Seconds" : "Second"}`
     embeds: [
       new MessageEmbed()
       .setTimestamp()
-      .setColor(process.env.XeTrons)
+      .setColor(process.env.XeTrons || "#FFBF00")
       .setURL("https://github.com/krakinz")
       .setImage("https://i.postimg.cc/522zf8CZ/XeTron.png")
       .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")

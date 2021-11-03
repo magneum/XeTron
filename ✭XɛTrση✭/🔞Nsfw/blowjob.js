@@ -67,7 +67,7 @@ ${cyanArea}
             .setFooter(`👈🏽Requested by ${message.author.username}`, message.author.avatarURL({
               dynamic: true
             }))
-            .setColor(process.env.XeTrons);
+            .setColor(process.env.XeTrons || "#FFBF00");
           message.reply({
             embeds: [wow]
           });

@@ -25,7 +25,7 @@ module.exports = async (interaction) => {
         embeds: [
           new Discord.MessageEmbed()
           .setTimestamp()
-          .setColor(process.env.XeTrons)
+          .setColor(process.env.XeTrons || "#FFBF00")
           .setURL("https://github.com/krakinz")
           .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
           .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
@@ -47,7 +47,7 @@ module.exports = async (interaction) => {
         embeds: [
           new Discord.MessageEmbed()
           .setTimestamp()
-          .setColor(process.env.XeTrons)
+          .setColor(process.env.XeTrons || "#FFBF00")
           .setURL("https://github.com/krakinz")
           .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
           .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
@@ -68,7 +68,7 @@ module.exports = async (interaction) => {
         embeds: [
           new Discord.MessageEmbed()
           .setTimestamp()
-          .setColor(process.env.XeTrons)
+          .setColor(process.env.XeTrons || "#FFBF00")
           .setURL("https://github.com/krakinz")
           .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
           .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
@@ -108,7 +108,7 @@ module.exports = async (interaction) => {
         embeds: [
           new Discord.MessageEmbed()
           .setTimestamp()
-          .setColor(process.env.XeTrons)
+          .setColor(process.env.XeTrons || "#FFBF00")
           .setURL("https://github.com/krakinz")
           .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
           .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
@@ -154,7 +154,7 @@ module.exports = async (interaction) => {
         embeds: [
           new Discord.MessageEmbed()
           .setTimestamp()
-          .setColor(process.env.XeTrons)
+          .setColor(process.env.XeTrons || "#FFBF00")
           .setURL("https://github.com/krakinz")
           .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
           .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
@@ -184,7 +184,7 @@ module.exports = async (interaction) => {
         embeds: [
           new Discord.MessageEmbed()
           .setTimestamp()
-          .setColor(process.env.XeTrons)
+          .setColor(process.env.XeTrons || "#FFBF00")
           .setURL("https://github.com/krakinz")
           .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
           .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
@@ -231,7 +231,7 @@ module.exports = async (interaction) => {
         embeds: [
           new Discord.MessageEmbed()
           .setTimestamp()
-          .setColor(process.env.XeTrons)
+          .setColor(process.env.XeTrons || "#FFBF00")
           .setURL("https://github.com/krakinz")
           .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
           .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
@@ -254,7 +254,7 @@ module.exports = async (interaction) => {
         embeds: [
           new Discord.MessageEmbed()
           .setTimestamp()
-          .setColor(process.env.XeTrons)
+          .setColor(process.env.XeTrons || "#FFBF00")
           .setURL("https://github.com/krakinz")
           .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
           .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
