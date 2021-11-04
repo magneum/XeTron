@@ -255,7 +255,7 @@ ${cyanArea}
       message: message,
       embedTitle: `**\`${Hit.displayName} AKA ⚰️💀\`**`,
       embedFooter: `Reqstd by ${message.author.username}`,
-      embedColor: "#c3a14a",
+      embedColor: process.env.XeTrons || "#FFBF00",
     });
     XɛTrσηAnime.kill();
   },

@@ -16,7 +16,7 @@ module.exports = {
       message: message,
       embedTitle: `**\`\`\`${message.author.username} smiles so cute.\`\`\`**`,
       embedFooter: `Reqstd by ${message.author.username}`,
-      embedColor: "#c3a14a",
+      embedColor: process.env.XeTrons || "#FFBF00",
     });
     XɛTrσηAnime.smile();
   },

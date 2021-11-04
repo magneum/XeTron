@@ -56,7 +56,7 @@ ${cyanArea}
       message: message,
       embedTitle: `**\`\`\`${message.author.username} yeeted ${target.displayName} like a power ranger lmao....\`\`\`**`,
       embedFooter: `Reqstd by ${message.author.username}`,
-      embedColor: "#c3a14a",
+      embedColor: process.env.XeTrons || "#FFBF00",
     });
     XɛTrσηAnime.yeet();
   },

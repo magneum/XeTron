@@ -56,7 +56,7 @@ ${cyanArea}
       message: message,
       embedTitle: `**\`\`\`${message.author.username} gave a sweet hug to ${target.displayName}\`\`\`**`,
       embedFooter: `Reqstd by ${message.author.username}`,
-      embedColor: "#c3a14a",
+      embedColor: process.env.XeTrons || "#FFBF00",
     });
     XɛTrσηAnime.hug();
   },
