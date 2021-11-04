@@ -55,11 +55,12 @@ module.exports = async (interaction) => {
           .addField(`📜**\`REPORT\`⮐**`, `**⧪ Report a bug!⪢ \`${XeRunner}\`report**`, true)
           .addField(`📜**\`PING\`⮐**`, `**⧪ Get XeTron's ping!⪢ \`${XeRunner}\`ping**`, true)
           .addField(`📜**\`INVITE\`⮐**`, `**⧪ Invite XeTron!⪢ \`${XeRunner}\`invite**`, true)
-          .addField(`📜**\`EMOJIID\`⮐**`, `**⧪ Get ID of emojis!⪢ \`${XeRunner}\`emojiid**`, true)
           .addField(`📜**\`HELP\`⮐**`, `**⧪ Show this Command List!⪢ \`${XeRunner}\`help**`, true)
           .addField(`📜**\`SUGGEST\`⮐**`, `**⧪ Suggest Features for XeTron!⪢ \`${XeRunner}\`suggest**`, true)
           .addField(`📜**\`XETRON\`⮐**`, `**⧪ Shows the XeTron informations!⪢ \`${XeRunner}\`xetron**`, true)
-          .addField(`📜**\`SERVERINFO\`⮐**`, `**⧪ Shows info about a server!⪢ \`${XeRunner}\`serverinfo**`, true),
+          .addField(`📜**\`SERVERINFO\`⮐**`, `**⧪ Shows info about a server!⪢ \`${XeRunner}\`serverinfo**`, true)
+          .addField(`📜**\`SERVERICON\`⮐**`, `**⧪ Shows displaypicture/avatar of server!⪢ \`${XeRunner}\`servericon**`, true)
+          .addField(`📜**\`SNIPE\`⮐**`, `**⧪ Get last message which is deleted with message Author and Image(If any)!⪢ \`${XeRunner}\`snipe**`, true),
         ],
       });
     } else if (interaction.values[0] === "XɛTrση_Anime") {
@@ -236,6 +237,7 @@ module.exports = async (interaction) => {
           .setThumbnail("https://i.postimg.cc/bwrSWMdK/XeTron.gif")
           .setAuthor("♚乂ΣTЯỖN⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
           .setTitle(`**Utility🔧ÇðmmåñÐ§**`, "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
+          .addField(`📜**\`EMOJIID\`⮐**`, `**⧪ Get ID of emojis!⪢ \`${XeRunner}\`emojiid**`, true)
           .addField(`📜**\`SAY\`⮐**`, `**⧪ Make the bot say your message!⪢ \`${XeRunner}\`say**`, true)
           .addField(`📜**\`EMBED\`⮐**`, `**⧪ Send Messages in embed form!⪢ \`${XeRunner}\`embed**`, true)
           .addField(`📜**\`GOOGLE\`⮐**`, `**⧪ Search anything on google!⪢ \`${XeRunner}\`google**`, true)
