@@ -38,7 +38,7 @@ module.exports = async (oldMember, newMember) => {
         .setURL(`https://github.com/krakinz`)
         .setThumbnail(`${newMember.user.avatarURL()}`)
         .setTitle(`\`\`\`Member🔔Update\`\`\``)
-        .addField(`📝**\`${newusername}\`**`, `**Changed their Username**`)
+        .addField(`📝**\`${newMember.user.tag}\`**`, `**Changed their Username**`)
         .addField(`🔎**\`User Tag\`**`, `${newMember.user.tag}`, true)
         .addField(`⚰️**\`Old Username\`**`, `${oldusername}`, true)
         .addField(`🥳**\`New Username\`**`, `${newusername}`, true)
@@ -56,7 +56,7 @@ module.exports = async (oldMember, newMember) => {
         .setURL(`https://github.com/krakinz`)
         .setImage(`${newMember.user.avatarURL()}`)
         .setTitle(`\`\`\`Member🔔Update\`\`\``)
-        .addField(`📝**\`${newMember}\`**`, `**Changed their Avatar**`)
+        .addField(`📝**\`${newMember.user.tag}\`**`, `**Changed their Avatar**`)
         .addField(`🔎**\`User Tag\`**`, `${newMember.user.tag}`, true)
         .setAuthor(`⚡乂ΣTЯỖN☆•`, `https://i.postimg.cc/bwrSWMdK/XeTron.gif`),
       ],
