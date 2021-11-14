@@ -21,11 +21,11 @@ module.exports = async (member) => {
       .setURL("https://github.com/krakinz")
       .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
       .setDescription(`**\`\`\`diff
-User: 
+!⪢⪢⪢ User: 
 -${member.user.tag} (${member.user})
-User ID: 
+!⪢⪢⪢ User ID: 
 -${member.id}
--Acc Created On:
+!⪢⪢⪢ Acc Created On:
 - ${member.user.createdAt}
 \`\`\`**`),
     ],

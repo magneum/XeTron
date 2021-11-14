@@ -21,11 +21,11 @@ module.exports = async (channel) => {
       .setURL("https://github.com/krakinz")
       .setAuthor("⚡乂ΣTЯỖN☆•", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
       .setTitle("Channel Deleted").setDescription(`**\`\`\`diff
-!⪢ CHANNELNAME
+!⪢⪢⪢ CHANNELNAME
 -${channel.name}
-!⪢ CHANNEL ID
+!⪢⪢⪢ CHANNEL ID
 -${channel.id}
-!⪢ CHANNEL TYPE
+!⪢⪢⪢ CHANNEL TYPE
 -${channel.type}
 \`\`\`**`),
     ],

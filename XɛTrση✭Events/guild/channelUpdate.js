@@ -24,9 +24,9 @@ module.exports = async (oldChannel, newChannel) => {
         .setTitle("Channel Updates")
         .setDescription(`**\`\`\`diff
 CHANNEL NAME CHANGED
-!⪢ OLD
+!⪢⪢⪢ OLD
 -${oldChannel.name}
-!⪢ NEW
+!⪢⪢⪢ NEW
 +${newChannel.name}
 \`\`\`**`),
       ],
@@ -42,9 +42,9 @@ CHANNEL NAME CHANGED
         .setTitle("Channel Updates")
         .setDescription(`**\`\`\`diff
 CHANNEL TOPIC CHANGED
-!⪢ OLD
+!⪢⪢⪢ OLD
 -${oldChannel.topic}
-!⪢ NEW
+!⪢⪢⪢ NEW
 +${newChannel.topic}
 \`\`\`**`),
       ],
@@ -60,9 +60,9 @@ CHANNEL TOPIC CHANGED
         .setTitle("Channel Updates")
         .setDescription(`**\`\`\`diff
 CHANNEL POSITION CHANGED
-!⪢ OLD
+!⪢⪢⪢ OLD
 -${oldChannel.position}
-!⪢ NEW
+!⪢⪢⪢ NEW
 +${newChannel.position}
 \`\`\`**`),
       ],
@@ -78,9 +78,9 @@ CHANNEL POSITION CHANGED
         .setTitle("Channel Updates")
         .setDescription(`**\`\`\`diff
 CHANNEL TYPE CHANGED
-!⪢ OLD
+!⪢⪢⪢ OLD
 -${oldChannel.type}
-!⪢ NEW
+!⪢⪢⪢ NEW
 +${newChannel.type}
 \`\`\`**`),
       ],
@@ -96,9 +96,9 @@ CHANNEL TYPE CHANGED
         .setTitle("Channel Updates")
         .setDescription(`**\`\`\`diff
 CHANNEL NSFW CHANGED
-!⪢ OLD
+!⪢⪢⪢ OLD
 -${oldChannel.nsfw}
-!⪢ NEW
+!⪢⪢⪢ NEW
 +${newChannel.nsfw}
 \`\`\`**`),
       ],
@@ -114,9 +114,9 @@ CHANNEL NSFW CHANGED
         .setTitle("Channel Updates")
         .setDescription(`**\`\`\`diff
 CHANNEL BITRATE CHANGED
-!⪢ OLD
+!⪢⪢⪢ OLD
 -${oldChannel.bitrate}
-!⪢ NEW
+!⪢⪢⪢ NEW
 +${newChannel.bitrate}
 \`\`\`**`),
       ],
@@ -132,9 +132,9 @@ CHANNEL BITRATE CHANGED
         .setTitle("Channel Updates")
         .setDescription(`**\`\`\`diff
 CHANNEL USERLIMIT CHANGED
-!⪢ OLD
+!⪢⪢⪢ OLD
 -${oldChannel.userLimit}
-!⪢ NEW
+!⪢⪢⪢ NEW
 +${newChannel.userLimit}
 \`\`\`**`),
       ],
@@ -150,9 +150,9 @@ CHANNEL USERLIMIT CHANGED
         .setTitle("Channel Updates")
         .setDescription(`**\`\`\`diff
 CHANNEL SLOWMO CHANGED
-!⪢ OLD
+!⪢⪢⪢ OLD
 -${oldChannel.rateLimitPerUser}
-!⪢ NEW
+!⪢⪢⪢ NEW
 +${newChannel.rateLimitPerUser}
 \`\`\`**`),
       ],

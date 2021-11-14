@@ -22,11 +22,11 @@ module.exports = async (channel) => {
       .setAuthor("⚡XΣƬЯӨП⚡", "https://i.postimg.cc/bwrSWMdK/XeTron.gif")
       .setTitle("Channel Created")
       .setDescription(`**\`\`\`diff
-!⪢ CHANNEL NAME 
+!⪢⪢⪢ CHANNEL NAME 
 +${channel.name}
-!⪢ CHANNEL ID
+!⪢⪢⪢ CHANNEL ID
 +${channel.id}
-!⪢ CHANNEL TYPE
+!⪢⪢⪢ CHANNEL TYPE
 +${channel.type}
 \`\`\`**`),
     ],
