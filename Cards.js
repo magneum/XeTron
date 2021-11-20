@@ -17,7 +17,7 @@ module.exports = {
   async lvlupimg(message, users) {
     const applyText = (canvas, text) => {
       const ctx = canvas.getContext("2d");
-      let fontSize = 70;
+      let fontSize = 50;
       do {
         ctx.font = `${(fontSize -= 10)}px Symbola`;
       } while (ctx.measureText(text).width > canvas.width - 300);

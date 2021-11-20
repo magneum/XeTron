@@ -20,6 +20,43 @@ module.exports = async (message, cooldowns) => {
     if (!message.guild.me.permissionsIn(message.channel).has("SEND_MESSAGES")) {
         return;
     }
+    "🐙============================================================================================================================<⚡>";
+    "⚡𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!";
+    "🐙============================================================================================================================<⚡>";
+    // if (message.channel.name === "🤖ai-xetron⚡") {
+    //     if (message.content.startsWith("xetron")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     } else if (message.content.startsWith(["hello" || "hi" || "hey" || "sup"])) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡\nHey There Fella!`);
+    //     } else if (message.content.startsWith("help")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     } else if (message.content.startsWith("help")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     } else if (message.content.startsWith("help")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     } else if (message.content.startsWith("help")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     } else if (message.content.startsWith("help")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     } else if (message.content.startsWith("help")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     } else if (message.content.startsWith("help")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     } else if (message.content.startsWith("help")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     } else if (message.content.startsWith("help")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     } else if (message.content.startsWith("help")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     } else if (message.content.startsWith("help")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     } else if (message.content.startsWith("help")) {
+    //         message.channel.send(`𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!`);
+    //     }
+    // }
+    "🐙============================================================================================================================<⚡>";
+    "⚡𝐗𝐞𝐓𝐫𝐨𝐧⚡ 𝐢𝐬 𝐚 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞𝐁𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!";
+    "🐙============================================================================================================================<⚡>";
     let xpAdd = Math.ceil(Math.random() * 15);
     let messageAdd = +1
     Users.findOne({
@@ -38,7 +75,6 @@ module.exports = async (message, cooldowns) => {
                 warns: 0,
                 avatarURL: message.author.displayAvatarURL()
             })
-
             newUsers.save().catch(error => console.log(error));
         } else {
             users.xp = users.xp + xpAdd;
@@ -49,18 +85,15 @@ module.exports = async (message, cooldowns) => {
             let nxtlvl = 300 * Math.pow(2, users.level)
             if (users.xp >= nxtlvl) {
                 users.level = users.level + 1
-
                 //lvl up image              
                 var sendimg = async function sendimg() {
                     await lvlupimg(message, users);
-
                 }
                 sendimg()
             }
             users.save().catch(error => console.log(error));
         }
     });
-
     //Add default cards to new users
     Cards.findOne({
         did: message.author.id
@@ -74,9 +107,7 @@ module.exports = async (message, cooldowns) => {
             newCards.save().catch(error => console.log(error));
         }
     })
-
     let client = message.client;
-
     const prefixData = await prefixModel.findOne({
         Ӽɛȶʀօռֆɨɖ: message.guild.id,
     }).catch(err => console.log(err))
@@ -87,30 +118,16 @@ module.exports = async (message, cooldowns) => {
         XeRunner = process.env.XeFixer;
     }
     client.prefix = XeRunner;
-
-
-
-    const prefixRegex = new RegExp(
-        `^(<@!?${client.user.id}>|${escapeRegex(XeRunner)})\\s*`
-    );
+    const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(XeRunner)})\\s*`);
     if (!prefixRegex.test(message.content)) return;
-
     const [, matchedPrefix] = message.content.match(prefixRegex);
-
     const p = matchedPrefix.length;
     const args = message.content.slice(p).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
-
-    const command =
-        client.commands.get(commandName) ||
-        client.commands.find(
-            (cmd) => cmd.aliases && cmd.aliases.includes(commandName)
-        );
-
+    const command = client.commands.get(commandName) || client.commands.find((cmd) => cmd.aliases && cmd.aliases.includes(commandName));
     if (!command) {
         return message.reply(`\`❌\` **${message.author} - Sorry, that command does not exist!**`);
     }
-
     //command enaled thing
     if (command.enabled === false) {
         return message.reply('This command is disabled!')
@@ -123,15 +140,10 @@ module.exports = async (message, cooldowns) => {
             return message.reply(command.userPermError)
         }
     }
-
-
-
     // bot permissions handler
     if (!message.guild.me.permissions.has(command.botPerms || [])) {
         if (command.botPermError === null || command.botPermError === undefined) {
-            return message.reply(
-                `Ups :/  I need \`${command.botPerms}\` premission|s to run this command correctly`
-            );
+            return message.reply(`Ups :/  I need \`${command.botPerms}\` premission|s to run this command correctly`);
         } else {
             return message.reply(command.botPermError)
         }
@@ -151,7 +163,6 @@ module.exports = async (message, cooldowns) => {
     }
     //min args and max args thing
     const arguments = message.content.split(/[ ]+/)
-
     arguments.shift()
     if (
         arguments.length < command.minArgs ||
@@ -163,14 +174,11 @@ module.exports = async (message, cooldowns) => {
     if (!cooldowns.has(command.name)) {
         cooldowns.set(command.name, new Collection());
     }
-
     const now = Date.now();
     const timestamps = cooldowns.get(command.name);
     const cooldownAmount = (command.cooldown || 1) * 1000;
-
     if (timestamps.has(message.author.id)) {
         const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
-
         if (now < expirationTime) {
             const timeLeft = (expirationTime - now) / 1000;
             return message.reply(`**\`\`\`diff
@@ -179,10 +187,8 @@ module.exports = async (message, cooldowns) => {
 \`\`\`**`)
         }
     }
-
     timestamps.set(message.author.id, now);
     setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
-
     try {
         command.run(client, message, args, p, cooldowns);
     } catch (error) {
@@ -195,26 +201,3 @@ module.exports = async (message, cooldowns) => {
         }).catch(console.error);
     }
 };
-/*
-example usage
-module.exports = {
-name: "name",
-description: "description",
-aliases: [],
-botPerms: [],
-userPerms: [],
-expectedArgs: null,
-minArgs: 1,
-maxArgs: 2,
-ownerOnly: true,
-guildOnly: true,
-enabled: true,
-nsfw: false,
-userPermError: null,
-botPermError: null,
-run: async (client, message, args) => {
-//code
-},
-};
-
-*/
