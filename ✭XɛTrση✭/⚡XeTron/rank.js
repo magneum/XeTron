@@ -42,12 +42,12 @@ module.exports = {
             ctx.closePath();
             ctx.stroke();
             //Get Username
-            ctx.font = "50px Symbola";
+            ctx.font = "40px Symbola";
             ctx.fillStyle = "#000";
             ctx.fillText(member.displayName, 280, 136);
             //Show XP and levels
             let nxtlvl = 300 * Math.pow(2, users.level);
-            ctx.font = "30px Symbola";
+            ctx.font = "20px Symbola";
             ctx.fillStyle = "#000";
             ctx.fillText(
               "You are level " + users.level + " - " + users.xp + " XP",
@@ -55,7 +55,7 @@ module.exports = {
               180
             );
             var xpLeft = nxtlvl - users.xp;
-            ctx.font = "40px Symbola";
+            ctx.font = "30px Symbola";
             ctx.fillStyle = "#000";
             ctx.fillText(`next level in ${xpLeft} XP`, 280, 225);
             await GetAvatar(message, ctx);
